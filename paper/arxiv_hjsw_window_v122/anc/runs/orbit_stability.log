@@ -1,0 +1,21 @@
+JOB orbit_stability : Exhaustive finite stability computations for c=1, every odd prime through 31.
+SOURCE slack/t221/orbit_stability.py ARGS ['3', '5', '7', '11', '13', '17', '19', '23', '29', '31']
+p=3 orbit type (classes=2, points=8): count=1 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=5 orbit type (classes=2, points=8): count=2 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=7 orbit type (classes=2, points=8): count=1 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=7 orbit type (classes=4, points=16): count=1 opt={12} #optimal patterns={1} stability c(d)={((1, 1), (2, 2), (3, 3))}
+p=11 orbit type (classes=2, points=8): count=1 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=11 orbit type (classes=4, points=16): count=2 opt={12} #optimal patterns={1} stability c(d)={((1, 1), (2, 2), (3, 3))}
+p=13 orbit type (classes=2, points=8): count=2 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=13 orbit type (classes=4, points=16): count=2 opt={12} #optimal patterns={1} stability c(d)={((1, 1), (2, 2), (3, 3))}
+p=17 orbit type (classes=2, points=8): count=2 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=17 orbit type (classes=4, points=16): count=3 opt={12} #optimal patterns={1} stability c(d)={((1, 1), (2, 2), (3, 3))}
+p=19 orbit type (classes=2, points=8): count=1 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=19 orbit type (classes=4, points=16): count=4 opt={12} #optimal patterns={1} stability c(d)={((1, 1), (2, 2), (3, 3))}
+p=23 orbit type (classes=2, points=8): count=1 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=23 orbit type (classes=4, points=16): count=5 opt={12} #optimal patterns={1} stability c(d)={((1, 1), (2, 2), (3, 3))}
+p=29 orbit type (classes=2, points=8): count=2 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=29 orbit type (classes=4, points=16): count=6 opt={12} #optimal patterns={1} stability c(d)={((1, 1), (2, 2), (3, 3))}
+p=31 orbit type (classes=2, points=8): count=1 opt={6} #optimal patterns={9} stability c(d)={((1, 0), (2, 0), (3, 0))}
+p=31 orbit type (classes=4, points=16): count=7 opt={12} #optimal patterns={1} stability c(d)={((1, 1), (2, 2), (3, 3))}
+JOB COMPLETE orbit_stability

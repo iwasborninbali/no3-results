@@ -1,0 +1,5 @@
+JOB old_constant : Historical signature-table weighted arithmetic at K=8.
+SOURCE slack/constant_km1.py ARGS ['8']
+K=8: saving/p = 2778667/5160960 = 0.538401   =>   alpha <= 17865173/5160960 = 3.4616 (p-1)
+tail (k>K, sav <= 4(k-1)) <= 0.0352
+JOB COMPLETE old_constant

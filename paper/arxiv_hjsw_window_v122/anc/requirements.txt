@@ -1,0 +1,12 @@
+# Offline run environment: python3 (3.14, with numpy); CPython 3.14.6.
+# Core finite incidence checks also use the Python standard library.
+numpy==2.5.2
+# Required for the LP/MILP scripts (cyc_model, lp_curve, orbit_union, block models,
+# clean_counts LP stage, orbit_cover); SciPy uses its bundled HiGHS solver.
+scipy==1.18.0
+# OPTIONAL ONLY: maxlawful_pysat.py, block_cover_km1.py, and the optional final
+# MIP stage of hjsw_boxes_check.py (which imports maxlawful_pysat.lines).
+# Not installed or run here. To run those jobs, install python-sat separately.
+# python-sat
+# SymPy is needed only for the archived upstream/pp_constant_exact.py.txt.
+# The active script uses the supplied exact Fraction integrator instead.

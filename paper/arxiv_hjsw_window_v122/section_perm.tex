@@ -1,0 +1,268 @@
+\section{Permutation monomials: exact covers and the conditional position law}\label{sec:perm}
+
+The cover and lift accounting are exact.  The rational model constants below are exact integrals.
+For fixed odd degree $k\ge5$, the conditional position law CP is proved below under the stated geometric-monodromy,
+branch-disjointness and sufficiently-large-prime hypotheses, giving the asymptotic bound.
+For $k=3$ Theorem~\ref{thm:cubic} supplies the unconditional bound independently.
+In particular the model values near $1.40N$ must not be confused with the upper coefficient including the full-split correction:
+for degree five $C_5+\varepsilon_5\le2.945933$, about $1.473N$.
+Any monomial exclusion below means fixed degree $k\ge3$, then $p\to\infty$; $x^{p-2}$ contains the inverse hyperbola and is outside that scope.
+
+Throughout, $k\ge3$ is odd and fixed, $p\nmid k(k-1)$, $\gcd(k,p-1)=1$, $B=[x_0,x_0+2p)\times[y_0,y_0+2p)$, $P=P(x^k,B)$ ($4p$ points, two per row and
+per column), and for $\sigma\in\{+1,-1\}$ we write $g_\sigma(t)=t^k-\sigma t$, so that $Y-X\equiv g_+(x)$ and $X+Y\equiv g_-(x)\pmod p$ for the lifts of the
+residue $x$.  For $c\in\Fp$ let $R_\sigma(c)=\{t: g_\sigma(t)=c\}$; every residue $x$ lies in exactly one $R_\sigma(c)$ for each $\sigma$, and we write
+$k_\sigma(x)=|R_\sigma(g_\sigma(x))|$.  Classes and thresholds are exactly as in Section~\ref{sec:cubic}: with $u_t=(r_t-x_0)/p$ the position of $t$ in the
+$x$-window, $\theta_+(c)=1-((c-y_0+x_0)\bmod p)/p$ and $\theta_-(c)=((c-x_0-y_0)\bmod p)/p$, a root $t\in R_+(c)$ has class $0$ iff $u_t\ge\theta_+(c)$ and a root
+$t\in R_-(c)$ has class $0$ iff $u_t\le\theta_-(c)$; for a single residue $x$ the two thresholds are tied by the identity
+\begin{equation}\label{eq:tie}
+ \theta_-(g_-(x))\ \equiv\ 1-\theta_+(g_+(x))+2u_x\pmod 1 ,
+\end{equation}
+because $g_-(x)-g_+(x)=2x$.
+
+\subsection*{The lift-accounting lemma}
+
+\begin{lemma}[profiles and lifts]\label{lem:lifts}
+Let $c$ be a residue of slope $\sigma$ with $|R_\sigma(c)|=k'$ roots, $n_0$ of class $0$ and $n_1=k'-n_0$ of class $1$.  The four consecutive lines of slope
+$\sigma$ carrying the $4k'$ lifts of these roots have $n_0,\ k'+n_0,\ k'+n_1,\ n_1$ points.  For a residue $x$ with $k_\pm=k_\pm(x)$ and $n_\pm=n_\pm(x)$
+the number of roots of its residue of slope $\pm$ lying in the class of $x$ (so $1\le n_\pm\le k_\pm$), the lines through the four lifts
+$(\delta,\varepsilon)$ of $x$ have the following numbers of points ($\{a,b\}$ means the two values in some order for the two lifts of the pair):
+\[
+\begin{array}{c|c|c}
+\text{lifts} & \text{slope }+1 & \text{slope }-1\\ \hline
+(0,0),(1,1) & k_++n_+,\ k_++n_+ & \{n_-,\ 2k_--n_-\}\\
+(0,1),(1,0) & \{2k_+-n_+,\ n_+\} & k_-+n_-,\ k_-+n_-
+\end{array}
+\]
+Consequently, for the cover $W_4$ (weight $1$ on every $\pm1$-line with $\ge4$ points, weight $1$ on every point lying on none of them),
+\begin{align}
+ U(x)&=[k_++n_+\le3]\bigl([n_-\le3]+[2k_--n_-\le3]\bigr)\notag\\
+ &\qquad+[k_-+n_-\le3]\bigl([n_+\le3]+[2k_+-n_+\le3]\bigr),\label{eq:Ux}\\
+ L&=\sum_\sigma\sum_c\Bigl([n_0\ge4]+[k'+n_0\ge4]+[k'+n_1\ge4]+[n_1\ge4]\Bigr),\label{eq:Lperm}\\
+ \alpha(x^k,B)&\ \le\ \mathrm{cost}(W_4)=2L+\sum_{x\in\Fp}U(x).\label{eq:costW4}
+\end{align}
+\end{lemma}
+\begin{proof}
+For slope $+1$ the lifts of a class-$0$ root $t$ have $Y-X=c'$ (twice, $\delta=\varepsilon$), $c'+p$ ($(0,1)$) and $c'-p$ ($(1,0)$), those of a class-$1$ root
+$c'+p$ (twice), $c'+2p$ ($(0,1)$) and $c'$ ($(1,0)$), exactly as in Section~\ref{sec:cubic}; counting gives the profile $(n_0,k'+n_0,k'+n_1,n_1)$ on the lines
+$c'-p,c',c'+p,c'+2p$, and reading off the line of each lift of $x$ gives the first column of the table (a class-$0$ root has its equal-shift lifts on the
+line with $k'+n_0=k'+n_+$ points, its $(0,1)$-lift on the line with $k'+n_1=2k'-n_+$ points and its $(1,0)$-lift on the line with $n_0=n_+$ points; for a
+class-$1$ root the same three numbers occur with the two mixed lifts exchanged).  For slope $-1$ the roles of ``equal'' and ``mixed'' lifts are exchanged
+(the profile sits on $X+Y\in\{c'',c''+p,c''+2p,c''+3p\}$ with the two mixed lifts of a root on the central lines).  A lift is a singleton of $W_4$ iff both its
+lines have $\le3$ points; summing over the two lifts of each kind gives \eqref{eq:Ux}, and \eqref{eq:costW4} is the usual duality (a lawful set meets a line
+in $\le2$ points, a point in $\le1$).
+\end{proof}
+For $k'=3$ this is the bookkeeping of Section~\ref{sec:cubic} ($k_++n_+\le3$ iff $k_+=1$ or $k_+=2$ with a split pair; the bracket $[n_-\le3]+[2k_--n_-\le3]$
+equals $2$ for a same triple and $1$ for a split one).  Note that for $k'\ge4$ both central lines are always rich ($k'+n_0,k'+n_1\ge4$).
+
+\subsection*{The three local laws for $x^k$}
+
+\begin{lemma}[root counts]\label{lem:rootcounts}
+Let $p\nmid k(k-1)$.  For each $\sigma$ and $0\le j\le k$,
+$\#\{c\in\Fp:\ |R_\sigma(c)|=j\}=P_j\,p+O_k(\sqrt p)$ with $P_j=\frac1{j!}\sum_{i=0}^{k-j}\frac{(-1)^i}{i!}$ (the proportion of permutations of $k$ letters with
+$j$ fixed points; $P_{k-1}=0$).  In particular the number of residues $x$ with $k_\sigma(x)=j$ is $jP_j\,p+O_k(\sqrt p)$.
+\end{lemma}
+\begin{proof}
+The map $t\mapsto g_\sigma(t)$ has the $k-1$ simple critical points $t^{k-1}=\sigma/k$ with the pairwise distinct critical values $t\,(\sigma/k-\sigma)$,
+so its geometric monodromy group is generated by transpositions and is transitive ($g_\sigma(t)-c$ is irreducible over $\overline\Fp(c)$, being linear in
+$c$): it is $S_k$, hence so is the arithmetic monodromy group.  Chebotarev's density theorem for the function field $\Fp(c)$ (with the Weil error term, the
+covering curve having genus bounded in terms of $k$) gives the count of $c$ whose Frobenius has $j$ fixed points, i.e.\ $j$ rational roots.
+\end{proof}
+
+\begin{theorem}[CP: conditional positions]\label{hyp:positions}
+For monomials fix an odd degree $k\ge5$ and take the primes allowed in Theorem~\ref{thm:perm}; for the generic-polynomial extension fix degree $k\ge3$ and take primes satisfying the structural hypotheses of Corollary~\ref{cor:permgen}.  As $p\to\infty$, the following hold uniformly in the box.
+Discard the bounded number of ramified fibres.  For each slope and each $j$ with $P_j>0$, condition on a fibre having exactly $j$ rational roots and order all of them uniformly (there is no conditioning assertion for $P_j=0$).
+If $j<k$, their positions and the threshold have product uniform law, with box-count error $O_k(\sqrt p\log^{k+1}p)$.
+If $j=k$, they have Haar law on the hyperplane $\sum_i u_{t_i}\equiv-kx_0/p\pmod1$, with independent uniform threshold and the same error.
+For a uniformly selected residue $x$, the two fibre sizes have independent size-biased laws $jP_j$;
+conditionally on those sizes and $(u_x,\theta_+)$ the partner positions have the corresponding product laws, independently between slopes,
+subject to the full-split relation on either slope and the exact threshold tie \eqref{eq:tie}.
+For the general-polynomial corollary, CP means these same assertions for that family, replacing the full-split sum by the sum of its roots minus $kx_0/p$.
+Here ``conditionally'' describes disintegration of the joint limiting law, not independent randomness after fixing one exact finite-field $x$.
+The structural hypotheses include geometric $S_k$ monodromy, disjoint finite branch loci for the two distinguished-root covers,
+and sufficiently large $p$ so that their ramification is tame.
+\end{theorem}
+\begin{proof}
+Write $(n)_h=n(n-1)\cdots(n-h+1)$.  If a fibre has $r\ge j$ distinct rational roots, after choosing an ordered $j$-tuple,
+\begin{equation}\label{eq:CPsieve}
+ \sum_{h=0}^{k-j}\frac{(-1)^h}{h!}(r-j)_h
+ =\sum_{h=0}^{r-j}(-1)^h\binom{r-j}{h}=\mathbf1_{r=j}.
+\end{equation}
+Thus a count on exactly $j$ roots, averaged over their orders, is $1/j!$ times the alternating sum of
+ordered $(j+h)$-tuple counts with the position predicate imposed only on the first $j$ coordinates.
+For $j=0$ the empty-tuple cover is the fibre-parameter line.
+
+Geometric $S_k$ monodromy makes every unrestricted ordered-tuple cover geometrically irreducible, as in the
+unrestricted part of Lemma~\ref{lem:positions} below.  Put $b=-[t^{k-1}]f/[t^k]f$, so $b=0$ for monomials.
+The only constant linear combination of all roots is their full sum $b$:
+a transposition in the splitting field sends a constant phase to itself and gives
+$(h_i-h_j)(t_i-t_j)=0$, forcing all root coefficients to agree.  For a proper subtuple a missing root has coefficient zero.
+After removing the full sum, a coefficient on the fibre parameter also has to vanish.
+The same bounded-pole character-sum argument as in Lemma~\ref{lem:positions} gives product Haar measure for a proper subtuple,
+and Haar measure with full sum $b$ for a complete tuple, independently of the threshold.
+For sufficiently large $p$ bounded pole orders exclude nonconstant Artin--Schreier-trivial phases.
+Projection of full-sum Haar measure onto a proper subtuple gives product Haar, so every term of \eqref{eq:CPsieve}
+has the same law on the observed coordinates.  Its scalar main term is
+\[
+ \frac1{j!}\sum_{h=0}^{k-j}\frac{(-1)^h}{h!}=P_j.
+\]
+There are boundedly many terms, and Fourier expansion uses only $j$ observed intervals and the threshold;
+the box-count error is $O_k(\sqrt p\log^{j+1}p)$, hence satisfies the stated bound.
+This proves the single-slope law including full splitting.  No conditioning is asserted when $P_j=0$.
+
+For the joint law distinguish the root $x$.  Each splitting field over the $x$-line has geometric and arithmetic
+group $S_{k-1}$, the stabilizer of $x$ in $S_k$, and is regular.
+The branch-locus argument in Lemma~\ref{lem:twoslopes} below gives geometric linear disjointness:
+the geometric intersection is unramified over the affine line and tame at infinity, hence trivial by Riemann--Hurwitz.
+The same argument applies under (i),(ii) of Corollary~\ref{cor:permgen}.
+Every ordered partner-tuple cover for the two slopes is therefore geometrically irreducible, of bounded degree and genus.
+Independent transpositions on each slope force coefficients on its partners to agree in any constant additive phase;
+a missing partner forces that common coefficient to zero.  A complete partner list has sum $b-x$.
+Eliminating these sums leaves $Hx+Kg_+(x)$, which is constant only if $H=K=0$ since $\deg g_+=k\ge3$.
+There are no further additive relations: the unrestricted joint law has independent uniform partner coordinates,
+subject only to complete partner sums, and independent uniform coordinates $x,g_+(x)$.
+The second threshold is fixed by \eqref{eq:tie}.  Bounded-pole character sums and Fourier expansion give joint box discrepancies $o(p)$;
+no quantitative joint rate is required here.
+
+Apply \eqref{eq:CPsieve} separately to the two partner lists, observing $j_\sigma-1$ partners and dividing by their factorials.
+The two scalar main terms are
+\[
+ \frac1{(j_\sigma-1)!}\sum_{h=0}^{k-j_\sigma}\frac{(-1)^h}{h!}=j_\sigma P_{j_\sigma}.
+\]
+Projecting auxiliary complete lists onto incomplete observed lists removes their sum relation, while a fully split
+observed list keeps it.  This proves both the independent size-biased laws and their conditional partner laws.
+Translation to window positions gives the full-split relation
+$\sum_i u_{t_i}\equiv b/p-kx_0/p\pmod1$, where $b/p$ denotes the normalized least residue of $b$;
+for partners alone subtract $u_x$.  Fourier bounds are uniform in the interval endpoints and hence in the box.
+\end{proof}
+
+\begin{lemma}[root tuples and exactly-sized fibres]\label{lem:positions}
+Let $1\le j\le k$ and $\sigma\in\{\pm1\}$.  Over the ordered $j$-tuples $(t_1,\dots,t_j)$ of distinct roots of a common residue $c$ of slope $\sigma$ (one for each $c$
+and each ordered choice of $j$ distinct elements of $R_\sigma(c)$), the vector $(u_{t_1},\dots,u_{t_j},\theta_\sigma(c))\in(\mathbb R/\mathbb Z)^{j+1}$ is equidistributed
+with error $O_k(\sqrt p\log^{j+1}p)$ for box conditions, except that for $j=k$ the positions satisfy the one linear relation $\sum_iu_{t_i}\equiv-kx_0/p$
+(and are equidistributed on that hyperplane).  By Theorem~\ref{hyp:positions}, for a residue with exactly $j<k$ roots the number $n_0$ of class-$0$ roots is $\mathrm{Bin}(j,\theta)$
+with $\theta$ uniform, i.e.\ uniform on $\{0,\dots,j\}$, and for a random member $x$ of such a residue $n_\sigma(x)=1+\mathrm{Bin}(j-1,q_\sigma)$, where
+$q_\sigma$ is the probability that a partner has the class of $x$: $q_+=1-\theta_+$ if $u_x\ge\theta_+$ and $q_+=\theta_+$ otherwise;
+$q_-=\theta_-$ if $u_x\le\theta_-$ and $q_-=1-\theta_-$ otherwise.
+\end{lemma}
+\begin{proof}
+The variety $V_j$ of ordered $j$-tuples of distinct roots of $g_\sigma(t)=c$ is a curve whose components correspond to the orbits of the geometric monodromy
+group $S_k$ on such tuples; $S_k$ is $j$-transitive, so $V_j$ is absolutely irreducible.  For $(h_1,\dots,h_j,h_0)\ne0$ the function
+$\sum_ih_it_i+h_0g_\sigma(t_1)$ is non-constant on $V_j$ when $j<k$: the fibre of $V_j\to V_{j-1}$ (forget $t_j$) has $k-j+1\ge2$ points, so $t_j$ is not a
+rational function of $(t_1,\dots,t_{j-1})$; inductively all $h_i=0$ for $i\ge2$, and then $h_1t_1+h_0g_\sigma(t_1)$ is non-constant unless $h_1=h_0=0$.  For
+$j=k$ the same argument leaves exactly the relation $\sum_it_i=0$ (the coefficient of $t^{k-1}$ in $g_\sigma$).  Bombieri's bound on the curve $V_j$
+\cite{IK} gives $O_k(\sqrt p)$ for each such exponential sum, and the Fourier expansion of the $j+1$ interval indicators (or Selberg's polynomials
+\cite{Montgomery,Vaaler}) gives the box-count with error $O_k(\sqrt p\log^{j+1}p)$.  The unrestricted tuple count does not condition on exactly $j$ roots.  The exact-size sieve in Theorem~\ref{hyp:positions} supplies that step, using only the unrestricted tuple argument here; its consequences follow by integrating in $\theta$:
+$\int_0^1\binom j m\theta^m(1-\theta)^{j-m}\,d\theta=1/(j+1)$.
+\end{proof}
+
+The ordered-$j$-tuple curve includes fibres with more than $j$ rational roots.
+Equation~\eqref{eq:CPsieve} supplies the exact-size bridge, including the full-split relation;
+irreducibility of the unrestricted tuple curve alone would not supply it.
+
+\begin{lemma}[the two slopes]\label{lem:twoslopes}
+Let $D_\pm(x)=k^k(x^k\mp x)^{k-1}\mp(k-1)^{k-1}$ (up to a constant, the discriminant of $g_\pm(t)-g_\pm(x)$ as a polynomial in $t$), take $p>k!$ (so all ramification is tame), and let $p$ not
+divide $k(k-1)\cdot\mathrm{Res}(D_+,D_-)$.  Then, over $x\in\Fp$, the pairs $(k_+(x),k_-(x))$ are asymptotically independent with the laws of
+Lemma~\ref{lem:rootcounts} (size-biased), and, by Theorem~\ref{hyp:positions}, given $(u_x,\theta_+(g_+(x)))$ and the fibre sizes, the partner-position vectors are independent
+between the two slopes, with the tie \eqref{eq:tie} for the second threshold.  Within a fibre of size $j<k$ the partner positions have product uniform law;
+within a fully split fibre they have Haar law subject to
+$\sum_{t\ne x}u_t\equiv-kx_0/p-u_x\pmod1$.  The box-count errors are those supplied by CP and Lemma~\ref{lem:positions}.
+\end{lemma}
+\begin{proof}
+The Galois closures $L_\pm$ over $\Fp(x)$ of $g_\pm(t)-g_\pm(x)$ are ramified (over the affine $x$-line) only at points in the zero sets of $D_\pm$; since
+$\mathrm{Res}(D_+,D_-)\not\equiv0$, these finite branch loci are disjoint, so $L_+\cap L_-$ is unramified over the affine line and tame at $\infty$
+(its degree divides $k!<p$), hence trivial: $L_+$ and $L_-$ are linearly disjoint and the fibre product $W$ of the two root varieties over the $x$-line is
+absolutely irreducible.  Chebotarev on the compositum gives the joint law of the two Frobenius classes (independence of the counts), while Theorem~\ref{hyp:positions} proves the conditional position statement using the geometric disjointness just established.  Pullback may cancel even-order discriminant factors; containment of branch loci is all the disjointness argument needs.
+Finally $\mathrm{Res}(D_+,D_-)\ne0$ for \emph{every} odd $k$: a common root $x$ of $D_+$ and $D_-$ (over $\overline{\mathbb Q}$; the
+resultant is an integer) would satisfy $(x^k+x)^{k-1}=-(x^k-x)^{k-1}$, so $x^k+x=\zeta(x^k-x)$ with $\zeta^{k-1}=-1$, whence $x\ne0$ and
+$x^{k-1}=-(1+\zeta)/(1-\zeta)$; then $(x^k-x)^{k-1}=x^{k-1}(x^{k-1}-1)^{k-1}=\pm2^{k-1}(1+\zeta)/(1-\zeta)^{k}$ is a unit at every prime $\ell\mid k$
+(the roots of unity $\zeta,-\zeta\ne1$ have order dividing $2(k-1)$, coprime to $\ell$, so $1\mp\zeta$ are $\ell$-adic units), whereas $D_+(x)=0$
+demands $(x^k-x)^{k-1}=(k-1)^{k-1}/k^k$, of negative $\ell$-adic valuation — a contradiction.  (Symbolically, for $k=5$ the prime factors of the
+resultant below $5000$ are $2,5,7,97,127$; for $k=7$: $2,3,5,7,193,1327$.)
+\end{proof}
+
+\subsection*{The theorem}
+
+For the rencontres numbers $P_j$ of Lemma~\ref{lem:rootcounts} define
+\begin{equation}\label{eq:Ck}
+\begin{aligned}
+ C_k\ :=\ &2\sum_\sigma\sum_{j}P_j\,\mathbb E_{n_0\sim\mathrm U\{0..j\}}\bigl[[n_0\ge4]+[j+n_0\ge4]+[2j-n_0\ge4]+[j-n_0\ge4]\bigr]\\
+ &+\int_0^1\!\!\int_0^1\mathbb E\bigl[U(x)\mid u_x=u,\ \theta_+=1-g\bigr]\,du\,dg ,
+\end{aligned}
+\end{equation}
+where inside the expectation $k_\pm$ have the size-biased laws $jP_j$, $n_\pm=1+\mathrm{Bin}(k_\pm-1,q_\pm)$ with $q_\pm$ as in
+Lemma~\ref{lem:positions} and $\theta_-=1-\theta_++2u\bmod1$, and $U(x)$ is \eqref{eq:Ux}.  The integrand is a piecewise polynomial in $(u,g)$ (four
+regions cut out by $g+2u=1$, $g+2u=2$, $u+g=1$), so $C_k$ is an explicit rational number:
+\[
+ C_3=\tfrac{11}4=2.75,\qquad C_5=\tfrac{28183}{10080}=2.79593\ldots,\qquad C_7=\tfrac{15265237}{5443200}=2.80446\ldots,
+\]
+\[
+ C_9=\tfrac{94048104091}{33530112000}=2.80488\ldots,\qquad C_{11}=2.80489\ldots
+\]
+(\texttt{anc/slack/pp\_constant\_exact.py}; for $k=3$ the two summands are $\tfrac12\cdot2$ and $\tfrac74$, as in Section~\ref{sec:cubic}).  As
+$k\to\infty$ the rencontres numbers converge to the Poisson law $e^{-1}/j!$ ($|P_j-e^{-1}/j!|\le1/(j!\,(k-j+1)!)$), and $C_k\to C_\infty$ (v1.19 quotes the numerical model estimate $2.80488\ldots$)
+(the value of \eqref{eq:Ck} for the Poisson law); since the first summand of \eqref{eq:Ck} is $16$-Lipschitz in $\ell^1(P)$ and the second is
+$8$-Lipschitz in $\ell^1$ of the size-biased law $(jP_j)_j$, one gets $|C_k-C_\infty|\le2^{k+3}(k+5)/(k+1)!$, which is decreasing and $<0.001$ for $k\ge11$.
+The exact value $C_{11}=126762273520591/45193226158080$, computed in \texttt{anc/independent/constants.py}, gives
+$C_k+\varepsilon_k\le C_{11}+2\cdot2^{14}\cdot16/12!+2/10!+8/11!<2.81$ for $k\ge11$
+by the triangle inequality and the correction bound below.
+Together with the exact values for $k=7,9$ this proves the stated numerical bounds without relying on the quoted decimal for $C_\infty$.
+
+\begin{theorem}[permutation monomials]\label{thm:perm}
+Fix odd $k\ge3$ and let $p>k!$ be a sufficiently large prime with $\gcd(k,p-1)=1$ and $p\nmid k(k-1)\mathrm{Res}(D_+,D_-)$ (a non-zero integer, Lemma~\ref{lem:twoslopes}).
+Then for every $2p\times2p$ box $B$,
+\[
+ \alpha(x^k,B)\ \le\ \bigl(C_k+\varepsilon_k+o(1)\bigr)\,p,\qquad 0\le\varepsilon_k\le\frac2{(k-1)!}+\frac8{k!},\quad \varepsilon_3=0,
+\]
+as $p\to\infty$ ($k$ fixed); numerically $C_5+\varepsilon_5\le2.945933$, $C_7+\varepsilon_7\le2.809$ and $C_k+\varepsilon_k<2.81$ for all odd $k\ge9$.  In particular
+$\alpha(x^k,B)\le(1.474+o(1))\cdot2p<\tfrac32\cdot2p$ for every odd $k$: for each fixed degree $k\ge3$ and sufficiently large $p$, a permutation monomial graph does not reach $3(p-1)$.
+\end{theorem}
+\begin{proof}
+For $k\ge5$ use Theorem~\ref{hyp:positions}.  By Lemma~\ref{lem:lifts}, $\alpha\le2L+\sum_xU(x)$.  The count $L$ is a sum over residues of a function of $(j,n_0)$; by Lemmas~\ref{lem:rootcounts}
+and~\ref{lem:positions} the residues with $j<k$ roots contribute the first term of \eqref{eq:Ck} times $p$, up to $o_k(p)$.
+Here and below CP's box counts are transferred to the moving-threshold comparisons by fixed-mesh inner and outer approximation,
+as in Section~\ref{sec:cubic}; for fixed $k$ the boundaries are finitely many hyperplane pieces, uniformly in the box.
+The residues
+with $j=k$ roots have density $P_k=1/k!$ per slope, and for them only the two outer indicators $[n_0\ge4]+[n_1\ge4]$ can deviate from the model
+(the central lines are rich for $k\ge4$), so $L$ deviates by at most $2\cdot2P_kp=4p/k!$ and $2L$ by at most $8p/k!$ — this is the second part of
+$\varepsilon_k$.  For $\sum_xU(x)$: by Lemma~\ref{lem:twoslopes} the joint law of $(k_+,n_+,k_-,n_-)$ for a random residue $x$ is, up to the error terms, the
+one described after \eqref{eq:Ck}, except for the residues $x$ lying in a $k$-root residue of some slope (density $kP_k=1/(k-1)!$ per slope), where the
+partner positions obey the linear relation of Lemma~\ref{lem:positions}; for such $x$ the only factor of \eqref{eq:Ux} that can be affected is a single
+$[n_\sigma\le3]$ (the other factor $[k_\sigma+n_\sigma\le3]$ vanishes for $k_\sigma=k\ge4$), so replacing it by $1$ changes $\sum_xU(x)$ by at most
+$2/(k-1)!\cdot p$ — the first part of $\varepsilon_k$.  All remaining terms are the integral in \eqref{eq:Ck} times $p$, with error $o_k(p)$.
+For $k=3$, $k$-root residues are exactly the three-root residues, and Section~\ref{sec:cubic} shows that only pairwise data enter, whence $\varepsilon_3=0$
+and $C_3=11/4$.  The numerical values of $C_k$ follow from the exact integration of the piecewise polynomial integrand.
+\end{proof}
+
+\begin{corollary}[generic permutation polynomials]\label{cor:permgen}
+Fix $k\ge3$, take $p>k!$ sufficiently large in terms of $k$, and let $f\in\Fp[x]$ be a permutation polynomial of degree $k$ such that for both $g_\pm(t)=f(t)\mp t$: (i) the map $t\mapsto g_\pm(t)$ has
+geometric monodromy group $S_k$ (for instance, $g_\pm'$ has $k-1$ distinct simple zeros with pairwise distinct critical values, and $p\nmid k$), and (ii) the
+discriminants $\mathrm{disc}_t\bigl(g_+(t)-g_+(x)\bigr)$ and $\mathrm{disc}_t\bigl(g_-(t)-g_-(x)\bigr)$ are coprime polynomials in $x$.  Then for every
+$2p\times2p$ box, $\alpha(f,B)\le(C_k+\varepsilon_k+o(1))\,p$ with the same $C_k$ and $\varepsilon_k$ as in Theorem~\ref{thm:perm} (the implied constants
+depending on $k$ and on the family, uniformly in the box).
+\end{corollary}
+\begin{proof}
+By Theorem~\ref{hyp:positions}, the argument of Lemmas~\ref{lem:lifts}--\ref{lem:twoslopes} and the proof of Theorem~\ref{thm:perm} applies with (i) and (ii): the classes,
+thresholds and the tie \eqref{eq:tie} are defined for any $f$ (as $g_-(x)-g_+(x)=2x$), the root-count laws are the rencontres numbers as soon as the
+monodromy is $S_k$, the $j$-tuple curves are irreducible by $j$-transitivity, the only linear relation is $\sum_it_i=$ const for $j=k$ (covered by
+$\varepsilon_k$), and (ii) gives the linear disjointness of the two slopes.  Hence the constant depends on $k$ only.
+\end{proof}
+For an arbitrary permutation polynomial (no assumption on the monodromy) the same proof gives $\alpha(f,B)\le(C(P^+,P^-)+\varepsilon+o(1))p$ with the
+root-count laws $P^\pm$ of $f\mp x$ in place of the rencontres numbers, provided the analogous CP law with these root-count laws holds, the corresponding root varieties are irreducible and the two slopes are
+linearly disjoint; whether every permutation polynomial of degree $\ge3$ satisfies $\alpha\le(\tfrac32-c_k)N$ is open (see (c) below).
+
+\begin{remark}[finite numerics, model values and other bijections]
+(a) The bookkeeping of Lemma~\ref{lem:lifts} evaluates $\mathrm{cost}(W_4)$ in time $O(p)$ without enumerating lines
+(\texttt{anc/slack/pp\_exact\_UL\_np.py}).  At $p\approx10^7$ (three primes, box $(0,0)$) it gives $\sum_xU(x)/p=1.7500\pm0.0002$ for $k=3$ (the exact $7/4$) and
+$1.7631\pm0.0002$ for $k=5$, against the value $17767/10080=1.76260$ of the tied-threshold law in \eqref{eq:Ck} — the small excess is consistent with a full-split correction.  The finite-$p$ estimate $2.797p\approx1.3985\,N$ quoted in v1.19 is not a proved asymptotic coefficient; a model with independent slopes would give
+$1519/864=1.7581$, which differs from the observations at those three primes.  At $p\le887$ the cost of $W_4$ fluctuates by a few percent (for $x^5$: mean $1.388\,N$, range $1.36$--$1.41$
+over seven primes; for $x^7$: mean $1.415\,N$; \texttt{anc/docs/research/g\_agents/x5\_x7\_numerics.md}); the LP over all $\pm1$-lines is $\approx1.32$--$1.34\,N$
+and the LP over all lines with $\ge3$ points $\approx1.07$--$1.10\,N$, as for cubics.
+(b) For the inverse map on $\Fp^*$, an occupied non-tangent residue on either slope has two roots; empty residues and the bounded number of tangent exceptions must be separated.
+The exact HJSW-window optimum is $3(p-1)$ by Theorem~\ref{thm:main}; in the corresponding leading-order cover accounting one obtains $3p+O(1)$.
+This is not an arbitrary-window identity: Theorem~\ref{thm:window} gives the exact window-dependent formula.
+The inverse map has maximally dependent partner slopes, so CP does not apply to it.
+(c) Niederreiter--Robinson \cite[Theorem 9 and Corollary 2]{NR82} concerns complete mappings of the binomial form $ax^k+bx$.
+It is not used here to exclude all bounded-degree nonlinear complete mappings.
+Nor does a positive collision fraction alone prove a linear saving for this geometric cover.
+An unconditional exclusion for every fixed-degree permutation polynomial remains open in this note.
+\end{remark}

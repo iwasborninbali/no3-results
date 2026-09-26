@@ -1,0 +1,8 @@
+JOB monomial_integral : Exact rational model integrals, using the documented R1 Fraction port (original SymPy source archived).
+SOURCE slack/pp_constant_exact.py ARGS ['3', '5', '7', '9', '11']
+k=3: L/p=1/2 U/p=7/4 C_k=11/4 = 2.750000000
+k=5: L/p=31/60 U/p=17767/10080 C_k=28183/10080 = 2.795932540
+k=7: L/p=877/1680 U/p=9582277/5443200 C_k=15265237/5443200 = 2.804460060
+k=9: L/p=237017/453600 U/p=59007510811/33530112000 C_k=94048104091/33530112000 = 2.804884878
+k=11: L/p=62574389/119750400 U/p=397658627087627/225966130790400 C_k=126762273520591/45193226158080 = 2.804895430
+JOB COMPLETE monomial_integral

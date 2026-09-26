@@ -1,0 +1,544 @@
+[
+  {
+    "job": "saturation",
+    "command": [
+      "python3",
+      "run_one.py",
+      "saturation"
+    ],
+    "exit_code": 0,
+    "seconds": 0.087,
+    "status": "PASS",
+    "log": "runs/saturation.log"
+  },
+  {
+    "job": "window",
+    "command": [
+      "python3",
+      "run_one.py",
+      "window"
+    ],
+    "exit_code": 0,
+    "seconds": 196.222,
+    "status": "PASS",
+    "log": "runs/window.log"
+  },
+  {
+    "job": "boxes",
+    "command": [
+      "python3",
+      "run_one.py",
+      "boxes"
+    ],
+    "exit_code": 0,
+    "seconds": 236.425,
+    "status": "PASS",
+    "log": "runs/boxes.log"
+  },
+  {
+    "job": "gadget",
+    "command": [
+      "python3",
+      "run_one.py",
+      "gadget"
+    ],
+    "exit_code": 0,
+    "seconds": 15.973,
+    "status": "PASS",
+    "log": "runs/gadget.log"
+  },
+  {
+    "job": "eight_cover",
+    "command": [
+      "python3",
+      "run_one.py",
+      "eight_cover"
+    ],
+    "exit_code": 0,
+    "seconds": 0.828,
+    "status": "PASS",
+    "log": "runs/eight_cover.log"
+  },
+  {
+    "job": "block_cover",
+    "command": [
+      "python3",
+      "run_one.py",
+      "block_cover"
+    ],
+    "exit_code": null,
+    "seconds": 0,
+    "status": "NOT RUN",
+    "reason": "PySAT is not installed; maxlawful_pysat is imported at module load.",
+    "log": null
+  },
+  {
+    "job": "km1_lines",
+    "command": [
+      "python3",
+      "run_one.py",
+      "km1_lines"
+    ],
+    "exit_code": 0,
+    "seconds": 0.753,
+    "status": "PASS",
+    "log": "runs/km1_lines.log"
+  },
+  {
+    "job": "cycle",
+    "command": [
+      "python3",
+      "run_one.py",
+      "cycle"
+    ],
+    "exit_code": 0,
+    "seconds": 0.702,
+    "status": "PASS",
+    "log": "runs/cycle.log"
+  },
+  {
+    "job": "potential",
+    "command": [
+      "python3",
+      "run_one.py",
+      "potential"
+    ],
+    "exit_code": 0,
+    "seconds": 0.88,
+    "status": "PASS",
+    "log": "runs/potential.log"
+  },
+  {
+    "job": "arcs",
+    "command": [
+      "python3",
+      "run_one.py",
+      "arcs"
+    ],
+    "exit_code": 0,
+    "seconds": 0.202,
+    "status": "PASS",
+    "log": "runs/arcs.log"
+  },
+  {
+    "job": "g8",
+    "command": [
+      "python3",
+      "run_one.py",
+      "g8"
+    ],
+    "exit_code": 0,
+    "seconds": 0.548,
+    "status": "PASS",
+    "log": "runs/g8.log"
+  },
+  {
+    "job": "cycles_dependency",
+    "command": [
+      "python3",
+      "run_one.py",
+      "cycles_dependency"
+    ],
+    "exit_code": 0,
+    "seconds": 0.085,
+    "status": "PASS",
+    "log": "runs/cycles_dependency.log"
+  },
+  {
+    "job": "lp_dependency",
+    "command": [
+      "python3",
+      "run_one.py",
+      "lp_dependency"
+    ],
+    "exit_code": 0,
+    "seconds": 0.919,
+    "status": "PASS",
+    "log": "runs/lp_dependency.log"
+  },
+  {
+    "job": "sat_dependency",
+    "command": [
+      "python3",
+      "run_one.py",
+      "sat_dependency"
+    ],
+    "exit_code": null,
+    "seconds": 0,
+    "status": "NOT RUN",
+    "reason": "PySAT is not installed.",
+    "log": null
+  },
+  {
+    "job": "monomial_integral",
+    "command": [
+      "python3",
+      "run_one.py",
+      "monomial_integral"
+    ],
+    "exit_code": 0,
+    "seconds": 0.902,
+    "status": "PASS",
+    "log": "runs/monomial_integral.log"
+  },
+  {
+    "job": "monomial_cover",
+    "command": [
+      "python3",
+      "run_one.py",
+      "monomial_cover"
+    ],
+    "exit_code": 0,
+    "seconds": 2.235,
+    "status": "PASS",
+    "log": "runs/monomial_cover.log"
+  },
+  {
+    "job": "cubic_cover",
+    "command": [
+      "python3",
+      "run_one.py",
+      "cubic_cover"
+    ],
+    "exit_code": 0,
+    "seconds": 0.754,
+    "status": "PASS",
+    "log": "runs/cubic_cover.log"
+  },
+  {
+    "job": "cubic_lines_3203_0_0",
+    "command": [
+      "python3",
+      "run_one.py",
+      "cubic_lines_3203_0_0"
+    ],
+    "exit_code": 0,
+    "seconds": 0.511,
+    "status": "PASS",
+    "log": "runs/cubic_lines_3203_0_0.log"
+  },
+  {
+    "job": "cubic_lines_3203_700_-2100",
+    "command": [
+      "python3",
+      "run_one.py",
+      "cubic_lines_3203_700_-2100"
+    ],
+    "exit_code": 0,
+    "seconds": 0.502,
+    "status": "PASS",
+    "log": "runs/cubic_lines_3203_700_-2100.log"
+  },
+  {
+    "job": "cubic_lines_12809_0_0",
+    "command": [
+      "python3",
+      "run_one.py",
+      "cubic_lines_12809_0_0"
+    ],
+    "exit_code": 0,
+    "seconds": 1.599,
+    "status": "PASS",
+    "log": "runs/cubic_lines_12809_0_0.log"
+  },
+  {
+    "job": "cubic_lines_12809_-6404_0",
+    "command": [
+      "python3",
+      "run_one.py",
+      "cubic_lines_12809_-6404_0"
+    ],
+    "exit_code": 0,
+    "seconds": 1.699,
+    "status": "PASS",
+    "log": "runs/cubic_lines_12809_-6404_0.log"
+  },
+  {
+    "job": "components",
+    "command": [
+      "python3",
+      "run_one.py",
+      "components"
+    ],
+    "exit_code": 0,
+    "seconds": 0.081,
+    "status": "PASS",
+    "log": "runs/components.log"
+  },
+  {
+    "job": "mirrored",
+    "command": [
+      "python3",
+      "run_one.py",
+      "mirrored"
+    ],
+    "exit_code": 0,
+    "seconds": 0.878,
+    "status": "PASS",
+    "log": "runs/mirrored.log"
+  },
+  {
+    "job": "signature_sample",
+    "command": [
+      "python3",
+      "run_one.py",
+      "signature_sample"
+    ],
+    "exit_code": 0,
+    "seconds": 4.449,
+    "status": "PASS",
+    "log": "runs/signature_sample.log"
+  },
+  {
+    "job": "old_constant",
+    "command": [
+      "python3",
+      "run_one.py",
+      "old_constant"
+    ],
+    "exit_code": 0,
+    "seconds": 2.504,
+    "status": "PASS",
+    "log": "runs/old_constant.log"
+  },
+  {
+    "job": "orbit_stability",
+    "command": [
+      "python3",
+      "run_one.py",
+      "orbit_stability"
+    ],
+    "exit_code": 0,
+    "seconds": 4.395,
+    "status": "PASS",
+    "log": "runs/orbit_stability.log"
+  },
+  {
+    "job": "orbit_types",
+    "command": [
+      "python3",
+      "run_one.py",
+      "orbit_types"
+    ],
+    "exit_code": 0,
+    "seconds": 2.475,
+    "status": "PASS",
+    "log": "runs/orbit_types.log"
+  },
+  {
+    "job": "standard_model",
+    "command": [
+      "python3",
+      "run_one.py",
+      "standard_model"
+    ],
+    "exit_code": 0,
+    "seconds": 9.235,
+    "status": "PASS",
+    "log": "runs/standard_model.log"
+  },
+  {
+    "job": "constant2",
+    "command": [
+      "python3",
+      "run_one.py",
+      "constant2"
+    ],
+    "exit_code": 0,
+    "seconds": 0.084,
+    "status": "PASS",
+    "log": "runs/constant2.log"
+  },
+  {
+    "job": "old_block_constant",
+    "command": [
+      "python3",
+      "run_one.py",
+      "old_block_constant"
+    ],
+    "exit_code": 0,
+    "seconds": 0.079,
+    "status": "PASS",
+    "log": "runs/old_block_constant.log"
+  },
+  {
+    "job": "fast_blocks",
+    "command": [
+      "python3",
+      "run_one.py",
+      "fast_blocks"
+    ],
+    "exit_code": 0,
+    "seconds": 2.746,
+    "status": "PASS",
+    "log": "runs/fast_blocks.log"
+  },
+  {
+    "job": "clean",
+    "command": [
+      "python3",
+      "run_one.py",
+      "clean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.182,
+    "status": "PASS",
+    "log": "runs/clean.log"
+  },
+  {
+    "job": "seven_cover",
+    "command": [
+      "python3",
+      "run_one.py",
+      "seven_cover"
+    ],
+    "exit_code": 0,
+    "seconds": 6.85,
+    "status": "PASS",
+    "log": "runs/seven_cover.log"
+  },
+  {
+    "job": "U",
+    "command": [
+      "python3",
+      "run_one.py",
+      "U"
+    ],
+    "exit_code": 0,
+    "seconds": 54.675,
+    "status": "PASS",
+    "log": "runs/U.log"
+  },
+  {
+    "job": "U_validation",
+    "command": [
+      "python3",
+      "run_one.py",
+      "U_validation"
+    ],
+    "exit_code": 0,
+    "seconds": 0.248,
+    "status": "PASS",
+    "log": "runs/U_validation.log"
+  },
+  {
+    "job": "gamma1",
+    "command": [
+      "python3",
+      "run_one.py",
+      "gamma1"
+    ],
+    "exit_code": 0,
+    "seconds": 7.913,
+    "status": "PASS",
+    "log": "runs/gamma1.log"
+  },
+  {
+    "job": "gamma2_hybrid",
+    "command": [
+      "python3",
+      "run_one.py",
+      "gamma2_hybrid"
+    ],
+    "exit_code": 0,
+    "seconds": 0.547,
+    "status": "PASS",
+    "log": "runs/gamma2_hybrid.log"
+  },
+  {
+    "job": "gamma2_continuum",
+    "command": [
+      "python3",
+      "run_one.py",
+      "gamma2_continuum"
+    ],
+    "exit_code": 0,
+    "seconds": 6.388,
+    "status": "PASS",
+    "log": "runs/gamma2_continuum.log"
+  },
+  {
+    "job": "independent_constants",
+    "command": [
+      "python3",
+      "run_one.py",
+      "independent_constants"
+    ],
+    "exit_code": 0,
+    "seconds": 1.722,
+    "status": "PASS",
+    "log": "runs/independent_constants.log"
+  },
+  {
+    "job": "independent_core",
+    "command": [
+      "python3",
+      "run_one.py",
+      "independent_core"
+    ],
+    "exit_code": 0,
+    "seconds": 0.605,
+    "status": "PASS",
+    "log": "runs/independent_core.log"
+  },
+  {
+    "job": "arithmetic_library",
+    "command": [
+      "python3",
+      "run_one.py",
+      "arithmetic_library"
+    ],
+    "exit_code": 0,
+    "seconds": 0.082,
+    "status": "PASS",
+    "log": "runs/arithmetic_library.log"
+  },
+  {
+    "job": "v120_formulas",
+    "command": [
+      "python3",
+      "run_one.py",
+      "v120_formulas"
+    ],
+    "exit_code": 0,
+    "seconds": 0.192,
+    "status": "PASS",
+    "log": "runs/v120_formulas.log"
+  },
+  {
+    "job": "v121_formulas",
+    "command": [
+      "python3",
+      "run_one.py",
+      "v121_formulas"
+    ],
+    "exit_code": 0,
+    "seconds": 0.542,
+    "status": "PASS",
+    "log": "runs/v121_formulas.log"
+  },
+  {
+    "job": "bs_certificates",
+    "command": [
+      "python3",
+      "run_one.py",
+      "bs_certificates"
+    ],
+    "exit_code": 0,
+    "seconds": 3.797,
+    "status": "PASS",
+    "log": "runs/bs_certificates.log"
+  },
+  {
+    "job": "v122_formulas",
+    "command": [
+      "python3",
+      "run_one.py",
+      "v122_formulas"
+    ],
+    "exit_code": 0,
+    "seconds": 4.979,
+    "status": "PASS",
+    "log": "runs/v122_formulas.log"
+  }
+]

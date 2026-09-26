@@ -1,0 +1,4 @@
+JOB clean : Full source campaign: 405 primes 100..3000 and five extra primes through 100003; LP through 300.
+SOURCE slack/t221_agents/clean_counts.py ARGS []
+wrote anc/slack/t221_agents/clean_counts_output.txt  (405 main rows + 5 extension rows, 37 LP(1) rows)  total time 4.08s
+JOB COMPLETE clean

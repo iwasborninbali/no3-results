@@ -1,0 +1,11 @@
+JOB v121_formulas : Independent exact checks of the larger-window counterexample, containing-window witnesses, exceptional cubic fibres and corrected signs.
+SOURCE verify_v121.py ARGS []
+F1: p=11, c=1: [0,23)^2 and [0,22)^2 have the same 40 points; exact maximum 22 < 30.
+F1: 68 exact HJSW maxima, all nonzero c at primes 3..19; lawful witnesses retained in 204 containing squares.
+F2: p=23, a=1, B=[0,46)^2: L4=11+2=13; U=42-6=36.
+F2: p=11 positive slope: same=1, split=0; finite split proportion is not 1/2.
+F2: corrected exact L4 and U formulas match direct enumeration in 896 cases at eight primes, every a and four boxes; corrections bounded by 4 lines and 16 points.
+F4: p=11 base copies (2,6),(5,9): common centre -4; first coordinates have the same sign.
+F4: 146 base-pair checks and 82115 torus points at nine primes; corrected symmetry preserves relation and swaps sharing events; 115/32 unchanged.
+ALL v1.21 checks passed
+JOB COMPLETE v121_formulas

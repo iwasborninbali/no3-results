@@ -1,0 +1,6 @@
+JOB potential : Potential cover and fixed-weight LP; arguments are p,k pairs.
+SOURCE slack/exact_c.py ARGS ['199', '3', '401', '3', '401', '5']
+p=199 k=3: G8=34 cycles=1 R=4 sum|A-B|=0 -> saving 17.00 => alpha <= 775.00 = 3.9141(p-1); LP(t=1/R) net 17.00
+p=401 k=3: G8=58 cycles=1 R=6 sum|A-B|=0 -> saving 19.33 => alpha <= 1580.67 = 3.9517(p-1); LP(t=1/R) net 19.33
+p=401 k=5: G8=48 cycles=16 R=9 sum|A-B|=48 -> saving 0.00 => alpha <= 1600.00 = 4.0000(p-1); LP(t=1/R) net -0.00
+JOB COMPLETE potential

@@ -1,0 +1,348 @@
+% section_strong.tex — Section 10: the strong form for cubic graphs — W_4 plus a matching of three-point lines (first solver, 2026-08-19).
+% Self-contained; uses \Fp, amsthm environments, Section~\ref{sec:cubic} (thm:cubic, lem:projection, cor:cubic), \input{lemma_fe} (lem:fe, second solver).
+% Data: slack/cube_matching_fast.py (exact counts), slack/g39_agents/{U_model,gamma1,gamma2,gamma2_continuum}.py (constants), logs slack/verification/g39_*.txt.
+
+\section{The strong form for cubic graphs: \texorpdfstring{$W_4$}{W4} plus a matching}\label{sec:strong}
+
+The pair-count law PC is proved below by a ten-conic argument.  A weaker uniform margin gives the unconditional
+coefficient $549/200=2.745$ for permutation cubics, with uniform error in the half-open boxes specified below.
+The original margin UM, the coefficient $2.652$ and G3 remain conditional; the v1.19 quadrature does not prove UM.
+
+\subsection*{Three-point lines and the certificate}
+
+We keep the notation of Section~\ref{sec:cubic}: $f(x)=ax^3$, $p\equiv2\pmod3$, box $B=[x_0,x_0+2p)\times[y_0,y_0+2p)$, $P=P(f,B)$, lifts
+$(r_x+\delta p,\,s_x+\varepsilon p)$; $W_4$ is the cover ``weight $1$ on every $\pm1$-line with $\ge4$ points'', $L_4$ their number, $S_0\subset P$
+the set of points on none of them ($2L_4+|S_0|=\tfrac{11}4p+o(p)$, Theorem~\ref{thm:cubic}).  Three residues $x_1,x_2,x_3$ are collinear on
+the residue curve iff $x_1+x_2+x_3=0$ (they are then the roots of $ax^3-mx-c$).  A three-point line of $P$ with a direction of slope $\notin\{0,\infty,\pm1\}$
+has three distinct residues; we call it a line of \emph{family $(1,3)$} if its points are $q,\ q+d,\ q+3d$ for an integer vector $d=(u^*,v^*)$: writing
+$z=3^{-1}u^*\bmod p$, its residues are $-4z,\,-z,\,5z$ (they sum to $0$) and $v^*\equiv f(-z)-f(-4z)=63az^3\pmod p$; conversely every $u\in\Fp^*$, every lift
+of the base residue $-4z$ and every pair of representatives $(u^*,v^*)$ with $q+d,q+3d\in B$ gives such a line, and distinct data give distinct lines.
+(In the general description of the three-point lines by steps $(i,j)$ — points $q,q+id,q+jd$, base residue $-(i+j)u/3$ — this is the family $(1,3)$; the
+family $(1,2)$, the lines through the four lifts of the centre $(0,f(0))$, is useless for what follows since all its lines meet in four points, and it is
+excluded throughout.)  A three-point line is \emph{good}
+if its three points lie in $S_0$.
+
+\begin{lemma}[the certificate]\label{lem:cert}
+If $M$ is a set of pairwise disjoint good three-point lines, then $\alpha(f,B)\le2L_4+|S_0|-|M|=(\tfrac{11}4+o(1))p-|M|$.
+\end{lemma}
+\begin{proof}
+Weight $1$ on the $\pm1$-lines of $W_4$, weight $1$ on the lines of $M$, weight $1$ on the points of $S_0$ not on a line of $M$: every point of $P$
+receives weight $\ge1$, the lines of $M$ are disjoint and inside $S_0$, and a lawful set meets a line in $\le2$ points; the cost is
+$2L_4+2|M|+(|S_0|-3|M|)$.
+\end{proof}
+
+\begin{lemma}[matching]\label{lem:match}
+Let $G$ be the set of good lines of family $(1,3)$ and $\Pi$ the set of unordered pairs of lines of $G$ with a common point.  Then $G$ contains a set of
+$|G|-|\Pi|$ pairwise disjoint lines.
+\end{lemma}
+\begin{proof}
+Delete one line from each pair of $\Pi$.
+\end{proof}
+
+\subsection*{The local law and the two constants}
+
+Fix a residue $x$ with position $\pi=((x-x_0)\bmod p)/p$ in the $x$-window and thresholds $\theta_+(x)=1-((f(x)-x-y_0+x_0)\bmod p)/p$,
+$\theta_-(x)=((f(x)+x-x_0-y_0)\bmod p)/p$ (Section~\ref{sec:cubic}).  Whether a lift $(\delta,\varepsilon)$ of $x$ is in $S_0$ depends, besides
+$(\pi,\theta_+,\theta_-,\delta,\varepsilon)$, only on the following data of $x$: whether the partner conics $t^2+xt+x^2\mp1/a=0$ have roots (the
+Legendre symbols of $\Delta_\pm=\pm4/a-3x^2$), and the positions of the roots ($t_2$ and $t_3=-x-t_2$ on each slope), through the classes and the line
+sizes of Lemma~\ref{lem:lifts}.  Averaging over these data with their limiting law — fair independent coins for the two symbols, and a uniform independent
+position of $t_2$ on each slope — defines the \emph{uncovered probability}
+\[
+ U(\pi,\theta_+,\theta_-,\delta,\varepsilon;\ x_0/p)\in[0,1],
+\]
+an explicit piecewise polynomial (it factorises as $P_+\cdot P_-$, the two slopes being independent; for $\delta=\varepsilon$ the factor $P_+$ equals
+$\tfrac12$ exactly, since the slope-$(+1)$ line through such a lift has $k_++n_+\ge4$ points iff $k_+=3$).
+For completeness we define both model constants by finite sums of bounded integrals, including all multiplicities.
+Write $\{x\}=x-\lfloor x\rfloor$, $A=(-4,-1,5)$ and $h=(0,1,3)$.
+The box-parameter domain is the full torus $(\xi,\eta)\in[0,1)^2$, where $\xi=\{x_0/p\}$ and $\eta=\{y_0/p\}$;
+all constants below have both arguments, with no asserted independence of $\eta$.
+For parameters $(Z,W)$ set
+\[
+ \pi_n=\{A_nZ-\xi\},\quad F_n=\{A_n^3W\},\quad
+ \theta_{+,n}=1-\{F_n-\pi_n-\eta\},\quad
+ \theta_{-,n}=\{F_n+\pi_n-\eta\}.
+\]
+Given an anchor role $r$, its lifts $d_r,e_r\in\{0,1\}$ and a real direction $(s,v)$, define
+\[
+ X_n=\xi+\pi_r+d_r+(h_n-h_r)s,\qquad
+ Y_n=\eta+\{F_r-\eta\}+e_r+(h_n-h_r)v,
+\]
+\[
+ d_n=X_n-\xi-\pi_n,\qquad e_n=Y_n-\eta-\{F_n-\eta\}.
+\]
+A line is admissible precisely when all $d_n,e_n\in\{0,1\}$; these differences are integers in the parameterisations below.
+Boundary choices have measure zero.  Write $I(L)$ for this indicator and
+$U_n(L)=U(\pi_n,\theta_{+,n},\theta_{-,n},d_n,e_n;\xi)$ on admissible data.
+The probability $U$ can be evaluated without root labels: for each slope toss a fair membership bit; on membership take
+$t\in[0,1)$ uniformly and its companion $\{-A_nZ-t\}$, convert these two absolute root residues to window positions by subtracting $\xi$ modulo one, form the three root classes by the thresholds above,
+and use the lift table of Lemma~\ref{lem:lifts} to test whether that lift's line has at most three points.
+Average the two-slope indicator.  This is a bounded, explicitly integrable function and is root-swap invariant.
+
+For one line integrate $s\in(-2/3,2/3)$, $w\in[0,1)$, average $\rho\in\{0,1,2\}$, and sum $d_1,e_1\in\{0,1\}$ and $b\in\mathbb Z$.
+Use $Z=(s+\rho)/3$, $W=w$, anchor $r=1$, and $v=\{63w\}+b$.  Then
+\begin{equation}\label{eq:gamma1}
+ \gamma_1(\xi,\eta)=\frac13\sum_{\rho,d_1,e_1,b}\int_{-2/3}^{2/3}\!\int_0^1
+ I(L)\prod_{n=1}^3U_n(L)\,dw\,ds .
+\end{equation}
+Only $|v|<2/3$ contributes, so the integer sum is finite.
+
+For pairs use the following complete list of distinct shared-role configurations and ratios $Z'/Z=P/Q$ in lowest terms:
+\[
+\begin{array}{c|rrrrrr}
+(m,m')&(1,2)&(1,3)&(2,1)&(2,3)&(3,1)&(3,2)\\
+P/Q&4&-4/5&1/4&-1/5&-5/4&-5
+\end{array}
+\]
+The role of a point on a family-$(1,3)$ line is intrinsic: its two consecutive gaps have ratio $1:2$.
+If the same role is shared, the residue parameter is the same, and two different representatives for either coordinate of the direction
+would make the union of the role coordinates span at least $2$; hence both cannot be admissible in a half-open box of side $2$.
+Thus a distinct pair has $m\ne m'$.  Two distinct lines share at most one point, so summing the three configurations $m<m'$ counts unordered pairs once.
+Equivalently, sum the six ordered configurations and divide by two.
+
+For each $m<m'$ integrate $(s,t)\in(-2/3,2/3)\times[0,1)$ and average $\rho\in\{0,1,2\}$ and $j\in\{0,\dots,Q-1\}$.
+Put
+\[
+ Z=(s+\rho)/3,\quad Z'=(PZ+j)/Q,\quad W=\{Q^3t\},\quad W'=\{P^3t\}.
+\]
+Construct $L_1$ from $(Z,W)$ with anchor $1$, lifts $(d_1,e_1)\in\{0,1\}^2$, direction $(s,\{63W\}+b_1)$.
+Construct $L_2$ from $(Z',W')$ with anchor $m'$, the same physical point as role $m$ of $L_1$ (thus the same lifts),
+and direction $(\{3Z'\}+b_2,\{63W'\}+b_3)$.
+All $b_i\in\mathbb Z$ are summed; admissibility forces both direction coordinates into $(-2/3,2/3)$ and leaves a finite sum.
+With $J(L_1,L_2)$ the joint probability that all their points are uncovered, define
+\begin{equation}\label{eq:gamma2}
+ \gamma_2(\xi,\eta)=\sum_{m<m'}\frac1{3Q}
+ \sum_{\rho,j,d_1,e_1,b_1,b_2,b_3}\int_{-2/3}^{2/3}\!\int_0^1
+ I(L_1)I(L_2)J(L_1,L_2)\,dt\,ds .
+\end{equation}
+Here is an explicit convention for shared variables in $J$.
+For each distinct conic indexed by $(\sigma,c)$, with residue coefficient $c$ in
+$\{A_n\}\cup\{(P/Q)A_n\}$, use one fair membership bit and one uniform root variable.
+Identical coefficients reuse both variables.  If coefficients are opposite, their partner pairs are negatives of one another:
+reuse the bit and negate both roots.  More generally conics are identified by equality of $(\sigma,c^2)$,
+not by their position in a list; no repeated conic receives a fresh random draw.
+The common point is tested once.  In the six configurations above there are five distinct coefficients with distinct squares
+apart from the identified common coefficient, so
+$J=U_m(L_1)\prod_{n\ne m}U_n(L_1)\prod_{n\ne m'}U_n(L_2)$.
+For example the coefficient lists for $m<m'$ are
+$\{-16,-4,-1,5,20\}$, $\{-4,-1,5,16/5,4/5\}$ and
+$\{-4,-1,5,4/5,1/5\}$.
+Additional coincidences modulo $p$ occur only at finitely many primes dividing differences or sums of these fixed rational squares;
+they are excluded in the asymptotic count, not assigned independent variables.
+The substitution $(W,W')=(\{Q^3t\},\{P^3t\})$ shares the cubic parameter; it is the integral form of averaging its $Q^3$ residue digits.
+These definitions, including the finite configuration list, specify a model.  The following theorem establishes its applicability to joint arithmetic counts.
+
+\begin{theorem}[PC: pair counts]\label{hyp:pair}
+For $p\equiv2\pmod3$ tending to infinity, the number $|\Pi|$ of unordered intersecting pairs of good family-$(1,3)$ lines satisfies
+$|\Pi|=\gamma_2(\xi,\eta)p+o(p)$, uniformly in $a\in\Fp^*$ and $(x_0,y_0)$.
+\end{theorem}
+
+\input{lemma_fe}
+
+\begin{proof}[Proof of Theorem~\ref{hyp:pair}]
+Fix one of the three configurations $m<m'$ in \eqref{eq:gamma2}, with ratio $P/Q$.
+Relative to $z$, the five distinct residue coefficients are, respectively,
+\[
+ \{-16,-4,-1,5,20\},\quad
+ \{-4,-1,5,16/5,4/5\},\quad
+ \{-4,-1,5,4/5,1/5\}.
+\]
+For each coefficient $c$ and sign $\sigma$ put $D_{\sigma,c}=4\sigma/a-3c^2z^2$.
+Outside finitely many primes independent of $a$, these ten polynomials are squarefree and have disjoint zero sets:
+a collision requires $c^2=c'^2$ or $c^2=-c'^2$, neither of which occurs between distinct entries over the rationals.
+Every nonempty product has a simple zero unique to one factor, so their square classes are independent over $\overline{\Fp}(z)$.
+For every membership set $S$, the multiquadratic curve $X_S$ with function field
+$\overline{\Fp}(z,\sqrt{D_s}:s\in S)$ is geometrically irreducible, of bounded degree and genus;
+products of unused discriminants remain nonsquares in its function field.
+
+As in Lemma~\ref{lem:fe}, expand nonmembership and interval indicators, counting on $X_S$ with factor $2^{-|S|}$.
+After collecting the deterministic coordinate relations, additive phases have the form
+\[
+ Az+Baz^3+\sum_{s\in S}H_s\sqrt{D_s}.
+\]
+Independent sign changes force every $H_s=0$ if this phase is constant, and then $A=B=0$.
+All pole orders and curve complexities are bounded independently of $p,a$.  For sufficiently large $p$, a nonconstant phase
+cannot be Artin--Schreier trivial: any pole of $h^p-h$ has order at least $p$.
+An unused nonempty discriminant product gives a nontrivial quadratic Kummer character, which cannot be cancelled by an
+additive character of order $p$.  Thus the pure and mixed character-sum bounds used in Lemma~\ref{lem:fe}
+apply uniformly, giving $O(\sqrt p\log^C p)=o(p)$ for fixed interval predicates and a fixed $C$.
+
+The zero-character coefficient of each membership pattern is
+$2^{-|S|}2^{-(10-|S|)}=2^{-10}$, since $|X_S(\Fp)|=p+O(\sqrt p)$.
+Hence the ten membership bits are independent fair bits in the limiting law; chosen roots are independent uniform
+coordinates, with each companion forced by its root sum $-cz$.  The common coefficient uses the same bit and root
+on both lines, and its physical point is tested once.  The predicates are invariant under the independent root swaps.
+Integrating the roots therefore gives exactly the five-factor $J$ of \eqref{eq:gamma2}.
+
+The base coordinates retain the residue branches.  Write $z=Qr$, $z'=Pr$; the normalized residues of $r$ and $ar^3$
+give independent Haar variables, so the two cubic coordinates are the shared pair
+$(W,W')=(\{Q^3T\},\{P^3T\})$.  In a chart with first direction $s$, solving $3Z=s\pmod1$ gives
+$Z=(s+\rho)/3$, and solving $QZ'=PZ\pmod1$ gives $Z'=(PZ+j)/Q$.
+The three and $Q$ branches have measure factor $1/(3Q)$, exactly as in \eqref{eq:gamma2}.
+
+After residue-digit subdivision and elimination of deterministic identities, admissibility and root-threshold predicates
+are finite Boolean combinations of affine inequalities in these joint coordinates.  A mesh of side $1/M$ has boundary
+volume $O(1/M)$ uniformly in the box: only the offsets of finitely many fixed hyperplane pieces change.
+Approximate from inside and outside by unions of cells, symmetrized under root swaps.  For fixed $M$ the character sums
+give $o_M(p)$ uniformly in $a$ and the box, and the difference of the approximations is $O(p/M)+o_M(p)$.
+Let $p\to\infty$ first, then $M\to\infty$.  This proves the uniform $o(p)$ passage to \eqref{eq:gamma2}.
+The role uniqueness established above excludes distinct equal-role pairs, and two distinct lines meet at most once;
+the sum over $m<m'$ therefore counts every unordered pair exactly once.
+\end{proof}
+
+\begin{proposition}[counts]\label{prop:counts}
+Uniformly in $a$ and the box, $|G|=\gamma_1(\xi,\eta)p+o(p)$.
+Also $|\Pi|=\gamma_2(\xi,\eta)p+o(p)$.
+\end{proposition}
+\begin{proof}
+For one line the three residues have coefficients $-4,-1,5$ in $z$ (equivalently divide these by $3$ in $u$).
+Their squared coefficients are distinct, and uncovered-lift events are invariant under each root swap.
+For each of the finite choices of representatives, lifts and membership bits in \eqref{eq:gamma1}, work in the independent torus coordinates
+of Lemma~\ref{lem:fe}: the base parameter, the cubic value and one root per present conic.
+After subdivision at the finitely many residue-digit boundaries, admissibility and root-threshold comparisons are affine inequalities in these coordinates.
+Their boundary cells in a mesh of side $1/M$ have measure $O(1/M)$, uniformly in $(\xi,\eta)$: there are finitely many hyperplane pieces with fixed normals,
+and only their offsets vary.  Deterministic linear identities are eliminated before subdivision.
+Approximate from inside and outside by unions of mesh cells, symmetrised under the independent root swaps so that Lemma~\ref{lem:fe} applies.
+For fixed $M$ it gives the model count with $o_M(p)$ error, uniformly in $a$ and the box; the difference between the two approximations is
+$O(p/M)+o_M(p)$.  Let $p\to\infty$ first and then $M\to\infty$.  Integrating the independent partner data gives the three $U$ factors and proves the stated $o(p)$ error.
+The second assertion is Theorem~\ref{hyp:pair}, whose ten-conic proof retains the shared variables.
+\end{proof}
+
+\begin{theorem}[a weaker uniform margin]\label{thm:weakmargin}
+For every $(\xi,\eta)\in[0,1)^2$,
+\[
+ \gamma_2\le\tfrac34\gamma_1,\qquad
+ \gamma_1\ge\frac{625}{27216},\qquad
+ \gamma_1-\gamma_2\ge\frac{625}{108864}>\frac1{200}.
+\]
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:lifts} gives $1/4\le U(q)\le1/2$: for each lift one slope's noncoverage factor is exactly $1/2$,
+and the other is between $1/2$ and $1$, since absence of partners leaves that lift uncovered.
+Assign these model probabilities to the actual family lines at a sufficiently large prime and put
+\[
+ A_p=\sum_L\prod_{q\in L}U(q),\qquad
+ B_p=\sum_{\{L,L'\}:L\cap L'\ne\varnothing}\prod_{q\in L\cup L'}U(q).
+\]
+These are deterministic weighted sums.  A physical point lies on at most one family line in each specified role:
+the role determines the residue parameter and both direction residues.  Distinct coordinate representatives differ by at least $p$.
+For either endpoint role the offset of magnitude three forces the union's coordinate span to be at least $3p$.
+For the middle role the offsets are $-1,0,2$; if $d=-a_0<0<d'=b_0$, the span is
+$\max(2a_0,b_0)+\max(a_0,2b_0)\ge2(a_0+b_0)=2|d'-d|$;
+if the representatives have the same sign, the span is at least $3|d'-d|$.
+Neither fits in a half-open interval of length $2p$.
+Each line thus has at most six distinct neighbours, two at each point.  Two different lines meet at just one point,
+so their union weight is at most $1/4$ times either incident line's weight.  Summing ordered pairs and dividing by two gives
+$B_p\le(6/8)A_p=3A_p/4$.
+
+Only base-coordinate equidistribution is needed for $A_p/p\to\gamma_1$ and $B_p/p\to\gamma_2$.
+For a pair ratio $P/Q$, write $z=Qr$, $z'=Pr$.  Every nonzero phase $hr+\ell ar^3$ is a nonconstant polynomial
+of degree at most three and has sum $O(\sqrt p)$, uniformly in $a\ne0$.
+Its two Haar coordinates give precisely the shared linear and cubic parameters of \eqref{eq:gamma1}--\eqref{eq:gamma2};
+the five distinct coefficients give the prescribed product $J$ by definition of the weights.
+The fixed-mesh argument above applies also after integrating the root coordinates defining $U$, and gives uniform convergence.
+Moreover these integrals are continuous on the parameter torus: after unfolding the root averages, changing $(\xi,\eta)$
+by $\delta$ changes only a region of volume $O(\delta)$ along finitely many hyperplane pieces.
+Approximating any torus point by window parameters on the $1/p$ grid transfers $B_p\le3A_p/4$ to every $(\xi,\eta)$.
+This argument concerns model weights; PC separately supplies the actual good-line counts.
+
+Replace the three $U$ factors in \eqref{eq:gamma1} by one and call the resulting geometric density $C$.
+Admissibility factors by coordinate, so $C=C_x(\xi)C_y(\eta)$.
+For direction coordinate $s\in(-2/3,2/3)$ the permissible anchor interval has length $\ell(s)=2-3|s|$.
+Horizontally the three branches $Z=(s+\rho)/3$ and two anchor lifts form a grid of six points spaced $1/3$ apart
+in the length-two window, since the anchor coefficient $-4$ is coprime to $3$.
+Their averaged admissible count is at least $\lfloor3\ell(s)\rfloor/3$ for every translate.
+Vertically the substitution $v=\{63w\}+b$ has $63$ branches with Jacobian $1/63$;
+the coefficient $-64$ is coprime to $63$, giving $126$ anchors spaced $1/63$ apart and lower count
+$\lfloor63\ell(v)\rfloor/63$.  Exactly,
+\[
+ I_q:=\int_{-2/3}^{2/3}\frac{\lfloor q(2-3|s|)\rfloor}{q}\,ds
+ =\frac{2}{3q^2}\sum_{j=0}^{2q-1}j=\frac{4q-2}{3q}.
+\]
+Thus $C_x\ge I_3=10/9$, $C_y\ge I_{63}=250/189$, and $C\ge2500/1701$.
+Since $U\ge1/4$, $\gamma_1\ge C/64\ge625/27216$.  Finally
+\[
+ \gamma_1-\gamma_2\ge\gamma_1/4\ge625/108864,
+ \qquad \frac{625}{108864}-\frac1{200}=\frac{2017}{2721600}>0.
+\]
+\end{proof}
+
+\begin{theorem}[unconditional permutation-cubic bound]\label{thm:cubic2745}
+As primes $p\equiv2\pmod3$ tend to infinity, for every $a\in\Fp^*$ and every half-open box
+$B=[x_0,x_0+2p)\times[y_0,y_0+2p)$ of integers,
+\[
+ \alpha(ax^3,B)\le\left(\frac{549}{200}+o(1)\right)p=(2.745+o(1))p,
+\]
+with error uniform in $a,x_0,y_0$.
+\end{theorem}
+\begin{proof}
+Proposition~\ref{prop:counts}, Lemma~\ref{lem:match} and Lemma~\ref{lem:cert} give
+$\alpha\le(11/4-\gamma_1+\gamma_2+o(1))p$, uniformly in this domain.
+Theorem~\ref{thm:weakmargin} gives $11/4-1/200=549/200$.
+The argument in fact gives $298751/108864$; $2.745$ is a rounded weakening.
+Neither CP nor BT is needed for this consequence.
+\end{proof}
+
+\paragraph{Hypothesis UM (uniform margin).}\label{hyp:margin}
+On the entire parameter domain $[0,1)^2$,
+\begin{equation}\label{eq:margin}
+ \gamma_1(\xi,\eta)-\gamma_2(\xi,\eta)\ge0.098.
+\end{equation}
+This is unproved.  In particular a sampled minimum and continuity do not establish it.
+
+\emph{Numerical evidence, quoted from v1.19.}
+The archived \texttt{anc/slack/g39\_agents/} computations and their logs report $\gamma_1$ around $0.1287$--$0.1362$
+on the sampled grid $\xi,\eta\in\{0,1/4,1/2,3/4\}$ and $\gamma_2$ around $0.028$--$0.031$ at the table's box positions.
+The table's $\gamma_2$ column is the v1.19 finite-dump hybrid estimate (\texttt{gamma2.py}); it averages model probabilities on actual intersecting pairs.  It is distinct from the continuum quadrature (\texttt{gamma2\_continuum.py}) for \eqref{eq:gamma2}.  Neither is an enclosure, and neither the endpoints nor $0.098$ are certified extrema.
+The $600\times600$ one-line quadrature and the pair quadrature (whose grid sizes are recorded separately in its log) do not cover all box positions.
+The table's discrepancy $0.028-0.0212=0.0068$ is to be compared with $0.098-1/12=0.01466\ldots$, about $2.16$ times as large,
+not ten times.  No rigorous quadrature error is known here.
+The subtractions $2.652=11/4-0.098$ and $2.657=11/4-0.093$ are arithmetic identities.
+The first is an extremal upper coefficient under UM; the second would be one under a proved uniform margin $0.093$.
+The former v1.19 ``allowance'' $0.005$ proved neither margin and is withdrawn.
+
+\begin{table}[ht]\centering\scriptsize
+\begin{tabular}{lccccccc}
+\toprule
+$p$, box & lines$/p$ & good$/p$ & $\gamma_1$ & pairs$/p$ & $\gamma_2$ & (good$-$pairs)$/p$ & threshold\\
+\midrule
+$3203$, $(0,0)$        & $1.730$ & $0.1318$ & $0.1287$ & $0.0212$ & $0.028$ & $0.1105$ & $0.0895$\\
+$3203$, $(700,-2100)$  & $1.802$ & $0.1339$ & $0.1363$ & $0.0253$ & $0.030$ & $0.1086$ & $0.0720$\\
+$12809$, $(0,0)$       & $1.731$ & $0.1313$ & $0.1287$ & $0.0275$ & $0.028$ & $0.1038$ & $0.0847$\\
+$12809$, $(-6404,0)$   & $1.801$ & $0.1365$ & $0.1361$ & $0.0315$ & $0.030$ & $0.1050$ & $0.0830$\\
+\bottomrule
+\end{tabular}
+\caption{Family $(1,3)$: exact counts (\texttt{anc/slack/cube\_matching\_fast.py}) versus the uncertified one-line quadrature and pair hybrid estimates (quoted from v1.19); ``threshold'' $=(2L_4+|S_0|-\tfrac83p)/p$ is
+the matching size the finite-$p$ certificate needs to reach $\tfrac43N$ (asymptotically $\tfrac1{12}$).}\label{tab:strong}
+\end{table}
+
+\begin{theorem}[permutation cubics, strong form; numerical endpoint conditional on UM]\label{thm:strong}
+For $p\equiv2\pmod3$ tending to infinity, $a\in\Fp^*$ and every half-open $2p\times2p$ box $B$, uniformly in $a$ and the box,
+\[
+ \alpha(ax^3,B)\le\bigl(11/4-\gamma_1(\xi,\eta)+\gamma_2(\xi,\eta)+o(1)\bigr)p
+\,.
+\]
+Under Hypothesis UM this is at most $(2.652+o(1))p=(1.326+o(1))N$.
+Under that hypothesis, in particular $\alpha(ax^3,B)<(4/3-0.007)N$ for sufficiently large $p$.
+\end{theorem}
+\begin{proof}
+Proposition~\ref{prop:counts} and Lemma~\ref{lem:match} give a matching of at least
+$(\gamma_1-\gamma_2-o(1))p$ good lines.  Lemma~\ref{lem:cert} gives the first inequality; UM gives the numerical endpoint.
+The final strict inequality follows from $4/3-0.007-1.326=1/3000>0$.
+\end{proof}
+
+\begin{corollary}[G3, conditional on UM]\label{cor:g3}
+Assume Hypothesis UM.  As $p\to\infty$, uniformly over degree-three polynomials $f\in\Fp[x]$ and all $2p\times2p$ boxes,
+$\alpha(f,B)\le(4/3+o(1))\,2p$; for permutation cubics the coefficient is at most $1.326$.
+\end{corollary}
+\begin{proof}
+For non-permutation cubics use Lemma~\ref{lem:projection} and \eqref{eq:nonperm}.
+Translate permutation cubics to $ax^3$ and use Theorem~\ref{thm:strong} under UM.
+\end{proof}
+
+\begin{remark}
+The finite certificate of Lemma~\ref{lem:cert} can always be checked point by point.
+The historical greedy matching experiments at $p\le797$ and their larger-family variants, archived in
+\texttt{anc/slack/verification/cube\_matching\_fast.txt}, are finite computations.  PC is now proved, but a uniform margin strictly exceeding $1/12$
+remains needed by this route to make G3 unconditional.  Such a margin would suffice even if the coefficient $2.652$ were lost;
+the weaker margin of Theorem~\ref{thm:weakmargin} does not reach that threshold.
+\end{remark}

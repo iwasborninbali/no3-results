@@ -1,0 +1,11 @@
+JOB v122_formulas : Independent exact weak-UM constants, CP sieve and partner laws through degree 15, BT arithmetic, and repaired-verifier negative tests.
+SOURCE verify_v122.py ARGS []
+Weak UM: 200 exact floor integrals; Cx >= 10/9, Cy >= 250/189;
+gamma1 >= 625/27216; margin >= 625/108864 > 1/200; coefficient 549/200 = 2.745.
+CP: 816 sieve cases for 0 <= j <= r <= k <= 15; 120 size-biased identities;
+rencontres and normalization checked independently, including exact permutations through k=7.
+BT: 999 length checks; exact tail 5/256; table saving 68350729/123863040 (BS still required).
+Verifier: honest p=11 run [3,4,5] gives (24, 24); fractional forgery REJECTED;
+bool indices, signature, interval, duplicate, missing block and wrong summary also REJECTED.
+ALL v1.22 checks passed
+JOB COMPLETE v122_formulas

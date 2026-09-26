@@ -1,0 +1,4 @@
+JOB monomial_cover : Finite degree-five W4 cost in box (0,0), at p=10000019. This is one finite prime, not the three-prime historical campaign.
+SOURCE slack/pp_exact_UL_np.py ARGS ['10000019', '5']
+p=10000019 k=5 box=(0,0): L/p=0.51658 U/p=1.76306 cost/p=2.79623 = 1.39812 N
+JOB COMPLETE monomial_cover

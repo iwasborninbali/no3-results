@@ -1,0 +1,10 @@
+JOB eight_cover : Point-by-point eight-line cover and finite LP comparison.
+SOURCE slack/km1_theorem_check.py ARGS ['11', '13', '17', '19', '23', '31', '101']
+p=11: m8=2, blocks=4, cover cost = 32 = 4(p-1) - 4 m8 = 32  (3.200(p-1)); LP(1) = 32.00
+p=13: m8=0, blocks=0, cover cost = 48 = 4(p-1) - 4 m8 = 48  (4.000(p-1)); LP(1) = 48.00
+p=17: m8=0, blocks=0, cover cost = 64 = 4(p-1) - 4 m8 = 64  (4.000(p-1)); LP(1) = 62.00
+p=19: m8=2, blocks=4, cover cost = 64 = 4(p-1) - 4 m8 = 64  (3.556(p-1)); LP(1) = 64.00
+p=23: m8=2, blocks=4, cover cost = 80 = 4(p-1) - 4 m8 = 80  (3.636(p-1)); LP(1) = 80.00
+p=31: m8=2, blocks=4, cover cost = 112 = 4(p-1) - 4 m8 = 112  (3.733(p-1)); LP(1) = 108.00
+p=101: m8=8, blocks=16, cover cost = 368 = 4(p-1) - 4 m8 = 368  (3.680(p-1)); LP(1) = 353.33
+JOB COMPLETE eight_cover

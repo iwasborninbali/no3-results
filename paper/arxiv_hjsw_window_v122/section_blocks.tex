@@ -1,0 +1,179 @@
+% section_blocks.tex — the block decomposition along runs of consecutive quadratic residues (second solver, 19.08)
+\subsection*{The blocks: runs of consecutive quadratic residues}\label{sec:blocks}
+
+The two constructions above (the eight-point groups, the seven-point groups) are special cases of a decomposition of $\Pset_{-1}$ that
+is exact and, as it turns out, carries the whole strength of the line cover by rows, columns and slope-$(\pm1)$ lines.
+
+For a point $q=(x,y)\in\Pset_{-1}$ put $r_+(q)=x-y$ and $r_-(q)=x+y$ modulo $p$.  Since $r_-^2-r_+^2=4xy\equiv\pm4$ according as
+$q\in H(1)$ or $q\in H(-1)$, the two residues of a point are linked; we index everything by
+\[
+ t(q):=\tfrac14\,r_+(q)^2\in\Fp\qquad\text{for }q\in H(1),\qquad t(q):=\tfrac14\,r_-(q)^2\ \ \text{for }q\in H(-1),
+\]
+so that $q\in H(1)$ has $\{\tfrac14r_+^2,\tfrac14r_-^2\}=\{t,t+1\}$ and $q\in H(-1)$ has $\{\tfrac14r_-^2,\tfrac14r_+^2\}=\{t,t+1\}$:
+every point determines an unordered pair of \emph{consecutive} values $t,t+1$, both of which are squares (as $4t=r^2$).  Call
+$\{t,t+1\}$ the \emph{edge} of $q$.
+
+\begin{lemma}[edges]\label{lem:edges}
+Let $t\in\Fp$ be such that $t$ and $t+1$ are both squares (with $0$ counted as a square).  The points of $\Pset_{-1}$ with edge
+$\{t,t+1\}$ are the four lifts of each of the $H(1)$-classes $\kappa$ with $d_\kappa^2\equiv4t$ together with the four lifts of each of
+their images under $R$, which are $H(-1)$-classes.  For $t\ne0,-1$ there are four such $H(1)$-classes (two $\sigma$-pairs, for
+$d_\kappa\equiv\pm2\sqrt t$), hence $32$ points; for $t=0$ there are two (the $\tau$-fixed classes $(1,1)$, $(-1,-1)$) and for $t=-1$ two
+(the $\sigma$-fixed classes, present iff $-1$ is a square), hence $16$ points.  If one of $t,t+1$ is a non-square there are no such points.
+The reflections $R$ and $R'$ preserve the edge, so every row and every column of the box consists of four points with the same edge.
+\end{lemma}
+\begin{proof}
+An $H(1)$-class $\kappa=(a,1/a)$ has $r_+\equiv a-1/a=:d_\kappa$ and $r_-\equiv a+1/a=:e_\kappa$ with $e_\kappa^2-d_\kappa^2=4$, so its edge is
+$\{\tfrac14d_\kappa^2,\tfrac14d_\kappa^2+1\}$; conversely $d_\kappa\equiv\pm2\sqrt t$ determines $a$ up to the two roots of $a^2-d_\kappa a-1$
+(which exist because $d_\kappa^2+4=4(t+1)$ is a square), and those two roots form a $\sigma$-pair, so that the two signs of $d_\kappa$ give
+four classes unless $d_\kappa\equiv-d_\kappa$, i.e.\ $t=0$, when $a^2\equiv1$ gives the single pair $\{(1,1),(-1,-1)\}$; the case $t=-1$ is
+$e_\kappa\equiv0$, i.e.\ $a^2\equiv-1$.  By $R(x,y)=(p-x,y)$ we have $(r_+,r_-)\mapsto(-r_-,-r_+)$ and by $R'(x,y)=(x,2p-y)$ we have
+$(r_+,r_-)\mapsto(r_-,r_+)$: both preserve the pair $\{\tfrac14r_+^2,\tfrac14r_-^2\}$ and exchange $H(1)$ with $H(-1)$, so the classes are as
+stated and rows ($\kappa\cup R\kappa$) and columns ($\kappa\cup R'\kappa$) stay inside the edge (Lemma~\ref{lem:rowsRR}).
+\end{proof}
+
+Let $Q:=\{t\in\Fp:\ t\ \text{is a square}\}$ (including $t=0$) and consider the graph on $Q$ whose edges are the pairs $\{t,t+1\}$ of
+consecutive squares (Lemma~\ref{lem:edges}).  Its connected components are the maximal \emph{runs} of consecutive
+squares $t_0,t_0+1,\dots,t_0+k-1$ (with $0$ joining the runs that end at $-1$ and start at $1$, if $-1$ is a square).  For a run $\varrho$
+let $B_\varrho\subseteq\Pset_{-1}$ be the union of the points of its $k-1$ edges, so that $|B_\varrho|=32(k-1)$ unless the run contains
+$0$, when each of its at most two degenerate edges contributes $16$ instead of $32$.
+
+\begin{theorem}[block decomposition]\label{thm:blocks}
+The sets $B_\varrho$, $\varrho$ a run of consecutive squares, partition $\Pset_{-1}$; each $B_\varrho$ is a union of rows and of columns;
+and every row, every column and every slope-$(\pm1)$ line of the box lies inside a single $B_\varrho$.  Consequently
+\begin{equation}\label{eq:blocks}
+ \alpha(\Pset_{-1})\ \le\ \sum_{\varrho}\beta(B_\varrho),
+\end{equation}
+where $\beta(B)$ is the largest size of an $S\subseteq B$ with at most two points on every row, column and slope-$(\pm1)$ line,
+and the same sum with $\beta$ replaced by the value of the linear relaxation equals the value of the linear relaxation for
+$\Pset_{-1}$ with rows, columns and slope-$(\pm1)$ lines.  (Lines of other slopes may carry three points of $\Pset_{-1}$ --- two from one
+hyperbola and one from the other --- and such a line need not stay inside a block; dropping those constraints is what makes the bound
+block-wise, and it only weakens it.)
+\end{theorem}
+\begin{proof}
+Every point lies on exactly one edge (Lemma~\ref{lem:edges}), and the edges of one run are pairwise disjoint sets of classes, so the
+$B_\varrho$ partition $\Pset_{-1}$; rows and columns stay inside an edge, hence inside a block.  A line of slope $+1$ with residue $d$
+carries the $H(1)$-classes with $d_\kappa\equiv\pm d$ --- edge $\{t,t+1\}$, $t=\tfrac14d^2$ --- and the $H(-1)$-classes with $r_+\equiv\pm d$,
+whose edge is $\{t-1,t\}$ (their $r_-^2=d^2-4$); both edges contain the vertex $t$, so they lie in the same run and the line lies in one
+block.  Slope $-1$ is symmetric under $R$.  Since the blocks partition $\Pset_{-1}$, a lawful $S$ satisfies
+$|S|=\sum_\varrho|S\cap B_\varrho|$, and each $S\cap B_\varrho$ has at most two points on every row, column and slope-$(\pm1)$ line, so
+$|S\cap B_\varrho|\le\beta(B_\varrho)$; the constraint matrix of the linear relaxation over those three families is block diagonal.
+\end{proof}
+
+\input{lemma_run}
+
+For a nondegenerate block put $s(B)=|B|/2-\beta(B)\ge0$; the row bound proves nonnegativity.
+The density law does not establish that $s(B)$ depends only on its descent signature.
+
+\paragraph{Hypothesis BS (block savings).}\label{hyp:block}
+For every fixed run length $k$, the optimum saving of every nondegenerate arithmetic block depends only on its descent signature $\varepsilon$.
+Write this common value as $s(\varepsilon)$.  For $2\le k\le9$ it is at least
+$b(\varepsilon):=\min \texttt{standard\_model.json}[\varepsilon]$, using the table in \texttt{anc/slack/t221/}.
+This is a hypothesis about all admissible configurations, not a consequence of sampling.
+
+\begin{theorem}[BT: block saving bound]\label{hyp:tail}
+For every nondegenerate block of length $k\ge2$ in the HJSW window,
+$0\le s(B)\le4(k-1)$, where $s(B)=|B|/2-\beta(B)$ uses the restricted optimum of Theorem~\ref{thm:blocks}.
+\end{theorem}
+\begin{proof}
+By Lemma~\ref{lem:edges}, each of the $k-1$ edges has four $H(1)$-classes forming one orbit under interchange
+and simultaneous negation:
+\[
+ (a,1/a),\quad(1/a,a),\quad(-a,-1/a),\quad(-1/a,-a).
+\]
+An exceptional orbit would have $a^2=\pm1$, exactly an excluded edge touching zero.
+Lemma~\ref{lem:orbopt} supplies twelve lawful points in each generic orbit in the HJSW window.
+The edges give distinct orbits, and Lemma~\ref{lem:orbdec} makes their union lawful within $H(1)$.
+It therefore satisfies all row, column and slope-$(\pm1)$ constraints defining $\beta(B)$, so
+$\beta(B)\ge12(k-1)$.  As $|B|=32(k-1)$, this gives $s(B)\le4(k-1)$;
+the row bound gives $s(B)\ge0$.  No assertion about arbitrary translated windows is used.
+\end{proof}
+
+\begin{corollary}[conditional block constant]\label{cor:blockconst}
+Assume Hypothesis BS.  With $b(\varepsilon)$ as above and fixed $2\le K\le9$,
+\[
+ \alpha(\Pset_{-1})\le\left(4-\sum_{k=2}^K2^{-(k+2)}
+ \sum_{\varepsilon\in\{0,1\}^{k-1}}\frac{D_k(S_\varepsilon)}{k!}b(\varepsilon)+o(1)\right)(p-1).
+\]
+At $K=9$ the exact weighted model saving is $68350729/123863040$, giving
+\[
+ \alpha(\Pset_{-1})\le\frac{427101431}{123863040}(p-1)+o(p)
+       =(3.44817\ldots+o(1))(p-1).
+\]
+By Theorem~\ref{hyp:tail}, the uncomputed tail of this certificate has total weight at most
+\[
+ \sum_{k>9}2^{-(k+2)}4(k-1)=\sum_{k=10}^\infty(k-1)2^{-k}
+ =\frac5{256}=0.01953125.
+\]
+Thus the coefficient obtained by extending the recorded lower-saving table through $k=9$ by the actual savings for $k>9$ lies between
+$427101431/123863040-5/256$ and $427101431/123863040$.
+This interval does not bound the optimum over unrestricted lawful sets, or improvements to the table entries for $k\le9$.
+\end{corollary}
+\begin{proof}
+Apply Corollary~\ref{cor:rundensity} with the lower bounds supplied by BS and the row bound on all other blocks.
+The rational arithmetic is reproduced by \texttt{anc/slack/t221/constant2.py} and the independent exact calculation recorded in \texttt{anc/RUNS.md}.
+For the last assertion apply Theorem~\ref{hyp:tail} to the tail after taking $p\to\infty$ at each fixed cutoff, then send that cutoff to infinity.
+The geometric-series identity gives the displayed tail exactly.
+\end{proof}
+
+\paragraph{What the table records.}
+The generator \texttt{standard\_model.py} samples rational positions and uses a floating-point MILP solver.
+Its committed table has $510$ signatures, of which eight have multiple recorded savings:
+\[
+\begin{array}{c|l@{\qquad}c|l}
+10101&16,24&000000&18,26\\
+001110&18,30&00011000&26,29\\
+01000011&24,31&10010010&28,35\\
+10111110&28,33&11010001&28,36
+\end{array}
+\]
+\texttt{constant2.py} takes the first, hence minimum, recorded value in each sorted row.
+The generator discards point counts on serialization and does not check the MILP success status or gap before using its objective.
+The eight ambiguities may involve degenerate sampled configurations; the saved table cannot decide this.
+They contradict the former assertion of agreement, but are not certified counterexamples to BS on arithmetic blocks.
+Neither the minima nor the rational weighted sum are universal saving certificates.  Hypothesis BS is the missing bridge;
+Theorem~\ref{hyp:tail} supplies the tail interval; the $K=9$ table bound still requires BS.
+
+\paragraph{Exact finite evidence for BS.}
+The certificates in \texttt{anc/bs\_search/} cover all $2707$ maximal nondegenerate blocks at the $95$ odd primes $p\le503$
+in the HJSW window, with lengths $2$--$11$ and $105$ signatures.
+Integer witnesses and rational dual bounds give $2582$ exact restricted optima and $125$ unresolved intervals.
+Of the $2702$ blocks of length at most nine, $2578$ certify the table's lower saving bound and $124$ remain unresolved.
+There is no certified table violation or conflict between exact savings for one signature.
+The verifier reconstructs signatures and intervals, checks complete unique coverage and recomputes these counts.
+This is finite evidence only: neither signature invariance nor the universal table bounds in BS follow.
+
+\begin{remark}\label{rem:blocks}
+(a) For each fixed run length $k$, the block has bounded size.  The density statements are fixed-$k$ asymptotics, not a uniform maximum-run bound.  By Weil's bound the number of runs of a given length and given \emph{type} (the sequence of line-size profiles of the groups at the
+interior vertices, which are the $(4,8,4)$, $(3,7,5,1)$, $(2,6,6,2)$ groups of Section~\ref{sec:two}, the end vertices carrying two-class
+groups) is $c\,p+o(p)$ with an explicitly computable $c$ --- sum the signature densities of Corollary~\ref{cor:rundensity}
+using the type dictionary of Proposition~\ref{prop:descent}.  Theorem~\ref{thm:two} is the case of a single $(4,8,4)$ interior vertex ($\beta=|B|/2-8$ for the
+two edges at it), Theorem~\ref{thm:seven} the case of a $(3,7,5,1)$ vertex ($\beta=|B|/2-4$).
+(b) Numerically (\texttt{anc/slack/t221/}, all primes $200\le p\le1400$): the saving $|B_\varrho|/2-\beta(B_\varrho)$ depends only on the type of the run
+(no exception among the several hundred blocks tested), and $\sum_\varrho(|B_\varrho|/2-\beta(B_\varrho))=0.5587\,p$ on average over
+$401\le p\le1103$, in agreement with Corollary~\ref{cor:blockconst}; truncating to runs of length $\le L_0$ gives
+$3.595$ for $L_0=5$, $3.480$ for $L_0=7$ and $3.452$ for $L_0=10$.  At a given prime the bound~\eqref{eq:blocks} is at most the value of the linear relaxation with
+all these lines, and strictly below it when integrality bites inside a block ($3.4107$ vs $3.4286$ at $p=113$, $3.3824$ vs $3.3873$ at
+$p=137$, $3.4343$ vs $3.4545$ at $p=199$, $3.4100$ vs $3.4300$ at $p=401$); the \emph{BS-conditional} coefficient $3.4482$ of
+Corollary~\ref{cor:blockconst} is compared in v1.19 with the numerical extrapolation $3.4413$; neither that extrapolation nor its difference from the cutoff value is a proved asymptotic statement.
+\emph{Correction (v1.15):} an earlier version of this remark quoted the pair $3.4286$ vs $3.4286$ at $p=113$ and
+the constant $3.4616$ (a $K=8$ truncation surviving from v1.11).  An independent recount --- exact MILP per block,
+the two disputed $64$-point blocks refereed by a SAT solver (satisfiable at $\beta$, unsatisfiable at $\beta+1$),
+and the LP ceilings $\lfloor26.67\rfloor=26$, $\lfloor50.67\rfloor=50$ forcing the same values --- gives
+$\sum_\varrho\beta(B_\varrho)=382=3.4107\,(p-1)$ at $p=113$: the first number of that pair was the LP value, and
+integrality does bite there, in three blocks of twelve.  The other three pairs of this remark were confirmed
+exactly by the same recount, as were the four block-sum anchors and, structurally, the decomposition itself
+(components under rows, columns and slope-$(\pm1)$ lines match the runs of consecutive squares in number, size
+law and total for all $57$ primes $19\le p\le311$).
+(c) For $\Pset_k=H(1)\cup H(k)$, the identity $r_-^2-r_+^2=4c$ links square vertices by steps $1$ and $k$.
+For $k=-1$ these are consecutive-square runs, as proved above.  The v1.19 computation at $p=4001$ reported largest components
+$11$ for $k=-1$ and $22,32,95,177$ for $k=2,3,5,7$ (\texttt{anc/slack/blocks\_general\_k.py}).
+These finite observations do not establish $O(\log p)$ or $p^{2/3}$ component laws.  Mean degree alone gives no arithmetic component-size theorem,
+and we withdraw the claim that finite block methods can work only for $k=-1$.
+(d) For every orbit tested at primes $p\le23$, v1.19 reported unrestricted lawful maxima $16$ on a generic mirrored pair
+$O\cup R(O)$ ($32$ candidates) and $8$ on an exceptional pair ($16$ candidates), matching the row bound
+(\texttt{anc/slack/orbit\_union.py}).  This is a finite observation, not an all-prime classification.
+It implies neither an asymptotic obstruction to local certificates nor $3(p-1)+O(1)$ for the unrestricted maximum.
+(e) At each prime, the restricted integer optimum is exactly $\sum_\varrho\beta(B_\varrho)$, whereas the restricted LP optimum is the sum of block LP optima.
+The unrestricted maximum can be smaller because other slopes impose additional constraints.  The numerical coefficient near $3.44$ in v1.19
+is an extrapolation of these restricted computations, not a proved limiting value or a universal lower bound on certificates.
+\end{remark}

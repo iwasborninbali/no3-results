@@ -1,0 +1,7 @@
+JOB U : Uncovered-probability implementation self-check.
+SOURCE slack/g39_agents/U_model.py ARGS []
+(d,e)=(0, 0): max|exact-MC|=0.0320 mean|.|=0.00619  (MC noise ~ 1/sqrt(M)=0.0158)
+(d,e)=(0, 1): max|exact-MC|=0.0305 mean|.|=0.00621  (MC noise ~ 1/sqrt(M)=0.0158)
+(d,e)=(1, 0): max|exact-MC|=0.0323 mean|.|=0.00625  (MC noise ~ 1/sqrt(M)=0.0158)
+(d,e)=(1, 1): max|exact-MC|=0.0347 mean|.|=0.00614  (MC noise ~ 1/sqrt(M)=0.0158)
+JOB COMPLETE U

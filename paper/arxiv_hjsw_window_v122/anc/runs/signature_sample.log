@@ -1,0 +1,29 @@
+JOB signature_sample : Bounded signature sampling on 101<=p<=199, run length<=6; not the historical campaign.
+SOURCE slack/sig_savings.py ARGS ['101', '199', '6', 'runs/generated/sig_savings.json']
+total signatures with a saving: 24; possible for k<=maxk: 34
+  0          k=2 saving=  0.00 count=176
+  00         k=3 saving=  4.00 count=32
+  01         k=3 saving=  8.00 count=21
+  10         k=3 saving=  6.00 count=43
+  000        k=4 saving=  7.00 count=4
+  001        k=4 saving=  8.00 count=10
+  010        k=4 saving=  8.00 count=24
+  100        k=4 saving=  9.00 count=10
+  0010       k=5 saving= 11.00 count=1
+  0011       k=5 saving=  8.00 count=1
+  0100       k=5 saving= 12.00 count=4
+  0101       k=5 saving= 16.00 count=9
+  0110       k=5 saving= 14.00 count=3
+  1000       k=5 saving= 12.00 count=2
+  1010       k=5 saving= 14.00 count=5
+  1100       k=5 saving= 12.00 count=2
+  00001      k=6 saving= 15.00 count=2
+  00101      k=6 saving= 16.00 count=1
+  00110      k=6 saving= 14.00 count=1
+  01000      k=6 saving= 15.00 count=1
+  01010      k=6 saving= 16.00 count=4
+  10010      k=6 saving= 16.00 count=2
+  10100      k=6 saving= 17.00 count=1
+  11000      k=6 saving= 16.00 count=1
+written runs/generated/sig_savings.json
+JOB COMPLETE signature_sample

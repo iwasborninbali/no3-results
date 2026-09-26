@@ -1,0 +1,9 @@
+JOB arcs : Arc and Fourier diagnostics at six listed primes; not an asymptotic estimate.
+SOURCE slack/arc_imbalance.py ARGS ['101', '199', '401', '1009', '2003', '4001']
+p=101 g=2: |K|=|M|=32  max_m|S_K|/sqrt p=1.30  max|S_M|/sqrt p=1.69  max|S_D|/sqrt p=1.98  (log p=4.6)  max arc |imbalance|=10 = 1.00 sqrt p
+p=199 g=3: |K|=|M|=68  max_m|S_K|/sqrt p=1.61  max|S_M|/sqrt p=1.18  max|S_D|/sqrt p=1.91  (log p=5.3)  max arc |imbalance|=4 = 0.28 sqrt p
+p=401 g=3: |K|=|M|=116  max_m|S_K|/sqrt p=2.20  max|S_M|/sqrt p=2.07  max|S_D|/sqrt p=2.32  (log p=6.0)  max arc |imbalance|=5 = 0.25 sqrt p
+p=1009 g=11: |K|=|M|=332  max_m|S_K|/sqrt p=2.24  max|S_M|/sqrt p=2.49  max|S_D|/sqrt p=3.25  (log p=6.9)  max arc |imbalance|=14 = 0.44 sqrt p
+p=2003 g=5: |K|=|M|=668  max_m|S_K|/sqrt p=2.16  max|S_M|/sqrt p=2.20  max|S_D|/sqrt p=3.18  (log p=7.6)  max arc |imbalance|=22 = 0.49 sqrt p
+p=4001 g=3: |K|=|M|=1360  max_m|S_K|/sqrt p=2.50  max|S_M|/sqrt p=2.26  max|S_D|/sqrt p=3.41  (log p=8.3)  max arc |imbalance|=49 = 0.77 sqrt p
+JOB COMPLETE arcs

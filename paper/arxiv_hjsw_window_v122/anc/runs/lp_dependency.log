@@ -1,0 +1,6 @@
+JOB lp_dependency : Both restricted and all-line LP on x^3 at p=101.
+SOURCE slack/lp_curve.py ARGS ['101', 'poly:1,0,0,0']
+p=101 poly:1,0,0,0 box=(0,0) N=2p=202 pts=404
+  pm1: lines>=3: 91 sizes={3: 46, 4: 11, 5: 11, 6: 23} LP=266.00 = 1.317 N = 2.634 p
+  all: lines>=3: 1517 sizes={3: 1472, 4: 11, 5: 11, 6: 23} LP=221.82 = 1.098 N = 2.196 p
+JOB COMPLETE lp_dependency

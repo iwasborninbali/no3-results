@@ -1,0 +1,5 @@
+JOB bs_certificates : Exact finite BS certificates for every odd prime through 503; complete unique block list, metadata and recounted summary. BS remains open.
+SOURCE bs_search/search_blocks.py ARGS ['--verify']
+{"blocks": 2707, "exact_optima": 2582, "max_length": 11, "min_length": 2, "odd_primes": 95, "prime_limit": 503, "signatures": 105, "table_blocks": 2702, "table_certified": 2578, "table_unresolved": 124, "unresolved_gaps": 125, "violations": []}
+EXACT VERIFICATION PASSED 2707
+JOB COMPLETE bs_certificates

@@ -1,0 +1,9 @@
+JOB gadget : Gadget checks, p<=13, six sampled boxes per case as implemented.
+SOURCE slack/gadget11_check.py ARGS ['13', '6']
+p=3: ok, (1,1)-orbits checked so far: 0
+p=5: ok, (1,1)-orbits checked so far: 6
+p=7: ok, (1,1)-orbits checked so far: 19
+p=11: ok, (1,1)-orbits checked so far: 67
+p=13: ok, (1,1)-orbits checked so far: 129
+ALL OK: every (1,1) orbit has the stated line structure, maximum 10, and 9/54/81 maximum sets by t
+JOB COMPLETE gadget

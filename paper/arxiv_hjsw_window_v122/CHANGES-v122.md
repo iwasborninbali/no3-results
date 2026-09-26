@@ -1,6 +1,6 @@
 # Changes for v1.22
 
-Version 1.22 is a separate copy of v1.21. The v1.21 directory and zip, and the repository-root README, are unchanged. No commit, push, network access, package installation or new solver search was performed. The submission zip contains the ten root-level TeX files and `anc/`, without the PDF, build files or this changelog.
+Version 1.22 is a separate copy of v1.21. The v1.21 directory and zip are unchanged. The repository-root README was unchanged by this edit; its v1.22 status row was added afterwards, at integration (commit ad86bc9). No commit, push, network access, package installation or new solver search was performed. The submission zip contains the ten root-level TeX files and `anc/`, without the PDF, build files or this changelog.
 
 ## Proof sources and review scope
 

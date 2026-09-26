@@ -9,7 +9,8 @@ ENUMERATORS. Each solver states that it wrote its program without reading the ot
                          run: ./no4_sym_exact n cyc3 [seconds]  (argument 2 is the group; any other value selects the half-turn group rot2, a
                          different problem).  The first solver's record reports a calibration table n = 5..8 for its full traversal; this shipped
                          source reproduces the record's node counts at n = 5 (13 in 5 366 nodes) and n = 6 (15 in 71 838) but NOT at n = 7
-                         (876 026 nodes against the record's 323 856); n = 8 was not remeasured for this version; the proof programs below give 224 501 and
+                         (876 026 nodes against the record's 323 856); at n = 8 it exhausts cyc3 with maximum 20 in 14 044 102 nodes (26 September 2026, 7.8 min, no time limit hit)
+                         against the record's 4 989 036; the proof programs below give 224 501 and
                          196 683 nodes at n = 7 with incumbents 17 and 18.  No shipped program reproduces the record's counts from n = 7
                          up; the program version behind the record's table is not in the repository as shipped.
     no4_sym_fastproof.c  the proof program: the list of live orbits is passed down, bound p + 3*|live|; the incumbent is supplied from outside and
@@ -67,4 +68,4 @@ Change in version 3.9 (26 September 2026, after the reviewer's fourth pass): two
 
 Change in version 4.0 (26 September 2026, after a fresh independent read): the eight receipts relabelled as a later rerun; the shipped first-solver source stated not to reproduce the record from n = 7 up; the historical witness headers noted as superseded; every witness re-verified with the point count bound.
 
-Change in version 4.1 (26 September 2026, after the fifth returning-reviewer pass): the n = 8 claim about no4_sym_exact.c withdrawn as not remeasured; the second solver's source stated as not bound to every completed shard; nothing else here changed.
+Change in version 4.1 (26 September 2026, after the fifth returning-reviewer pass): the n = 8 count of no4_sym_exact.c remeasured (maximum 20 reproduced, node count 14 044 102 against the record's 4 989 036); the second solver's source stated as not bound to every completed shard; nothing else here changed.

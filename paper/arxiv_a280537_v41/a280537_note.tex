@@ -230,11 +230,12 @@ of avoiding every constraint carries no sign guarantee, and forbidden quadruples
 size need not be positively correlated (two disjoint coplanar quadruples on opposite faces of the
 binary cube, in a uniformly random four-subset of its vertices, have covariance $-1/4900$).  An earlier
 version asserted a positive-correlation mechanism and a resulting sign; that assertion is withdrawn.
-The \emph{quadruple-independence} threshold: with $F(m)=\log\binom{N}{m}-\binom{m}{4}Q(n)/\binom{N}{4}$, where
+The \emph{quadruple-independence} threshold: with $F(m)=\ln\binom{N}{m}-\binom{m}{4}Q(n)/\binom{N}{4}$, where
 $Q(n)$ is the exact number of coplanar quadruples of the cube and the second term is the expected number of
 coplanar quadruples in a random $m$-subset, the journal reports the first $m$ with $F(m)\le0$ (treating the
 avoidance of each quadruple as if independent of the others): $13,15,16,18,20,22,24,26$ for $n=5,\dots,12$ (the
-largest $m$ with $F(m)\ge0$ is one less, e.g.\ $12$ at $n=5$, where $F(12)=2.479$ and $F(13)=-10.882$).  What we can
+largest $m$ with $F(m)\ge0$ is one less; our recomputation with natural logarithms and $Q(5)=673\,943$, $Q(6)=4\,058\,656$
+reproduces the journal's $13$ and $15$, with $F(12)=2.985$, $F(13)=-10.151$ at $n=5$).  What we can
 report is measured: against the certified lower bounds of this note ($13,16,18,20,23,26,28,31$) that threshold
 lies at or below them at every $n$ from 5 to 12, with deficits $0,-1,-2,-2,-3,-4,-4,-5$.  What looked like a bracket around the truth was two heuristics
 evaluated at two coarsenings, both leaning the same way in this range; why they lean that way is not

@@ -1,7 +1,7 @@
 {
  "version": "4.1 evidence manifest, 26 September 2026",
  "files": {
-  "README.txt": "683c00b34f3f645f3f143f987bbcaeed3d97ff244a0a664bab9677ce9d9e2c48",
+  "README.txt": "a28df77c859ea3da2079c6b824047e3a5bac51ec61def0bbd093e26e0c78e302",
   "coverage_check.py": "dc900266b1c6dff9d42db86ea3ba0b3e20444851592c6d17b9b355682c5b3a18",
   "coverage_n10_record.txt": "6d5d8edf168502c19e02cf39543247459b689d7f24301b97442775e86cceb59c",
   "cyc3d_mine.c": "768fef0b73b60a7b00869cdc631fb991fd14f49346ca38d2e8c9ee79327c9a88",

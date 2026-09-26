@@ -103,7 +103,7 @@ reflects the problem or the budget is precisely the question that the reported s
 does not settle --- but the numbers themselves are prior art and stand.
 
 \emph{The comparison for every row of this note, against the prior art as checked on 26 September 2026.}
-\begin{center}
+\begin{center}\small
 \begin{tabular}{rrrl}
 \toprule
 $n$ & this note & prior (source) & verdict\\
@@ -111,13 +111,13 @@ $n$ & this note & prior (source) & verdict\\
  9 & 23 & 23 (2017) & tie; our set is also in the OEIS file\\
 10 & 26 & 26 (2017) & tie; our set is also in the OEIS file\\
 11 & 28 & 28 (2017; 2016) & tie; contest sets public (ten)\\
-12 & 31 & 30 (2017) & \textbf{improved by 1}; published by the author in the OEIS entry, August 2026\\
+12 & 31 & 30 (2017) & \textbf{improved by 1}; in the OEIS file (Aug.\ 2026)\\
 13 & 32 & 32 (2017; 2016) & tie; contest sets public (eleven)\\
 14 & 34 & 35 (2017) & \emph{below the OEIS-file configurations by 1}\\
 15 & 35 & 36 (2017) & \emph{below the OEIS-file configurations by 1}\\
 16 & 38 & 38 (2017) & tie; Franckenstein sets in the OEIS file\\
 17 & 38 & 42 (2017; 2016) & \emph{below the contest configurations by 4}\\
-18 & 41 & 43 (2016; coordinates in the OEIS file) & \emph{below the OEIS-file configurations by 2}\\
+18 & 41 & 43 (2016; in the OEIS file) & \emph{below the OEIS-file configurations by 2}\\
 19 & 43 & 46 (2016) & \emph{below the contest configurations by 3}\\
 20 & 45 & 46 (monotone from $a(19)$) & \emph{below the monotone consequence}\\
 21 & 47 & 46 (monotone from $a(19)$) & \textbf{improved by 1}\\
@@ -216,10 +216,10 @@ Proposition~\ref{p:3n} and nothing else.  In particular the numbers
 in the table are not claimed to be maxima, and we expect several of them to be improved.
 
 \section{A bound of ours that these witnesses refuted}
-Two heuristic thresholds were computed on 21 August 2026 (journal \texttt{logs/a280537/derived\_bracket.txt}; the
+Two heuristic thresholds were computed on 21 August 2026 (journal file \texttt{derived\_bracket.txt} under \texttt{logs/a280537/}; the
 values below are that journal's, with its rounding).  The \emph{plane-independence} threshold: the largest $m$ with
-$\log\binom{N}{m}+\sum_P\log\Pr[\text{at most three of the $m$ points lie on }P]\ge0$, the sum over all lattice
-planes $P$ of the cube carrying at least four cells ($346\,743$ at $n=7$; this family is larger than the list of
+\[\log\binom{N}{m}+\sum_P\log\Pr[\text{at most three of the $m$ points lie on }P]\ge0,\]
+the sum over all lattice planes $P$ of the cube carrying at least four cells ($346\,743$ at $n=7$; this family is larger than the list of
 Section~\ref{s:strata}), treating the planes as independent; it landed on exactly $2n+5$ for $n=5,\dots,12$.  Against the values recorded in that journal's final table
 ($13,16,18,20,23,24,26,29$) its slack ran $2,1,1,1,0,1,1,0$, and the journal read the zeros as a bound becoming
 tight.  It is not a bound: the 2017 value $a(10)\ge26$ already exceeds $2n+5=25$, and the witness for

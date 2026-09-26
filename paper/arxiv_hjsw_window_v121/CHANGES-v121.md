@@ -1,0 +1,53 @@
+# v1.21 corrections and verification
+
+Prepared on 26 September 2026 from the public v1.20 package. The inputs were the seven findings of a clean-context read and the editorial residual of a returning reviewer, following three reads of v1.20. Each finding was checked before its TeX correction. All edits are in the v1.21 copy. No mathematical status is upgraded; the exact scope and text of BS, BT, CP, PC and UM are unchanged.
+
+## Finding-by-finding record
+
+Locations use source filenames and stable TeX labels; theorem numbers remain those of v1.20.
+
+| Finding | Location | Verified? (how) | Change | Effect on any statement or constant |
+|---|---|---|---|---|
+| Finding 1: larger windows | `hjsw_window.tex`, `rem:larger` | Yes. Independent integer incidence enumeration gives the identical 40-point support in `[0,22)^2` and `[0,23)^2` for p=11, c=1, with exact maximum 22. Exhaustive component search supplies lawful HJSW maxima in 68 cases: every nonzero c at primes 3,5,7,11,13,17,19. Those witnesses remain in 204 containing squares. | Introduce the anchored squares before the claim. Assert the lower bound only for windows containing the HJSW window; keep the quoted finite data attached to the anchored squares. | The larger-window assertion is restricted. The lower bound remains 3(p-1) on its corrected domain. No finite data or ratio claim is extended. |
+| Finding 2: cubic exceptional fibres and exactness | `section_cubic.tex`, Theorem 47 proof, `eq:U`, `eq:AS` | Yes. Direct line enumeration at p=23, a=1, box `(0,0)` gives L4=13 and U=36; the triple-only expressions give 11 and 42. The two omitted lines cover six additional points. At p=11 the positive slope has one same triple and zero split triples. The profile `(3,6,3,0)` has rich outer lines that receive no W4 weight. | Include O(1) exceptional-fibre terms in L4, U and the conic cross-sum conversion; keep slope-specific triple counts; correct the membership qualification and assembly; distinguish W4 coverage from richness; use “limiting proportion”. | The exact cover inequality is unchanged. Only formerly exact intermediate expressions are weakened by bounded errors; 11/4 is unchanged. The new program checks exact exceptional corrections against direct enumeration in 896 cases at eight primes. |
+| Finding 3: comparison-region transfers | `lemma_run.tex`, `prop:descent`, `cor:rundensity`; `section_cubic.tex`, Theorem 47; `section_strong.tex`, `prop:counts`; downstream passages listed below | Yes. Re-derived the descent comparison from the cosine identity and the cubic pairwise cancellation. Rectangular Fourier bounds alone do not count variable-threshold regions with the asserted logarithmic rates. These regions have finitely many affine boundary pieces after subdivision; fixed-mesh inner/outer approximation has boundary volume O(1/M). For twisted sums its absolute boundary contribution is bounded by the untwisted count. This yields o(p), uniformly in the stated translations and coefficients, by taking p to infinity before M. | Replace unsupported comparison rates by o(p), or o_k(p)/o_k(1) for fixed k, and print the approximation argument. Apply the same correction to the conditional monomial proof's moving-threshold counts without changing CP. | The printed rates are weaker. All leading densities and constants survive. No downstream extremal conclusion requires the removed rate; all already have o(1) remainders. The interval estimates themselves remain unchanged. |
+| Finding 4: closure and seven-group signs | `hjsw_window.tex`, `lem:closure`; `section_seven.tex`, Proposition 31 | Yes. At p=11 the base copies `(2,6)` and `(5,9)` have common centre -4 and positive first coordinates. Algebraically the signed permutation `(u1,u2,u3,u4) -> (u3,-u4,u1,-u2)` is an involution, preserves the relation modulo one and exchanges the two sharing events; being a signed permutation, it preserves Haar measure. Checked 146 base pairs and all 82,115 discrete torus points at nine primes. | Say “same sign”; restore the minus sign in the relation for b+1/b; give the signed symmetry with its sharing events explicitly. | Closure, the mixed probabilities 1/6, the clean proportion 7/16 and the coefficient 115/32 are unchanged. |
+| Finding 5: full-split partner constraint | `section_perm.tex`, Lemma 53 (`lem:twoslopes`) | Yes. From the vanishing degree-(k-1) coefficient, the sum of all root positions is -kx0/p modulo one; conditioning on the distinguished root leaves partner sum -kx0/p-u_x. Also checked full cubic fibres at p=11,17,23. Thus their joint law cannot be product uniform. | State independence between the two slope vectors, conditional on the distinguished data and fibre sizes. Within each fully split fibre retain the Haar root-sum constraint explicitly. | CP has exactly its prior scope. Theorem 54 already accounts for these fibres: its full-split correction and constants are unchanged. |
+| Finding 6: PC in strong-form implications | `section_strong.tex`, numerical discussion and closing remark | Yes. Exact rational subtraction gives 11/4-0.098=2.652, 11/4-0.093=2.657 and 11/4-1/12=8/3. These identities do not establish arithmetic pair counts; the matching deduction separately uses PC. | Separate arithmetic identities from extremal coefficients; require PC alongside UM or any alternative proved uniform margin, including the closing implication to G3. | Theorems 62 and Corollary 63 remain conditional on PC and UM. Neither margin is promoted to a proved fact. |
+| Finding 7: periods, tangency, symmetry | `hjsw_window.tex`, Corollary 12 and following paragraph | Yes. Each residue has exactly c representatives in an interval of length cp only for integral c (checked all translations at p=5,7,11,13 and c=2,3,4). A singleton horizontal intersection is a horizontal tangency: y=x^2 at the origin is an explicit example. Coordinate swaps and grid reflections preserve determinant collinearity and square windows. | Require integral c>=2, say “horizontal tangent”, and restrict the symmetry warning to general finite-field affine transformations. | Domain clarified; the c=2, p>=11 conclusion and c(p+3) bound on the corrected domain are unchanged. |
+| F2: editorial residual | `section_cubic.tex`, paragraph introducing W4 | Yes. The opening TeX quote before “rich” had no closing quote. | Close the quote. | Editorial only. |
+
+## Printed rates weakened
+
+- Proposition 37 (`prop:descent`): O_k(p^(-1/2) log^k p) becomes o_k(1).
+- Corollary 38 (`cor:rundensity`): O_k(sqrt(p) log^k p) becomes o_k(p).
+- Remark 40(a) (`rem:blocks`): the fixed-type run count becomes cp+o(p), now explicitly deduced by summing signature densities.
+- Theorem 47 (`thm:cubic`), its same/split and cross-sum estimates, and the assembled W4 cost: O(sqrt(p) log^3 p) becomes o(p). This is propagated into the proof of Corollary 48 and the W4 cost recalled at the start of the strong-form section. Corollary 48's statement was already asymptotic and does not change.
+- Theorem 54 proof (`thm:perm`): its two moving-threshold model-count errors become o_k(p); the theorem statement and full-split correction are unchanged.
+- Proposition 61 (`prop:counts`): the one-line count error O(sqrt(p) log^16 p) becomes o(p). The PC pair-count clause already had o(p).
+
+The fixed-cutoff BS deduction (Corollary 39), the CP monomial bounds (Theorem 54 and its corollaries), the matching certificate and the PC/UM strong-form deductions use only leading terms and o(p). None needs the removed quantitative rates. No new hypothesis replaces those rates. Lemma 36's interval estimate, Lemma FE's stated interval predicates, and CP's box-count hypothesis retain their printed rates. The leading constants 11/4, 115/32, 427101431/123863040 and all model constants and conditional correction constants are unchanged.
+
+## Version and disclosure
+
+The title page reads version 1.21. The requested history entry and replacement AI-disclosure sentence were inserted verbatim, with the rest of the disclosure retained. `verify_v120.py` is retained byte for byte. `verify_v121.py` is self-contained and uses only the Python standard library; it imports no author or earlier verification code. Its job is `v121_formulas` in `anc/jobs.json`.
+
+## Build and execution
+
+The final TeX was built with three consecutive runs of `pdflatex -interaction=nonstopmode -halt-on-error hjsw_window.tex` from the v1.21 directory. All three exited 0, with zero errors and zero undefined references or citations. The PDF has **47 pages**.
+
+Direct execution from `anc/`, `python3 verify_v121.py`, reports **ALL v1.21 checks passed**. It checks the F1 counterexample, 68 HJSW maxima and 204 containing squares; 896 exact cubic comparisons; and 146 base-pair sign checks plus 82,115 torus points. All arithmetic and incidence tests use exact integers or fractions. Finite success does not prove the asymptotic transfers or any named hypothesis.
+
+`python3 run_all.py` reran the 42 existing jobs, and `python3 run_all.py v121_formulas` ran the added job. All 43 current entries are recorded: **41 PASS, 2 NOT RUN, 0 FAILED**. The recorded interpreter is python3 (3.14, with numpy): CPython 3.14.6, NumPy 2.5.2, SciPy 1.18.0. PySAT remains absent and optional; the two PySAT jobs are NOT RUN, and the boxes job explicitly skips its optional PySAT stage. `anc/README.md`, `anc/RUNS.md`, the run logs and `runs/results.json` were updated. Only the newly printed local prefix in `runs/clean.log` was normalized to `anc/`; its values were retained. No network or package installation was used.
+
+`anc/MANIFEST.sha256` was regenerated and verified both by direct hashing and by `shasum -a 256 -c MANIFEST.sha256`: **341/341 files OK** (the manifest excludes itself).
+
+## Archive and preservation
+
+`arxiv_hjsw_window_v121.zip` has **352 files**, with the ten TeX files at its root and all remaining files under `anc/`, matching the flat v1.20 layout. It contains no PDF, TeX auxiliary output or CHANGES file. ZIP CRC verification passed, and every archived member was compared byte for byte with its source.
+
+SHA-256: `5880da86a179c0c72a1922c2f9a899ac422f8bf361b28f72bf3bf5cf47fe1046`.
+
+Case-insensitive scanning of every decompressed member found **0 occurrences of the five requested excluded words**; member names also have zero occurrences. Newly written documentation, source changes, commands and fresh logs have no absolute local paths. Unmodified archival sources retain their historical bytes.
+
+All **356 original v1.20 files** (the complete directory plus its ZIP) have the same SHA-256 digests and file set as before the work. The repository-root README was not edited. No commit or push was made.

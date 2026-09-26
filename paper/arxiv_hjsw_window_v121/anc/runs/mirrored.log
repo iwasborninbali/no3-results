@@ -1,0 +1,11 @@
+JOB mirrored : Mirrored orbit MILP reports at every odd prime through 23; floating solver objectives, no new exact certificate.
+SOURCE slack/orbit_union.py ARGS ['3', '5', '7', '11', '13', '17', '19', '23']
+p=3: orbits 1; (|O| pts, max in O, max in O∪R(O)) -> count: {(8, 6, 8): 1}; sum over orbits: H(1) alone 6 (=3(p-1)=6), unions 8 = 4.000(p-1)
+p=5: orbits 2; (|O| pts, max in O, max in O∪R(O)) -> count: {(8, 6, 8): 2}; sum over orbits: H(1) alone 12 (=3(p-1)=12), unions 16 = 4.000(p-1)
+p=7: orbits 2; (|O| pts, max in O, max in O∪R(O)) -> count: {(8, 6, 8): 1, (16, 12, 16): 1}; sum over orbits: H(1) alone 18 (=3(p-1)=18), unions 24 = 4.000(p-1)
+p=11: orbits 3; (|O| pts, max in O, max in O∪R(O)) -> count: {(8, 6, 8): 1, (16, 12, 16): 2}; sum over orbits: H(1) alone 30 (=3(p-1)=30), unions 40 = 4.000(p-1)
+p=13: orbits 4; (|O| pts, max in O, max in O∪R(O)) -> count: {(8, 6, 8): 2, (16, 12, 16): 2}; sum over orbits: H(1) alone 36 (=3(p-1)=36), unions 48 = 4.000(p-1)
+p=17: orbits 5; (|O| pts, max in O, max in O∪R(O)) -> count: {(8, 6, 8): 2, (16, 12, 16): 3}; sum over orbits: H(1) alone 48 (=3(p-1)=48), unions 64 = 4.000(p-1)
+p=19: orbits 5; (|O| pts, max in O, max in O∪R(O)) -> count: {(8, 6, 8): 1, (16, 12, 16): 4}; sum over orbits: H(1) alone 54 (=3(p-1)=54), unions 72 = 4.000(p-1)
+p=23: orbits 6; (|O| pts, max in O, max in O∪R(O)) -> count: {(8, 6, 8): 1, (16, 12, 16): 5}; sum over orbits: H(1) alone 66 (=3(p-1)=66), unions 88 = 4.000(p-1)
+JOB COMPLETE mirrored

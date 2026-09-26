@@ -1,0 +1,13 @@
+JOB components : Source fixed finite cases: p=1009,4001 and k=-1,2,3,5,7.
+SOURCE slack/blocks_general_k.py ARGS []
+p=1009 k= -1: vertices 505, edges 506, components 252, largest 21 (4.2% of vertices), small sizes {1: 130, 2: 58, 3: 34, 4: 18, 5: 8, 7: 2}
+p=1009 k=  2: vertices 505, edges 506, components 130, largest 35 (6.9% of vertices), small sizes {1: 32, 2: 22, 3: 16, 4: 22, 5: 8, 6: 10}
+p=1009 k=  3: vertices 505, edges 506, components 98, largest 69 (13.7% of vertices), small sizes {1: 40, 2: 4, 3: 10, 4: 8, 5: 4, 6: 6}
+p=1009 k=  5: vertices 505, edges 506, components 84, largest 69 (13.7% of vertices), small sizes {1: 40, 2: 8, 3: 2, 4: 4, 5: 4, 8: 2}
+p=1009 k=  7: vertices 505, edges 506, components 70, largest 71 (14.1% of vertices), small sizes {1: 24, 2: 12, 3: 2, 4: 8, 6: 4, 8: 2}
+p=4001 k= -1: vertices 2001, edges 2002, components 1000, largest 11 (0.5% of vertices), small sizes {1: 488, 2: 275, 3: 120, 4: 54, 5: 35, 6: 14}
+p=4001 k=  2: vertices 2001, edges 2002, components 488, largest 22 (1.1% of vertices), small sizes {1: 108, 2: 82, 3: 88, 4: 58, 5: 36, 6: 36}
+p=4001 k=  3: vertices 2001, edges 2001, components 380, largest 32 (1.6% of vertices), small sizes {1: 118, 2: 34, 3: 36, 4: 34, 5: 28, 6: 24}
+p=4001 k=  5: vertices 2001, edges 2002, components 312, largest 95 (4.7% of vertices), small sizes {1: 108, 2: 42, 3: 26, 4: 26, 5: 8, 6: 16}
+p=4001 k=  7: vertices 2001, edges 2002, components 293, largest 177 (8.8% of vertices), small sizes {1: 120, 2: 38, 3: 34, 4: 23, 5: 12, 6: 6}
+JOB COMPLETE components

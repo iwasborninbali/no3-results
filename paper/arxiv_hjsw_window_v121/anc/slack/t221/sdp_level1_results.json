@@ -1,0 +1,44 @@
+[
+ {
+  "p": 19,
+  "n": 144,
+  "n_lines_all": 496,
+  "n_lines_strong": 120,
+  "hist_all": {
+   "3": 292,
+   "4": 192,
+   "6": 8,
+   "8": 4
+  },
+  "hist_strong": {
+   "3": 20,
+   "4": 88,
+   "6": 8,
+   "8": 4
+  },
+  "lp_all": 63.63636363636354,
+  "lp_strong": 63.999999999999986,
+  "exact": 59,
+  "theta_all": {
+   "solver": "SCS",
+   "status": "optimal_inaccurate",
+   "value": 63.63611147888668,
+   "wall": 180.16375613212585,
+   "extra": "solve_time=180.02s iters=6075 res_pri=9.67e-05 res_dual=1.34e-04 gap=2.02e-04"
+  },
+  "local_strong": {
+   "solver": "SCS",
+   "status": "optimal",
+   "value": 64.00000589551296,
+   "wall": 58.69020104408264,
+   "extra": "solve_time=40.10s iters=275 res_pri=1.98e-05 res_dual=1.11e-06 gap=1.64e-05"
+  },
+  "local_all": {
+   "solver": "SCS",
+   "status": "optimal_inaccurate",
+   "value": 62.918696215415025,
+   "wall": 547.6637320518494,
+   "extra": "solve_time=185.42s iters=450 res_pri=2.70e-04 res_dual=2.68e-04 gap=2.92e-05"
+  }
+ }
+]

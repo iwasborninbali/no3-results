@@ -1,0 +1,6 @@
+JOB orbit_types : Finite incidence types and optima, c=1, primes through 31.
+SOURCE slack/t221/orbit_types.py ARGS ['3', '5', '7', '11', '13', '17', '19', '23', '29', '31']
+orbit incidence types found: 2
+  classes=2 points=8 richline profile=(3, 3): n=14 (p=[3, 5, 7, 11, 13, 17, 19, 23, 29, 31]) -> (opt,#max,c(d))={(6, 9, ((1, 0), (2, 0)))}
+  classes=4 points=16 richline profile=(4, 4, 3, 3, 3, 3): n=30 (p=[7, 11, 13, 17, 19, 23, 29, 31]) -> (opt,#max,c(d))={(12, 1, ((1, 1), (2, 2)))}
+JOB COMPLETE orbit_types

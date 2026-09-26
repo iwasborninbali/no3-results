@@ -1,0 +1,5 @@
+JOB gamma2_continuum : Bounded 100x100 midpoint quadrature at (0,0), all six configurations; numerical diagnostic, not historical grid reproduction.
+SOURCE slack/g39_agents/gamma2_continuum.py ARGS []
+all ordered configurations {(1, 2): np.float64(0.008261701500495355), (1, 3): np.float64(0.008346424534642575), (2, 1): np.float64(0.008173321170607682), (2, 3): np.float64(0.009224325932040785), (3, 1): np.float64(0.007678603056077736), (3, 2): np.float64(0.009745895420622156)}
+unordered gamma2 0.02583245196717871
+JOB COMPLETE gamma2_continuum

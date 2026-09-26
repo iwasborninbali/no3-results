@@ -1,0 +1,57 @@
+{
+  "appendix_hyperbolae.tex": {
+    "sha256": "6dc85d125f45ce6dd1f94e4cfe6c4b076811c749a3fc16c9216b29f699a884c8",
+    "lines": 29
+  },
+  "hjsw_window.tex": {
+    "sha256": "e5ba102a0ca2e0aa2d57108c72cf2f26325e53715308bc157214a96ece669d2e",
+    "lines": 1367
+  },
+  "lemma_fe.tex": {
+    "sha256": "2ff8be30500eededd33bf70bde8fd5a98387705438d3c89ea70c8f36a6fd35e0",
+    "lines": 64
+  },
+  "lemma_run.tex": {
+    "sha256": "2735a85d365100f25c90a08f3fcb572f511aee185fcd1fd7a73faa55c67252a1",
+    "lines": 80
+  },
+  "lemma_stability.tex": {
+    "sha256": "6f8de1a15d4edbea8a10d8bb1884aa031f5fc82bfc4784204624271b5fcb69ab",
+    "lines": 63
+  },
+  "section_blocks.tex": {
+    "sha256": "0a9954fb3933f814e4568d5a6382d370d000602cd99414465427f9e0a3813610",
+    "lines": 127
+  },
+  "section_cubic.tex": {
+    "sha256": "6920baf299410b32b9ecea3f20d02f9c850fb41e9d04ca54e0e5a11d2b7806bc",
+    "lines": 261
+  },
+  "section_perm.tex": {
+    "sha256": "c361a86d42fbc9fcfc5ab9761a12466d3039e129077e2cf963dabd79847e1b70",
+    "lines": 200
+  },
+  "section_seven.tex": {
+    "sha256": "3207d050e5cab81c6c4e1ce60079bfe5fcc9586b7f260338fb8b89f9dc50932d",
+    "lines": 154
+  },
+  "section_strong.tex": {
+    "sha256": "33ec405b02f8fe7bb114a83c9a1845ba15e8d2e46f3b9d7bb32ec0f5e16ea21a",
+    "lines": 148
+  },
+  "zip": {
+    "sha256": "a849719baaf5e69c5e3a8cb39e5547c9e1759913949c9a7ee1458e6921c8982f",
+    "entries": [
+      "appendix_hyperbolae.tex",
+      "hjsw_window.tex",
+      "lemma_fe.tex",
+      "lemma_run.tex",
+      "lemma_stability.tex",
+      "section_blocks.tex",
+      "section_cubic.tex",
+      "section_perm.tex",
+      "section_seven.tex",
+      "section_strong.tex"
+    ]
+  }
+}

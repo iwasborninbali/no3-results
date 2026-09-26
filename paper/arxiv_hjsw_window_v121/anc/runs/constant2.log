@@ -1,0 +1,5 @@
+JOB constant2 : Committed 510-signature table, minimum recorded saving; floating arithmetic only.
+SOURCE slack/t221/constant2.py ARGS []
+K=9: saving/p >= 0.55183 (untabulated density 0.00e+00)  =>  alpha <= 3.4482(p-1)
+tail (k>9) <= 0.01953  =>  certificate constant in [3.4286, 3.4482]
+JOB COMPLETE constant2

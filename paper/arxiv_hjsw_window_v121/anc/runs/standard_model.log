@@ -1,0 +1,38 @@
+JOB standard_model : Bounded model regeneration through k=5, three draws/signature, seed 0. Historical 510-entry k<=9 input is preserved.
+SOURCE slack/t221/standard_model.py ARGS ['5']
+  k=2 done (2 patterns)
+  k=3 done (6 patterns)
+  k=4 done (14 patterns)
+  k=5 done (30 patterns)
+patterns=30 ambiguous(saving depends on positions)=0: []
+  xi=0         -> [(0.0, 32)]
+  xi=1         -> [(0.0, 32)]
+  xi=00        -> [(4.0, 64)]
+  xi=01        -> [(8.0, 64)]
+  xi=10        -> [(6.0, 64)]
+  xi=11        -> [(4.0, 64)]
+  xi=000       -> [(7.0, 96)]
+  xi=001       -> [(8.0, 96)]
+  xi=010       -> [(8.0, 96)]
+  xi=011       -> [(8.0, 96)]
+  xi=100       -> [(9.0, 96)]
+  xi=101       -> [(8.0, 96)]
+  xi=110       -> [(9.0, 96)]
+  xi=111       -> [(7.0, 96)]
+  xi=0000      -> [(10.0, 128)]
+  xi=0001      -> [(12.0, 128)]
+  xi=0010      -> [(11.0, 128)]
+  xi=0011      -> [(8.0, 128)]
+  xi=0100      -> [(12.0, 128)]
+  xi=0101      -> [(16.0, 128)]
+  xi=0110      -> [(14.0, 128)]
+  xi=0111      -> [(12.0, 128)]
+  xi=1000      -> [(12.0, 128)]
+  xi=1001      -> [(14.0, 128)]
+  xi=1010      -> [(14.0, 128)]
+  xi=1011      -> [(11.0, 128)]
+  xi=1100      -> [(12.0, 128)]
+  xi=1101      -> [(12.0, 128)]
+  xi=1110      -> [(12.0, 128)]
+  xi=1111      -> [(10.0, 128)]
+JOB COMPLETE standard_model

@@ -1,0 +1,20 @@
+JOB fast_blocks : Bounded finite-prime model sampling, p in [113,137]; output does not replace historical table.
+SOURCE slack/t221/fast_blocks.py ARGS ['113', '137']
+  p=113: signatures=7 bad=0
+
+TOTAL signatures=14  bad=0
+  ab         sav=  0.00 count=22
+  a6a        sav=  6.00 count=5
+  a7b        sav=  4.00 count=10
+  b8b        sav=  8.00 count=3
+  a68b       sav=  8.00 count=6
+  b78b       sav=  8.00 count=1
+  a677a      sav= 12.00 count=1
+  a678b      sav= 14.00 count=1
+  a768b      sav= 12.00 count=1
+  b868b      sav= 16.00 count=1
+  a6868b     sav= 16.00 count=1
+  a7677a     sav= 16.00 count=1
+  a67787b    sav= 18.00 count=1
+  a767868b   sav= 25.00 count=1
+JOB COMPLETE fast_blocks

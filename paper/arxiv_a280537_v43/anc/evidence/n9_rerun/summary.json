@@ -1,0 +1,62 @@
+{
+ "shards_expected": 8,
+ "shards_exhausted": 8,
+ "problems": [],
+ "total_nodes": 115838153,
+ "total_wall_seconds_summed": 1088.9,
+ "total_process_hours": 0.3,
+ "max_shard_seconds": 396.5,
+ "orbits": [
+  249
+ ],
+ "receipts": {
+  "0/8": {
+   "orbits": 249,
+   "nodes": 39982491,
+   "seconds": 396.5,
+   "sha256": "bff00a8deee5861d7c95fb94bd5158c16ba5a80a0fa41cbaac12765b795e1cd5"
+  },
+  "1/8": {
+   "orbits": 249,
+   "nodes": 13153983,
+   "seconds": 116.8,
+   "sha256": "ca74b458d74e99a1093c42c96300a0294b0d2316eb2120d491b116e83f16f78c"
+  },
+  "2/8": {
+   "orbits": 249,
+   "nodes": 11546506,
+   "seconds": 106.6,
+   "sha256": "c7ea177f40838aa4838b924635571436712fbd5dd64855e2203c72bd15a41b6a"
+  },
+  "3/8": {
+   "orbits": 249,
+   "nodes": 10277941,
+   "seconds": 96.1,
+   "sha256": "592f3de4499954b44d068a82da3d3f1b9a00882b0a4c4a979d91d09849328d73"
+  },
+  "4/8": {
+   "orbits": 249,
+   "nodes": 9811077,
+   "seconds": 93.7,
+   "sha256": "5ea6064f41504ec42f3ec92461fd2064e0bce389de99bd6eea4ab311a0f36cc3"
+  },
+  "5/8": {
+   "orbits": 249,
+   "nodes": 10766839,
+   "seconds": 101.0,
+   "sha256": "cc6e771c1c2fd5adb0804b3a4e77e79f311720b4d53ae264295bc8f4799864ef"
+  },
+  "6/8": {
+   "orbits": 249,
+   "nodes": 9273950,
+   "seconds": 89.2,
+   "sha256": "42191cb5e24cd6eb894bad64aec8cc372fc6c380ba8d38d02ef8c0ca5fddc7dc"
+  },
+  "7/8": {
+   "orbits": 249,
+   "nodes": 11025366,
+   "seconds": 89.0,
+   "sha256": "46ff01e3b993e1e6ebc96addbb2477553dcbfb6338fb148d5b96baddb060bd35"
+  }
+ }
+}

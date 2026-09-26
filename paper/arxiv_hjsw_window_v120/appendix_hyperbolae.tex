@@ -1,0 +1,34 @@
+% Appendix (draft by the verifying agent, 3 Sep 2026): constructions along modular hyperbolae do not reach 2n.
+% v1.20: included after the main text; proved, conditional and computational statements are distinguished below.
+\section*{Appendix: what the hyperbola route cannot give}\label{app:hyperbolae}
+
+Write $n=2p$ for the side of the grid, so that the trivial upper bound is $2n=4p$ and the HJSW set has $3(p-1)=\tfrac32 n-3$ points.
+The results of this note, read as statements about constructions, say the following.
+
+\begin{enumerate}
+\item[(a)] \emph{One hyperbola, any $2p\times2p$ window.}  Every no-three-in-line subset of $\Hc\cap W$ has at most $3(p-1)=\tfrac32 n-3$ points
+ (Theorem~\ref{thm:window}), with equality exactly for the windows with $n_1=n_0=0$, the HJSW window among them (Theorem~\ref{thm:main});
+ the maximum sets are classified and their number is $9^s$ in the HJSW window and $144^{n_1}1296^{n_0}9^{s_1}6^{s_2}$ in general.
+ The barrier $\tfrac32$ is therefore exact for this route, not approximate.
+\item[(b)] \emph{Two hyperbolae.}  For $H(1)\cup H(-1)$ in the HJSW window,
+$\alpha\le(11/3+o(1))(p-1)=(11/6+o(1))n$ by Theorem~\ref{thm:two} and Proposition~\ref{prop:m8asym}.
+The proved clean-seven coefficient is $115/32$ (Proposition~\ref{prop:clean}), with a strict margin below $11/3$.
+The refinement $(427101431/123863040+o(1))(p-1)$ is conditional on BS; its tail interval additionally assumes BT.
+For an arbitrary second hyperbola of order at least $C\sqrt p\log^5p$, Corollary~\ref{cor:general} gives the unconditional saving $c\sqrt p/\log^5p$.
+\item[(c)] \emph{Other conics, cubics and fixed-degree monomials.}
+Among nondegenerate conics only shifted hyperbolae can attain $3(p-1)$ for $p\ge11$ (Corollary~\ref{cor:conics}).
+The proved cubic bound is $(11/8+o(1))n$; the stronger $(4/3+o(1))n$ assumes PC and UM.
+For fixed odd degree $k\ge3$ and then $p\to\infty$, Theorem~\ref{thm:perm} gives $(C_k+\varepsilon_k+o(1))p$, conditional on CP when $k\ge5$;
+in degree five the upper coefficient is at most $2.945933$, about $1.473n$.
+The $C_k$ are exact rational model integrals.  The decimal cubic margin in UM is uncertified quadrature, and the block refinement uses the model table under BS.
+\end{enumerate}
+
+\noindent\textbf{What this does not cover.}  (1) Unions of three or more hyperbolae, and pairs $H(k),H(k')$ with $k$ of small multiplicative order
+in an arbitrary window: only the computations of Section~\ref{sec:beyond}, which suggest a gain of $O(1)$ over $3(p-1)$ but prove nothing.
+(2) Windows other than $2p\times2p$: already a $(2p+1)\times2p$ window at $p=5$ admits $13>12$ points of one hyperbola, and for larger windows
+only MIP values are known (Table~\ref{tab:shifts}).  (3) Composite moduli: Lemma~\ref{lem:lagrange} fails (for $m=9$ the rich lines have slopes
+$-1,\tfrac12,1,2$), so everything above is for prime $p$.  (4) Points outside the algebraic set: by Remark~\ref{rem:kns}(b) any improvement of the
+HJSW construction must use another hyperbola, a larger window or non-hyperbola points, and about the last two the theorems are silent.
+(5) General higher-degree curves and monomials of growing degree; $x^{p-2}$ already contains the hyperbola.
+The finite single-hyperbola checks in \texttt{anc/RUNS.md} test specified finite ranges and do not verify asymptotic statements (b)--(c).
+These restrictions neither settle Green's Problem~72 nor exhaust possible algebraic constructions.

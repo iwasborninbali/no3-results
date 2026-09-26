@@ -1,0 +1,4 @@
+JOB arithmetic_library : Explicit arithmetic library exercise, C3=11/4.
+SOURCE independent/model_arithmetic.py ARGS []
+{'k': 3, 'L': '1/2', 'U': '7/4', 'C': '11/4', 'C_decimal': 2.75}
+JOB COMPLETE arithmetic_library

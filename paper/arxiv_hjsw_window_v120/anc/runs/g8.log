@@ -1,0 +1,8 @@
+JOB g8 : Eight-group counts through p=500 at the listed k.
+SOURCE slack/g8_general.py ARGS ['500', '-1', '2', '3', '5', '7']
+k=-1: G8/p over primes 100..500: mean 0.1603 min 0.1162 max 0.2152 (n=70); 4-class groups/p mean 0.487; both-shared fraction 0.328; sample: [(101, 16), (199, 32), (401, 64), (499, 80)]
+k=2: G8/p over primes 100..500: mean 0.1614 min 0.1135 max 0.2075 (n=70); 4-class groups/p mean 0.486; both-shared fraction 0.333; sample: [(101, 16), (199, 32), (401, 64), (499, 84)]
+k=3: G8/p over primes 100..500: mean 0.1631 min 0.0917 max 0.2211 (n=70); 4-class groups/p mean 0.488; both-shared fraction 0.336; sample: [(101, 10), (199, 34), (401, 58), (499, 74)]
+k=5: G8/p over primes 100..500: mean 0.1598 min 0.0734 max 0.2199 (n=70); 4-class groups/p mean 0.484; both-shared fraction 0.334; sample: [(101, 16), (199, 30), (401, 48), (499, 84)]
+k=7: G8/p over primes 100..500: mean 0.1642 min 0.1069 max 0.2011 (n=70); 4-class groups/p mean 0.492; both-shared fraction 0.332; sample: [(101, 18), (199, 28), (401, 54), (499, 78)]
+JOB COMPLETE g8

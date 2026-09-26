@@ -1,0 +1,8 @@
+JOB cubic_cover : Five boxes at p=197, a=1.
+SOURCE slack/cube_cover4.py ARGS ['197', '1', '5']
+p=197 a=1 box=(0,0): L4=97 sizes={4: 31, 5: 31, 6: 35} covered=438/788 cost=544 = 1.381 N
+p=197 a=1 box=(-98,0): L4=98 sizes={4: 32, 5: 32, 6: 34} covered=444/788 cost=540 = 1.371 N
+p=197 a=1 box=(-98,-98): L4=92 sizes={4: 26, 5: 26, 6: 40} covered=440/788 cost=532 = 1.350 N
+p=197 a=1 box=(79,-190): L4=103 sizes={4: 37, 5: 37, 6: 29} covered=455/788 cost=539 = 1.368 N
+p=197 a=1 box=(-130,-114): L4=97 sizes={4: 31, 5: 31, 6: 35} covered=448/788 cost=534 = 1.355 N
+JOB COMPLETE cubic_cover

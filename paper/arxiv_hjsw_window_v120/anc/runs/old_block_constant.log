@@ -1,0 +1,13 @@
+JOB old_block_constant : Earlier finite table arithmetic, not a universal certificate.
+SOURCE slack/t221/constant.py ARGS ['slack/t221/fast_sig_table.json', '8']
+  k=2: contribution=0.00000  (density of signatures missing from the table: 0.000000)
+  k=3: contribution=0.18750  (density of signatures missing from the table: 0.000000)
+  k=4: contribution=0.12760  (density of signatures missing from the table: 0.000000)
+  k=5: contribution=0.09987  (density of signatures missing from the table: 0.000000)
+  k=6: contribution=0.06158  (density of signatures missing from the table: 0.000000)
+  k=7: contribution=0.03902  (density of signatures missing from the table: 0.000000)
+  k=8: contribution=0.02284  (density of signatures missing from the table: 0.000000)
+
+saving/p (k<=8) = 0.5384  =>  alpha <= 3.4616 (p-1)
+tail bound (k>8, using sav <= 4(k-1)): 0.0352  =>  full constant in [3.4264, 3.4616]
+JOB COMPLETE old_block_constant

@@ -1,0 +1,6 @@
+JOB gamma1 : 600x600 midpoint quadrature at the three table positions; no enclosure or uniform-box certificate.
+SOURCE slack/g39_agents/gamma1.py ARGS []
+box 0 0 gamma1 0.12868909349286156
+box 0.500039035053478 0 gamma1 0.13609756703956127
+box 0.21854511395566656 0.3443646581330003 gamma1 0.13634558976792754
+JOB COMPLETE gamma1

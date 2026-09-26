@@ -1,0 +1,7 @@
+JOB cycle : Class-cycle LP and two synthetic examples, with explicit p,k arguments.
+SOURCE slack/cyc_model.py ARGS ['199', '3']
+p=199 k=3: G8=34 cycles=1 (len 396); class-level LP saving=30.00 (net/group 0.882); t-values Counter({np.float64(-0.0): 16, np.float64(1.0): 12, np.float64(0.5): 6})
+   all t=1: saving -60.00 (formula 2*changes-6*G8 = -60); all t=1/2: saving 2.00
+   synthetic seed 0: LP saving 15.86 (net/group 0.466)
+   synthetic seed 1: LP saving 21.40 (net/group 0.629)
+JOB COMPLETE cycle

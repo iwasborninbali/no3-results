@@ -1,0 +1,433 @@
+{
+  "saturation": {
+    "script": "saturation.py",
+    "args": [],
+    "description": "Module self-check, including rejection examples.",
+    "code": null,
+    "skip": null
+  },
+  "window": {
+    "script": "slack/hjsw_window_check.py",
+    "args": [],
+    "description": "Default full finite range: every c for p<=31; six c values for larger primes through 101.",
+    "code": null,
+    "skip": null
+  },
+  "boxes": {
+    "script": "slack/hjsw_boxes_check.py",
+    "args": [
+      "31",
+      "31"
+    ],
+    "description": "All boxes and c through 31 for bound/orbit scan; brute-force gadgets through 13; optional MIP stage skipped without PySAT.",
+    "code": null,
+    "skip": null
+  },
+  "gadget": {
+    "script": "slack/gadget11_check.py",
+    "args": [
+      "13",
+      "6"
+    ],
+    "description": "Gadget checks, p<=13, six sampled boxes per case as implemented.",
+    "code": null,
+    "skip": null
+  },
+  "eight_cover": {
+    "script": "slack/km1_theorem_check.py",
+    "args": [
+      "11",
+      "13",
+      "17",
+      "19",
+      "23",
+      "31",
+      "101"
+    ],
+    "description": "Point-by-point eight-line cover and finite LP comparison.",
+    "code": null,
+    "skip": null
+  },
+  "block_cover": {
+    "script": "slack/block_cover_km1.py",
+    "args": [
+      "320"
+    ],
+    "description": "Historical block-cover implementation.",
+    "code": null,
+    "skip": "PySAT is not installed; maxlawful_pysat is imported at module load."
+  },
+  "km1_lines": {
+    "script": "slack/km1_lines.py",
+    "args": [
+      "1500"
+    ],
+    "description": "Slope profiles for every odd prime through 1500.",
+    "code": null,
+    "skip": null
+  },
+  "cycle": {
+    "script": "slack/cyc_model.py",
+    "args": [
+      "199",
+      "3"
+    ],
+    "description": "Class-cycle LP and two synthetic examples, with explicit p,k arguments.",
+    "code": null,
+    "skip": null
+  },
+  "potential": {
+    "script": "slack/exact_c.py",
+    "args": [
+      "199",
+      "3",
+      "401",
+      "3",
+      "401",
+      "5"
+    ],
+    "description": "Potential cover and fixed-weight LP; arguments are p,k pairs.",
+    "code": null,
+    "skip": null
+  },
+  "arcs": {
+    "script": "slack/arc_imbalance.py",
+    "args": [
+      "101",
+      "199",
+      "401",
+      "1009",
+      "2003",
+      "4001"
+    ],
+    "description": "Arc and Fourier diagnostics at six listed primes; not an asymptotic estimate.",
+    "code": null,
+    "skip": null
+  },
+  "g8": {
+    "script": "slack/g8_general.py",
+    "args": [
+      "500",
+      "-1",
+      "2",
+      "3",
+      "5",
+      "7"
+    ],
+    "description": "Eight-group counts through p=500 at the listed k.",
+    "code": null,
+    "skip": null
+  },
+  "cycles_dependency": {
+    "script": "slack/cycle_stats.py",
+    "args": [
+      "101",
+      "0"
+    ],
+    "description": "Cycle statistics dependency, primitive roots through p=101.",
+    "code": null,
+    "skip": null
+  },
+  "lp_dependency": {
+    "script": "slack/lp_curve.py",
+    "args": [
+      "101",
+      "poly:1,0,0,0"
+    ],
+    "description": "Both restricted and all-line LP on x^3 at p=101.",
+    "code": null,
+    "skip": null
+  },
+  "sat_dependency": {
+    "script": "slack/maxlawful_pysat.py",
+    "args": [
+      "M",
+      "11",
+      "22",
+      "1,10",
+      "32",
+      "33"
+    ],
+    "description": "Optional SAT module; explicit finite instance.",
+    "code": null,
+    "skip": "PySAT is not installed."
+  },
+  "monomial_integral": {
+    "script": "slack/pp_constant_exact.py",
+    "args": [
+      "3",
+      "5",
+      "7",
+      "9",
+      "11"
+    ],
+    "description": "Exact rational model integrals, using the documented R1 Fraction port (original SymPy source archived).",
+    "code": null,
+    "skip": null
+  },
+  "monomial_cover": {
+    "script": "slack/pp_exact_UL_np.py",
+    "args": [
+      "10000019",
+      "5"
+    ],
+    "description": "Finite degree-five W4 cost in box (0,0), at p=10000019. This is one finite prime, not the three-prime historical campaign.",
+    "code": null,
+    "skip": null
+  },
+  "cubic_cover": {
+    "script": "slack/cube_cover4.py",
+    "args": [
+      "197",
+      "1",
+      "5"
+    ],
+    "description": "Five boxes at p=197, a=1.",
+    "code": null,
+    "skip": null
+  },
+  "cubic_lines_3203_0_0": {
+    "script": "slack/cube_matching_fast.py",
+    "args": [
+      "3203",
+      "3",
+      "0",
+      "0"
+    ],
+    "description": "Exact family counts and matching diagnostic for the displayed strong-form table case. Both (1,3) and its reversed family are present in the script; gamma2.py reads only rec13.",
+    "code": null,
+    "skip": null
+  },
+  "cubic_lines_3203_700_-2100": {
+    "script": "slack/cube_matching_fast.py",
+    "args": [
+      "3203",
+      "3",
+      "700",
+      "-2100"
+    ],
+    "description": "Exact family counts and matching diagnostic for the displayed strong-form table case. Both (1,3) and its reversed family are present in the script; gamma2.py reads only rec13.",
+    "code": null,
+    "skip": null
+  },
+  "cubic_lines_12809_0_0": {
+    "script": "slack/cube_matching_fast.py",
+    "args": [
+      "12809",
+      "3",
+      "0",
+      "0"
+    ],
+    "description": "Exact family counts and matching diagnostic for the displayed strong-form table case. Both (1,3) and its reversed family are present in the script; gamma2.py reads only rec13.",
+    "code": null,
+    "skip": null
+  },
+  "cubic_lines_12809_-6404_0": {
+    "script": "slack/cube_matching_fast.py",
+    "args": [
+      "12809",
+      "3",
+      "-6404",
+      "0"
+    ],
+    "description": "Exact family counts and matching diagnostic for the displayed strong-form table case. Both (1,3) and its reversed family are present in the script; gamma2.py reads only rec13.",
+    "code": null,
+    "skip": null
+  },
+  "components": {
+    "script": "slack/blocks_general_k.py",
+    "args": [],
+    "description": "Source fixed finite cases: p=1009,4001 and k=-1,2,3,5,7.",
+    "code": null,
+    "skip": null
+  },
+  "mirrored": {
+    "script": "slack/orbit_union.py",
+    "args": [
+      "3",
+      "5",
+      "7",
+      "11",
+      "13",
+      "17",
+      "19",
+      "23"
+    ],
+    "description": "Mirrored orbit MILP reports at every odd prime through 23; floating solver objectives, no new exact certificate.",
+    "code": null,
+    "skip": null
+  },
+  "signature_sample": {
+    "script": "slack/sig_savings.py",
+    "args": [
+      "101",
+      "199",
+      "6",
+      "runs/generated/sig_savings.json"
+    ],
+    "description": "Bounded signature sampling on 101<=p<=199, run length<=6; not the historical campaign.",
+    "code": null,
+    "skip": null
+  },
+  "old_constant": {
+    "script": "slack/constant_km1.py",
+    "args": [
+      "8"
+    ],
+    "description": "Historical signature-table weighted arithmetic at K=8.",
+    "code": null,
+    "skip": null
+  },
+  "orbit_stability": {
+    "script": "slack/t221/orbit_stability.py",
+    "args": [
+      "3",
+      "5",
+      "7",
+      "11",
+      "13",
+      "17",
+      "19",
+      "23",
+      "29",
+      "31"
+    ],
+    "description": "Exhaustive finite stability computations for c=1, every odd prime through 31.",
+    "code": null,
+    "skip": null
+  },
+  "orbit_types": {
+    "script": "slack/t221/orbit_types.py",
+    "args": [
+      "3",
+      "5",
+      "7",
+      "11",
+      "13",
+      "17",
+      "19",
+      "23",
+      "29",
+      "31"
+    ],
+    "description": "Finite incidence types and optima, c=1, primes through 31.",
+    "code": null,
+    "skip": null
+  },
+  "standard_model": {
+    "script": "slack/t221/standard_model.py",
+    "args": [
+      "5"
+    ],
+    "description": "Bounded model regeneration through k=5, three draws/signature, seed 0. Historical 510-entry k<=9 input is preserved.",
+    "code": null,
+    "skip": null
+  },
+  "constant2": {
+    "script": "slack/t221/constant2.py",
+    "args": [],
+    "description": "Committed 510-signature table, minimum recorded saving; floating arithmetic only.",
+    "code": null,
+    "skip": null
+  },
+  "old_block_constant": {
+    "script": "slack/t221/constant.py",
+    "args": [
+      "slack/t221/fast_sig_table.json",
+      "8"
+    ],
+    "description": "Earlier finite table arithmetic, not a universal certificate.",
+    "code": null,
+    "skip": null
+  },
+  "fast_blocks": {
+    "script": "slack/t221/fast_blocks.py",
+    "args": [
+      "113",
+      "137"
+    ],
+    "description": "Bounded finite-prime model sampling, p in [113,137]; output does not replace historical table.",
+    "code": null,
+    "skip": null
+  },
+  "clean": {
+    "script": "slack/t221_agents/clean_counts.py",
+    "args": [],
+    "description": "Full source campaign: 405 primes 100..3000 and five extra primes through 100003; LP through 300.",
+    "code": null,
+    "skip": null
+  },
+  "seven_cover": {
+    "script": "slack/t221_agents/orbit_cover.py",
+    "args": [
+      "11",
+      "500"
+    ],
+    "description": "Full source finite seven-orbit cover validation through p=500.",
+    "code": null,
+    "skip": null
+  },
+  "U": {
+    "script": "slack/g39_agents/U_model.py",
+    "args": [],
+    "description": "Uncovered-probability implementation self-check.",
+    "code": null,
+    "skip": null
+  },
+  "U_validation": {
+    "script": "slack/g39_agents/validate_U.py",
+    "args": [],
+    "description": "Uncovered-probability finite-dump comparison on the three archived NPZ inputs.",
+    "code": null,
+    "skip": null
+  },
+  "gamma1": {
+    "script": "slack/g39_agents/gamma1.py",
+    "args": [],
+    "description": "600x600 midpoint quadrature at the three table positions; no enclosure or uniform-box certificate.",
+    "code": "for x,y in [(0,0),((-6404)%12809/12809,0),(700/3203,(-2100)%3203/3203)]:\n print('box',x,y,'gamma1',ns['gamma1_integral'](x,y,ns=600,nw=600),flush=True)",
+    "skip": null
+  },
+  "gamma2_hybrid": {
+    "script": "slack/g39_agents/gamma2.py",
+    "args": [],
+    "description": "All unordered finite-dump pairs, predicted joint probabilities and empirical counts; three archived NPZ inputs.",
+    "code": null,
+    "skip": null
+  },
+  "gamma2_continuum": {
+    "script": "slack/g39_agents/gamma2_continuum.py",
+    "args": [],
+    "description": "Bounded 100x100 midpoint quadrature at (0,0), all six configurations; numerical diagnostic, not historical grid reproduction.",
+    "code": "v,parts=ns['gamma2_continuum'](0,0,ns=100,nt=100,configs=ns['CONFIGS_ALL'],return_by_config=True)\nprint('all ordered configurations',parts)\nprint('unordered gamma2',sum(parts[k] for k in ns['CONFIGS_HALF']))",
+    "skip": null
+  },
+  "independent_constants": {
+    "script": "independent/constants.py",
+    "args": [],
+    "description": "R1 exact model integration and descent enumeration through length nine; eight ambiguous signatures and exact tail.",
+    "code": null,
+    "skip": null
+  },
+  "independent_core": {
+    "script": "independent/check.py",
+    "args": [],
+    "description": "R1 independent incidence checks: 446 cases and the full p=11 box table; no author imports.",
+    "code": null,
+    "skip": null
+  },
+  "arithmetic_library": {
+    "script": "independent/model_arithmetic.py",
+    "args": [],
+    "description": "Explicit arithmetic library exercise, C3=11/4.",
+    "code": "r=ns['constant'](3); assert r['C']=='11/4'; print(r)",
+    "skip": null
+  },
+  "v120_formulas": {
+    "script": "verify_v120.py",
+    "args": [],
+    "description": "New exact finite checks: p=5 cubic optimum, corrected FE formulas, configuration list, tail and constant arithmetic.",
+    "code": null,
+    "skip": null
+  }
+}

@@ -1,0 +1,17 @@
+JOB saturation : Module self-check, including rejection examples.
+SOURCE saturation.py ARGS []
+n=2: 4 tokens, every triple at full rank  [4 triples checked in exact integer arithmetic]
+n=4: 8 tokens, every triple at full rank  [56 triples checked in exact integer arithmetic]
+dual check: probe (1, 0) reads [0, 0, 0] on a degenerate triple
+
+theorem: a lawful book holds at most 2n tokens  [the readout t -> t // n has n reading classes; three tokens of one class are aliased by probe (1, 0), hence degenerate; so at most 2 per class]
+frontier: None
+
+rejected: Degenerate (0, 1, 2)
+rejected: AssertionError lawful but 3 < 8: not saturated
+rejected: ValueError [99]
+rejected: TypeError not a token: 0.5
+rejected: ValueError vibes: it fits
+rejected: ValueError a frontier with content is a submission, not a fact
+rejected: NotImplementedError n=101: your end
+JOB COMPLETE saturation

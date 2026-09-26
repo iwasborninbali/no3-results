@@ -54,7 +54,7 @@ RECORDS:
 WHAT IS NOT HERE, stated plainly: per-shard terminal receipts (node count, seconds, status) for every shard of the completed runs were printed to
 terminals and summarised in the logs above by group; they are not preserved as one file per shard for the second solver's residue groups nor for the
 first solver's 44 shards.  The exhaustion statements in the note therefore rest on the recorded run reports of two independent implementations,
-not on a receipt per shard.  No n = 9 or n = 10 production exhaustion was re-run for this version; the n=5 and n=6 calibrations of cyc3d_mine.c were reproduced by the
+not on a receipt per shard.  The n = 10 exhaustion of cyc3d_mine.c WAS re-run for this version (26 September 2026) as 64 receipted shards, see n10_rerun/ below; no n = 9 production exhaustion was re-run; the n=5 and n=6 calibrations of cyc3d_mine.c were reproduced by the
 reviewer on 26 September 2026 (4 494 and 64 444 nodes).
 
 WITNESS HEADERS: the historical header lines of several witness files (n = 15, 18, 25, 27, 29 in witnesses_table/ and witness_n27_56_record.txt) say «no published data for this n» or that the sequence stops at a(8); those remarks are the solver's belief at the time and are superseded by Section 2 of the note (the contest report and the OEIS coordinate file carry prior configurations); the files are kept byte-identical for provenance.
@@ -69,3 +69,12 @@ Change in version 3.9 (26 September 2026, after the reviewer's fourth pass): two
 Change in version 4.0 (26 September 2026, after a fresh independent read): the eight receipts relabelled as a later rerun; the shipped first-solver source stated not to reproduce the record from n = 7 up; the historical witness headers noted as superseded; every witness re-verified with the point count bound.
 
 Change in version 4.1 (26 September 2026, after the fifth returning-reviewer pass): the n = 8 count of no4_sym_exact.c remeasured (maximum 20 reproduced, node count 14 044 102 against the record's 4 989 036); the second solver's source stated as not bound to every completed shard; nothing else here changed.
+
+n10_rerun/ (added in version 4.2): the shipped cyc3d_mine.c (byte-identical copy inside; SHA-256 of source and binary in hashes.txt) compiled with gcc -O2 on an
+  8-core Apple laptop and run on 26 September 2026 (started 2026-09-26T10:33:10.613848, six processes in parallel under caffeinate) as 64 processes
+  ./cyc3d_mine 10 400000 27 s 8 26 k 8  for s, k in 0..7 (jobs.txt): first chosen orbit index modulo 8 by second chosen orbit index modulo 8, each started
+  with the incumbent 26 and the target 27, no time limit reached.  One receipt per shard (the program's stdout as written): every one reports
+  "ИСЧЕРПАНО — НЕ ПРЕВЗОШЁЛ НАЧАЛЬНОГО" (exhausted; did not exceed the initial incumbent).  coverage_n10_rerun.py checks the 64-shard partition,
+  the statuses and the partition line of every receipt and sums them (summary.json): 1,522,448,281 nodes, 7.6 core-hours, longest shard 1666 s.
+  What this certifies: with the incumbent 26 no shard found 27; attainment of 26 is certified separately by the witness.  What it does not
+  certify: the historical production runs of 21-22 August (their reports remain as recorded above); the n = 9 exhaustion was not re-run.

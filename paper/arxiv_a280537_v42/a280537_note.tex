@@ -7,7 +7,7 @@
 \title{Nineteen certified configurations, eighteen independent bounds for the no-four-coplanar problem in the cube,\\
 and what they do not establish}
 \author{Aleksei Kudriashov (Alex Komang)\\ \small Nusa Dua Studio, Nusa Dua, Bali, Indonesia\\ \small ORCID: 0009-0006-8885-5338}
-\date{26 September 2026 --- version 4.2 (after the sixth returning-reviewer pass and a fresh independent read)}
+\date{26 September 2026 --- version 4.2 (after the sixth returning-reviewer pass and a fresh independent read; the $n=10$ exhaustion re-run with a receipt per shard)}
 \begin{document}\maketitle
 \begin{abstract}
 Let $a(n)$ be the largest number of points of $\{0,\dots,n-1\}^3$ no four of which are coplanar
@@ -41,7 +41,8 @@ statements above $n=8$, both about the cyclically invariant subspace, each exhau
 independent implementations according to their recorded run reports (the ancillary evidence
 directory holds both solvers' programs, the records, the shard coverage and its check; per-shard
 receipts and the exact program versions of either solver's production runs are not bound by the
-records): its maximum is $23$ at $n=9$ and $26$ at $n=10$.
+records; for $n=10$ the shipped second solver was re-run on 26 September 2026 as $64$ receipted shards
+covering its full partition, and no shard exceeded the incumbent $26$): its maximum is $23$ at $n=9$ and $26$ at $n=10$.
 
 Version 3.3 adds a search over all 33 symmetry classes of the cube group
 (Section~\ref{s:strata}): no bound changes, but the best known values at $n=7$, $8$, $9$ are
@@ -332,7 +333,11 @@ $20$) by the classes containing a $3$-fold rotation or a half-turn; at $n=6$ the
 value is $15=a(6)-1$, in agreement with Section~\ref{s:subspace}.  At $n=9,10$ the $3$-fold
 stratum reproduces $23$ and $26$ --- the subspace maxima already exhausted by the first route ---
 with a one-hour budget, and nothing above them (at $n=9$ and $n=10$ the runs ended feasible, with incumbents
-$23$ and $26$ and bounds $27$ and $30$: reproductions of the values, not second exhaustions; the exhaustion evidence, the
+$23$ and $26$ and bounds $27$ and $30$: reproductions of the values, not second exhaustions; the $n=10$
+exhaustion itself was re-run for this version with the shipped \texttt{cyc3d\_mine.c} as $64$ receipted shards,
+first chosen orbit index modulo $8$ by second chosen orbit index modulo $8$, each started with the incumbent $26$ and
+the target $27$, 1\,522\,448\,281 nodes in 7.6 core-hours, longest shard 1666\,s, every shard exhausted and none exceeding $26$
+(\texttt{anc/evidence/n10\_rerun/}, one receipt per shard); the exhaustion evidence, the
 programs of both solvers with their build and run commands, the recorded run reports, the shard coverage
 of $n=10$ and a script that recomputes it, is in the ancillary directory \texttt{anc/evidence/} with a
 hashed manifest; per-shard terminal receipts and the exact program versions of either solver for each

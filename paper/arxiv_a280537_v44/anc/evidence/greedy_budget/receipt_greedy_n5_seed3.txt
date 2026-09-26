@@ -1,0 +1,1 @@
+n=5 seed=3 seconds=15.0 restarts=839037 best=13 target=13 reached=yes

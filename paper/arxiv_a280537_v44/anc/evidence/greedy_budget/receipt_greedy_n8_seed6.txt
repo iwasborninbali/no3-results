@@ -1,0 +1,1 @@
+n=8 seed=6 seconds=15.0 restarts=93863 best=18 target=20 reached=no

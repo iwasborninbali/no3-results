@@ -1,0 +1,547 @@
+{
+ "version": "4.4 evidence manifest, 26 September 2026",
+ "files": {
+  "README.txt": "e161bb03357281d73200a4b8a97bece72b561edf90b5980e3fc9352aabb05140",
+  "coverage_check.py": "dc900266b1c6dff9d42db86ea3ba0b3e20444851592c6d17b9b355682c5b3a18",
+  "coverage_n10_record.txt": "6d5d8edf168502c19e02cf39543247459b689d7f24301b97442775e86cceb59c",
+  "cyc3d_mine.c": "768fef0b73b60a7b00869cdc631fb991fd14f49346ca38d2e8c9ee79327c9a88",
+  "interrupted_attempt_threshold25_shard0.txt": "89204c9ddb275890d3b2e9e436ee5df5816eb611c7be1bdf149a1fa9948b3dea",
+  "interrupted_attempt_threshold25_shard1.txt": "6afcb9bbd1e1ef1308bd09de3eb9d12ab2a62234c6549b5b82a0d2a6281dc6cb",
+  "interrupted_attempt_threshold25_shard2.txt": "5a319dee66c7bdfbe8712a3e0c2886eac109d3796250b1f87e1dbd88aba665ef",
+  "interrupted_attempt_threshold25_shard3.txt": "394049067512ab48350d5a4eeb14b617cfa2fea26681f686afa975642ef7384f",
+  "interrupted_attempt_threshold25_shard4.txt": "a840712a25027f338616a239a6bc4278348dcc1108b2fb3520e12e3e489c5589",
+  "interrupted_attempt_threshold25_shard5.txt": "ca21263dff810b34da40bad4905fc0cda3da1b20f4951b8fb3f7e35bc586a3d8",
+  "interrupted_attempt_threshold25_shard6.txt": "8c2cb764a4ec49d7eee42a71bc1fec2859a5164962db102e7c7782e98a38546c",
+  "interrupted_attempt_threshold25_shard7.txt": "2d777ca5b367f6958c7e70a88101d9c6bce1b9f0a54ef6838eb47c910ad1b7e7",
+  "log_second_solver_n10_completed.txt": "5e67b2d1cc8916793156408eb0095866ccfc4c76c880ce00527cddeb3a4e5577",
+  "log_second_solver_n9_and_n10_first_attempts.txt": "7aad99309a75eb8b19b1310a7c27892a49279eafdd2541558c2b5c9b16f42a26",
+  "no4_sym_cap.c": "e3268fee0ff9f0487fdcfbdcc8958df3d57b437d4a5b3bb19713ac49c76e70c4",
+  "no4_sym_exact.c": "2a0ca76b67268b042d8e1192ec152e96694966b614f72bf4aa7c53a309451045",
+  "no4_sym_fastproof.c": "0a658b0eadffd0cee1f7fde535af8f61fb7a184daeac44fda10689a2e354132f",
+  "record_first_solver_symmetry_2026-08-21.md": "bd57e0ea325c5a1a7c6a67028761e5723cba37a2430e74a63cdad2f654bffeb3",
+  "greedy_budget/greedy_budget.c": "2e2a368a104fc8190e8ea10c8f6f1bd32e29fb362481de1124d6bdac5a7d3616",
+  "greedy_budget/hashes.txt": "333927f88325c4d35129f7ebb2779f5c3114714764773ff6501649d4ad2024d6",
+  "greedy_budget/jobs.txt": "869b41ae8c472f7089584451956f7957ca6c8fac973c2c47bbb055757ac94742",
+  "greedy_budget/receipt_greedy_n5_seed1.txt": "c1c40822be6cb211af1d40a112269933832e84f55e15dfb4da1a486dedc1e51a",
+  "greedy_budget/receipt_greedy_n5_seed2.txt": "2a2906455562cd037a9957b05478f4a70d40f9e15a5bf700eeb02165c99188f3",
+  "greedy_budget/receipt_greedy_n5_seed3.txt": "077177db5eb2f9a2ad2246aa04a9ea19ba2af204adb898def9b62815e057875d",
+  "greedy_budget/receipt_greedy_n5_seed4.txt": "37f85b6ddae528500e5e3024f0dd4f27388d0ff0a0eeda370925988021bd7966",
+  "greedy_budget/receipt_greedy_n5_seed5.txt": "30dd94c5806880119e58887b4b58dc84f040125125e1dd5bb8846be261a77f85",
+  "greedy_budget/receipt_greedy_n5_seed6.txt": "7286bd22665f6de56f26c9aa74cfcc601b5f23aec91d3f5da31b412b44c1efc0",
+  "greedy_budget/receipt_greedy_n5_seed7.txt": "294aabe310765944c205a655fdbba540cda048bda985a1d10f44d6dbaf0ab115",
+  "greedy_budget/receipt_greedy_n5_seed8.txt": "29e2d808ab9ee541d68b311306c1341c4fed933b8b127330c0ec60f555bc8d7d",
+  "greedy_budget/receipt_greedy_n6_seed1.txt": "d49de65c6be4b746fb7db3ee3c93311880ff3b5400bfd368baeffd98a1ffb7b7",
+  "greedy_budget/receipt_greedy_n6_seed2.txt": "150519a8a3273cb48ab882e8fde5a43c3ea80036ab7e36286825ab12b67842a7",
+  "greedy_budget/receipt_greedy_n6_seed3.txt": "8d438867ff4cc77c85feb039c600e3628fed9e892d273877c379dafd1e1cfb41",
+  "greedy_budget/receipt_greedy_n6_seed4.txt": "3a6aecae2702e70495ad7a2a87a40a7f9b2f90b423290af297a81206334f47a9",
+  "greedy_budget/receipt_greedy_n6_seed5.txt": "9e8a189821464216140da1e5fa374ce8a7403102bacc9ea02562402b1e497dd5",
+  "greedy_budget/receipt_greedy_n6_seed6.txt": "477e4b5c1fa7df9304eeed2b1aa02427f27db66b6b4f7d83ae6bcb3dd5bb79bd",
+  "greedy_budget/receipt_greedy_n6_seed7.txt": "4e3c6197cc4da37d91738e74198387cc7704cf76ea6797757489c71eb7da505e",
+  "greedy_budget/receipt_greedy_n6_seed8.txt": "02178e536191da7d70a81d97cff660e56f917d4f0974a1fb2b81c750b036973e",
+  "greedy_budget/receipt_greedy_n7_seed1.txt": "45ac6219cf53b892fcc220e20a4f22c94f75ee0f2b9d2b77b245fb3d9f89c080",
+  "greedy_budget/receipt_greedy_n7_seed2.txt": "af8136227d78104ed43a04e0bafb56ea3e7643f286b971b75ff7ec84e58fdfb9",
+  "greedy_budget/receipt_greedy_n7_seed3.txt": "34a13091241500212d31efce56564ed908a7b9e50b3f04b34235d74c9396cdb5",
+  "greedy_budget/receipt_greedy_n7_seed4.txt": "9785996823e2d0ff5a732aa2449c52f43ffe4668cbe97918341ce5e1730976b1",
+  "greedy_budget/receipt_greedy_n7_seed5.txt": "a7a7b75e9e54dd0dabcfbc2f663a93676100ad5a7aac57713279af43036ad2cf",
+  "greedy_budget/receipt_greedy_n7_seed6.txt": "678d421800200510e9d59c73f9b8d6519400c811d334cc73a90336e2111eb71f",
+  "greedy_budget/receipt_greedy_n7_seed7.txt": "8c99b20c7802e14b48ec9b6079644257a29349039b2a67647aca8a352b9ad722",
+  "greedy_budget/receipt_greedy_n7_seed8.txt": "c2c7ce9ab97ed2b44e3cbb7ea011e9f7d0075f4d162d1f2c0cff9820b1955013",
+  "greedy_budget/receipt_greedy_n8_seed1.txt": "62dfbd9ab7bef973df078da88b83dba9f1a0be0594335f8e0001678186c29880",
+  "greedy_budget/receipt_greedy_n8_seed2.txt": "bf26b8b2926d123f9c169d12a4d89884b92a4300843562f76492aedda1c91b4d",
+  "greedy_budget/receipt_greedy_n8_seed3.txt": "e663fa142c09f51fb0545053d936d6d1f2b29a988c5db6bd8ca36b061cf65070",
+  "greedy_budget/receipt_greedy_n8_seed4.txt": "e2ac3f95889bb5ed24270ebcac3becad9e575a401b874ec8517cade9d3902af5",
+  "greedy_budget/receipt_greedy_n8_seed5.txt": "71423e56b3ebbadbce2407ca15c53ae4bac13c761300ee5a4409b6732347d1e2",
+  "greedy_budget/receipt_greedy_n8_seed6.txt": "209a258c49071e4b5e523176e8d1b57a389ba6004e1a765707b89b918fb045dd",
+  "greedy_budget/receipt_greedy_n8_seed7.txt": "00910b24bd4592e8f1745495114ce00dea29e2a61dbbadaf4d8fcc28262fca3d",
+  "greedy_budget/receipt_greedy_n8_seed8.txt": "5880e64bc3ddd783e0f258e5e6c9381ab92ba499b3d0326879fbb777ff42a443",
+  "greedy_budget/started.txt": "167af3aae5c4590ac57afc63c56a42b98921b7f295a8469749c27f2702e6d2a8",
+  "n9_rerun/coverage_n9_rerun.py": "7e2e8c542304036067783b4cd14f1937dda7ecbb3369758195f953493f67eb04",
+  "n9_rerun/cyc3d_mine.c": "768fef0b73b60a7b00869cdc631fb991fd14f49346ca38d2e8c9ee79327c9a88",
+  "n9_rerun/hashes.txt": "24ef7151bf444bfb1edac6da71a2833f1c3433b4cd6ac030c909e5890cc5ae5e",
+  "n9_rerun/jobs.txt": "d59784813bbf8e9a47929bbd4195498a43979c690f9e799cfe2e14522217c48d",
+  "n9_rerun/receipt_n9_shard0of8.txt": "bff00a8deee5861d7c95fb94bd5158c16ba5a80a0fa41cbaac12765b795e1cd5",
+  "n9_rerun/receipt_n9_shard1of8.txt": "ca74b458d74e99a1093c42c96300a0294b0d2316eb2120d491b116e83f16f78c",
+  "n9_rerun/receipt_n9_shard2of8.txt": "c7ea177f40838aa4838b924635571436712fbd5dd64855e2203c72bd15a41b6a",
+  "n9_rerun/receipt_n9_shard3of8.txt": "592f3de4499954b44d068a82da3d3f1b9a00882b0a4c4a979d91d09849328d73",
+  "n9_rerun/receipt_n9_shard4of8.txt": "5ea6064f41504ec42f3ec92461fd2064e0bce389de99bd6eea4ab311a0f36cc3",
+  "n9_rerun/receipt_n9_shard5of8.txt": "cc6e771c1c2fd5adb0804b3a4e77e79f311720b4d53ae264295bc8f4799864ef",
+  "n9_rerun/receipt_n9_shard6of8.txt": "42191cb5e24cd6eb894bad64aec8cc372fc6c380ba8d38d02ef8c0ca5fddc7dc",
+  "n9_rerun/receipt_n9_shard7of8.txt": "46ff01e3b993e1e6ebc96addbb2477553dcbfb6338fb148d5b96baddb060bd35",
+  "n9_rerun/started.txt": "8484a31ec758651c5ec006abab888684af936f1b70f1191c848fdfba6953eff3",
+  "n9_rerun/summary.json": "732991cba5a18168d157e9067f9ee86beed14714dba7b808975ddb5277b3f569",
+  "witnesses_table/n09_23pts.txt": "69736d29f40431296a77a5d2b675a1d08521c4ccaec506244523b99f22526e59",
+  "witnesses_table/n10_26pts.txt": "0b1da147af135897909dab96dc20d8d229625e398ababb6d3651e999b0692143",
+  "witnesses_table/n11_28pts.txt": "bad49637796e26474c3dc9466cbcc499e90b40ee90f6f684b720971f816dd3bf",
+  "witnesses_table/n12_31pts.txt": "cc6274a50b90ade28c49a139105bb0cc4de78d1b49e7d0c549ceb0d4a95bbd08",
+  "witnesses_table/n13_32pts.txt": "83e3b2f03b37cae13ad33a5fabb217e240624dba8861bed805eb94c9870e636d",
+  "witnesses_table/n14_34pts.txt": "fc4148d53cbd6b5fe4055ac8e6c1a1afc2b4a7088f83758be4c2f04699ec1a66",
+  "witnesses_table/n15_35pts.txt": "22371b62e9d6f6b7aa3666ecfffd141c6ba3141a64c3acdfb1c275d4258e7e85",
+  "witnesses_table/n16_38pts.txt": "9ff098f8bacd56c01595ded5a337ef0e5dfb1f09cf28ee9d4a55502cc1916f58",
+  "witnesses_table/n17_38pts.txt": "cffb6df879d88b88188e3fac26acbbf95ac049c556c7409dc7ba51329f5a6c4e",
+  "witnesses_table/n18_41pts.txt": "56fe470e34be7ba8c02f3ffa374e03b941d08a59ce858b72357c3355b2819c8f",
+  "witnesses_table/n19_43pts.txt": "c2644cb954581674e4bad07ae8d9d7c462eda9e0f558e2e38e915984d98137f7",
+  "witnesses_table/n20_45pts.txt": "6239bd1d1c3f6e74ab43bddbfbd6e68a8cdd60ab04d0d1b2acfe2f40f7142efb",
+  "witnesses_table/n21_47pts.txt": "4f6225c8c40997e9325d9209f5d7a5197de1e412443695e1efd202e9df5883d8",
+  "witnesses_table/n22_49pts.txt": "24b37d02ab352fd24bab435a6c940041acf38985c2f3154cf7d3e0841d146c12",
+  "witnesses_table/n23_50pts.txt": "b6c3ebe3089cd122295f641589c79388217dd52b100e68f71269d921d9ac912f",
+  "witnesses_table/n24_52pts.txt": "3b4eab7096812f6ad0c823c3b15041d315e49cb8b2dc6ae3a61a8e9180cde82b",
+  "witnesses_table/n25_53pts.txt": "7356b0eb247eb55fb6fee81faec082acef7a9c718315607a20ffca768192541b",
+  "witnesses_table/n27_56pts.txt": "896c6f01bbbfd0d224ca1b0d36a374691287e133c05fba227acff4329ad16189",
+  "witnesses_table/n29_59pts.txt": "21bc9e2184865dadde89972a69bf828627e791daccaa5b2cb0e19d33c1c5f848",
+  "n10_rerun/coverage_n10_rerun.py": "23d142f28f9e684f3139c16d4ae8a9dd26879e06ccda1773cf35e5d4670b3919",
+  "n10_rerun/cyc3d_mine.c": "768fef0b73b60a7b00869cdc631fb991fd14f49346ca38d2e8c9ee79327c9a88",
+  "n10_rerun/hashes.txt": "24ef7151bf444bfb1edac6da71a2833f1c3433b4cd6ac030c909e5890cc5ae5e",
+  "n10_rerun/jobs.txt": "afe03eebc8c2490ac0059134283e719555d2d284cd5285edae568ceb11635045",
+  "n10_rerun/receipt_n10_shard0of8_sub0of8.txt": "7516026b985aeb4b95ecdf6f32b1911386bc22e38cea42c642238b0a6743b904",
+  "n10_rerun/receipt_n10_shard0of8_sub1of8.txt": "569bbfd610dae59cdda7138948d3573a70c6dbb6668bbee10538b7c433746670",
+  "n10_rerun/receipt_n10_shard0of8_sub2of8.txt": "8404469f02519b93918abcd77dcf8e8b3610f0058623382d3a0d33d5f63a9b85",
+  "n10_rerun/receipt_n10_shard0of8_sub3of8.txt": "b1b6559e3b2862c9a04131e8e14aa1e54f6f2325628e14c467b1812f52b177d9",
+  "n10_rerun/receipt_n10_shard0of8_sub4of8.txt": "ec03911fc8dab19b22714961098f275f7a47215e740a6aad99bdfd400b88605d",
+  "n10_rerun/receipt_n10_shard0of8_sub5of8.txt": "f6b0d4e290dbd1b651c740745ecc0f44e07cc8331caa487a8de8b50d85853140",
+  "n10_rerun/receipt_n10_shard0of8_sub6of8.txt": "cc1883059bb487fa013baf62455fe7b06857ec485e0562b059f17de07679f1e3",
+  "n10_rerun/receipt_n10_shard0of8_sub7of8.txt": "aa2334c11893655d097176caaa68698df09acc89bb9dc7de2745236cab44af85",
+  "n10_rerun/receipt_n10_shard1of8_sub0of8.txt": "345de1db2626a28b8210ab7f28ae5874d86399b245500dc43b5b31f396701a70",
+  "n10_rerun/receipt_n10_shard1of8_sub1of8.txt": "a9e338eff044e981489bb0f2cfb7f95e3a02c40396913b0b6d403357836bc1ea",
+  "n10_rerun/receipt_n10_shard1of8_sub2of8.txt": "3ab914789e2728922f1043cef39fe0e1f67789fdacbae796f7cec09e39176ea3",
+  "n10_rerun/receipt_n10_shard1of8_sub3of8.txt": "8317fbf691b98a02e517e3e6841f070f6aa5eed8a1d3bc231331390af5aca3ed",
+  "n10_rerun/receipt_n10_shard1of8_sub4of8.txt": "f5582ca21bdcab15f837598ac0b98c1917b6a05691bf6aa128262281eaa9a435",
+  "n10_rerun/receipt_n10_shard1of8_sub5of8.txt": "6845aa49fbb77afc56952fdfc645f5ebc6a89a3629cd2e621083845f637afedb",
+  "n10_rerun/receipt_n10_shard1of8_sub6of8.txt": "12fc888a6a97dd450c83e9b7c26274ffc75f39962fc1251f952e0c6380cfdff2",
+  "n10_rerun/receipt_n10_shard1of8_sub7of8.txt": "905f91972e1c592db21ed6629b475d7bdc08365f3eb71fbe58822627ae3194cf",
+  "n10_rerun/receipt_n10_shard2of8_sub0of8.txt": "8c8012e23f5725a7b5c12da7d0200b2e3dd2a453d37dd23a86839c76b897f48d",
+  "n10_rerun/receipt_n10_shard2of8_sub1of8.txt": "7e95a5b3ffe8b7c737cdf13f94e0d3dfcd570088a542a942d1c9c4831c37a7d7",
+  "n10_rerun/receipt_n10_shard2of8_sub2of8.txt": "a2e4cdc28ef3005ce4d9be342c41f389708042fa926496a1ee750aec1291a2a1",
+  "n10_rerun/receipt_n10_shard2of8_sub3of8.txt": "c04cd61bf2ca3bc123d679772d204e708ef2b65d286a999170eddb2367dd2c1c",
+  "n10_rerun/receipt_n10_shard2of8_sub4of8.txt": "58223b66a3c34f7eda43f737448022be1d603ccfb63ab52f86d3647701c38eb9",
+  "n10_rerun/receipt_n10_shard2of8_sub5of8.txt": "7ba7e8ad213f03abf3b174cc42efaaa51fade12e8d7dde277a1f67707a8be823",
+  "n10_rerun/receipt_n10_shard2of8_sub6of8.txt": "a4a67f457fccca991afe559e507512031a65f94f7ab6fddf2d9250dc6dc63118",
+  "n10_rerun/receipt_n10_shard2of8_sub7of8.txt": "3ca8937c9019861bd87031416ce4eec0c0938385a356a8fbfbeb14c6a5b9f382",
+  "n10_rerun/receipt_n10_shard3of8_sub0of8.txt": "14ec0576c3b650f4e652e3efe951fb46dd53d93323ee15dd0a693dc9bd251617",
+  "n10_rerun/receipt_n10_shard3of8_sub1of8.txt": "09fac27d7d671ebb8c740bfd97ebf1c4d063b156149683ec007bea96feeb9f12",
+  "n10_rerun/receipt_n10_shard3of8_sub2of8.txt": "28b7006988b9d2fd92862b4bb5f2277c80583220ce9f3526e62a6a8942164dd9",
+  "n10_rerun/receipt_n10_shard3of8_sub3of8.txt": "0b0ee8c43334dddbcb7c7a139a51a4429e8b384f55bbd4e79dae6dcc5cff09e0",
+  "n10_rerun/receipt_n10_shard3of8_sub4of8.txt": "af3ee6885821fcbefd64bbfe43fada59a5ab1cf61c9272f9e9f2a9a121df4859",
+  "n10_rerun/receipt_n10_shard3of8_sub5of8.txt": "a30213fdc06f5d2dc69b911965e26bc615228d87ea8d2ce9db24cf2913f0fd97",
+  "n10_rerun/receipt_n10_shard3of8_sub6of8.txt": "69e263340d585185dd39c0a2a4dc9d72840dc74353a19489ec8d9d800f816d1f",
+  "n10_rerun/receipt_n10_shard3of8_sub7of8.txt": "b2def318ff27cd41f2b381470c5be50f2fac4f696d39c94d4c9dff312278e7a0",
+  "n10_rerun/receipt_n10_shard4of8_sub0of8.txt": "8fdf95aa01f37ad1605bca448fbf9c8af6547237b1bba8e16f7573f3648338f9",
+  "n10_rerun/receipt_n10_shard4of8_sub1of8.txt": "5998445a928969ae076893d9d628d17d3cf07ccdfa8f752435fdbef36859a814",
+  "n10_rerun/receipt_n10_shard4of8_sub2of8.txt": "227bcf7ab9b91458724f2a906c0cffa52616d23eaf6ad2283c9f2389e9b82fc0",
+  "n10_rerun/receipt_n10_shard4of8_sub3of8.txt": "8bfd71aaf23f1f2c773490fd11d615bf131e01ccd6affc1453bf987962758acf",
+  "n10_rerun/receipt_n10_shard4of8_sub4of8.txt": "643961c54689d6890836e5262c8e47df3feee67917fae9f1040c9e999d6beca6",
+  "n10_rerun/receipt_n10_shard4of8_sub5of8.txt": "6ba0da8a8c9875880aa2fe4bb13d3b8f29328adaf53a8eb5365298dee3eaf1cc",
+  "n10_rerun/receipt_n10_shard4of8_sub6of8.txt": "13b180a9b2e9f756b37253a56cf155cc1953e10fed7a4a355a558a56ef519a6c",
+  "n10_rerun/receipt_n10_shard4of8_sub7of8.txt": "3d4ed9b61f66de9e743c7c0e1ffcf378de7881370f380addbb422a89bf1cc8c5",
+  "n10_rerun/receipt_n10_shard5of8_sub0of8.txt": "320e1815d032e7654df37ca25b0e36a94d356f82dce707586d5d6c9a539f58fe",
+  "n10_rerun/receipt_n10_shard5of8_sub1of8.txt": "2cc1d59719e5013135bf8845280eb856cb570c34075d8cc7ba0f1fd29e2a3c71",
+  "n10_rerun/receipt_n10_shard5of8_sub2of8.txt": "09c0d093ad48776efed737a63e8a3ec81db5d7dd9f7e3995b18b40718d20488d",
+  "n10_rerun/receipt_n10_shard5of8_sub3of8.txt": "8c5c417aa15bbb5defd984d3dd983a85a170b6105de07534f2a94197904b8789",
+  "n10_rerun/receipt_n10_shard5of8_sub4of8.txt": "17040e8bb212a0415db0c8a77a3814e4b6573efe582b8ebe3caab0bb078ec4c3",
+  "n10_rerun/receipt_n10_shard5of8_sub5of8.txt": "48d25c045bc21231d4f617c73e47bb5a6009b978f60d0a8ae0faea536eb1285e",
+  "n10_rerun/receipt_n10_shard5of8_sub6of8.txt": "be2014b52f0656c129276aa34272146750c7d7c2f64d1e0b12f40103f947db97",
+  "n10_rerun/receipt_n10_shard5of8_sub7of8.txt": "a19f228d1a88a932fa7b625d10bf8c8c98921ab4d2ed2fc3409db62d5415ca52",
+  "n10_rerun/receipt_n10_shard6of8_sub0of8.txt": "62500fa64d10599638e04dd0c6a9b034ce6d93116bac7b77c1b70fe695932a74",
+  "n10_rerun/receipt_n10_shard6of8_sub1of8.txt": "676e567fa756f3823037ec0bb8ac5323d2c32185ebb0c7cf5dd24ef82e0c0d4b",
+  "n10_rerun/receipt_n10_shard6of8_sub2of8.txt": "4c6d79999500e58794ea344f9caef21cab3e4db075f76218669fbca78d57e904",
+  "n10_rerun/receipt_n10_shard6of8_sub3of8.txt": "0a262a6f546a8c7c13b559977190ee88250774693d1b2c157e93805ee836a61e",
+  "n10_rerun/receipt_n10_shard6of8_sub4of8.txt": "b58e5ee9e39da20c9ff70e86e4ec5d15718995d3c0e00b8d8e1a2558eb7a2114",
+  "n10_rerun/receipt_n10_shard6of8_sub5of8.txt": "d40b6aab83127376db205ae40a0ee19a1a440531285e446895a802cc6be724ec",
+  "n10_rerun/receipt_n10_shard6of8_sub6of8.txt": "57ca269b38f69f62236bf5b371820c327746add9d631692cc98e15884fba6e78",
+  "n10_rerun/receipt_n10_shard6of8_sub7of8.txt": "31db437999a7f79c06a950c8da2ee6e814af51719d41c6dd9bd37661895a14bd",
+  "n10_rerun/receipt_n10_shard7of8_sub0of8.txt": "83aa92f5203c6fd00eb64c932a506a3ba0b4c0621e77c9573f39d0606963acb2",
+  "n10_rerun/receipt_n10_shard7of8_sub1of8.txt": "97f791a3cffbcf6a11bb3a1c0b201c886aec9fbaca1d0408251102248410ef7c",
+  "n10_rerun/receipt_n10_shard7of8_sub2of8.txt": "ad48cfd2031fe2939cffa2e7fef6cef6814e3ca6147de4f6d32b21e3f62a19aa",
+  "n10_rerun/receipt_n10_shard7of8_sub3of8.txt": "e60c321d81c23060922f649b9149b5f5c2e58bf5044a9f140df4a4c5c9ca7b0b",
+  "n10_rerun/receipt_n10_shard7of8_sub4of8.txt": "09604124e3fa17da474d91941e570ee5eac8bdeca367c75be2a029e882315895",
+  "n10_rerun/receipt_n10_shard7of8_sub5of8.txt": "08f8384d651c0f75089c26c3c8d84966098a51636c04db66205869762625d7f1",
+  "n10_rerun/receipt_n10_shard7of8_sub6of8.txt": "6b1caff780db6093bd6133e63a779ba41eaf8dcbd0589a770ef3671249a78658",
+  "n10_rerun/receipt_n10_shard7of8_sub7of8.txt": "d243af0cdb15f0443576ae5e8da7bf2af28a6e6c3e3db638dad51ebd098ce2a0",
+  "n10_rerun/started.txt": "de16a342dedca8296f57403337b203230a2045bc692e8781710ee0c14f128973",
+  "n10_rerun/summary.json": "8f86beb8e100ebc457a5b01b9e29bc5a1d8901cdf50a0d10350b6cf370ff6037"
+ },
+ "witness_table": [
+  {
+   "n": 9,
+   "points": 23,
+   "file": "witnesses_table/n09_23pts.txt",
+   "source": "certs/a280537_first_solver/n9/n9_23pts.txt",
+   "sha256": "69736d29f40431296a77a5d2b675a1d08521c4ccaec506244523b99f22526e59",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 10,
+   "points": 26,
+   "file": "witnesses_table/n10_26pts.txt",
+   "source": "certs/a280537_first_solver/n10/n10_26pts.txt",
+   "sha256": "0b1da147af135897909dab96dc20d8d229625e398ababb6d3651e999b0692143",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 11,
+   "points": 28,
+   "file": "witnesses_table/n11_28pts.txt",
+   "source": "certs/a280537_first_solver/n11/n11_28pts.txt",
+   "sha256": "bad49637796e26474c3dc9466cbcc499e90b40ee90f6f684b720971f816dd3bf",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 12,
+   "points": 31,
+   "file": "witnesses_table/n12_31pts.txt",
+   "source": "certs/a280537_first_solver/n12/n12_31pts.txt",
+   "sha256": "cc6274a50b90ade28c49a139105bb0cc4de78d1b49e7d0c549ceb0d4a95bbd08",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 13,
+   "points": 32,
+   "file": "witnesses_table/n13_32pts.txt",
+   "source": "certs/a280537_first_solver/n13/n13_32pts.txt",
+   "sha256": "83e3b2f03b37cae13ad33a5fabb217e240624dba8861bed805eb94c9870e636d",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 14,
+   "points": 34,
+   "file": "witnesses_table/n14_34pts.txt",
+   "source": "certs/a280537_first_solver/n14/n14_34pts.txt",
+   "sha256": "fc4148d53cbd6b5fe4055ac8e6c1a1afc2b4a7088f83758be4c2f04699ec1a66",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 15,
+   "points": 35,
+   "file": "witnesses_table/n15_35pts.txt",
+   "source": "certs/a280537_first_solver/n15/n15_35pts.txt",
+   "sha256": "22371b62e9d6f6b7aa3666ecfffd141c6ba3141a64c3acdfb1c275d4258e7e85",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 16,
+   "points": 38,
+   "file": "witnesses_table/n16_38pts.txt",
+   "source": "certs/a280537_first_solver/n16/n16_38pts.txt",
+   "sha256": "9ff098f8bacd56c01595ded5a337ef0e5dfb1f09cf28ee9d4a55502cc1916f58",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 17,
+   "points": 38,
+   "file": "witnesses_table/n17_38pts.txt",
+   "source": "certs/a280537_first_solver/n17/n17_38pts.txt",
+   "sha256": "cffb6df879d88b88188e3fac26acbbf95ac049c556c7409dc7ba51329f5a6c4e",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 18,
+   "points": 41,
+   "file": "witnesses_table/n18_41pts.txt",
+   "source": "certs/a280537_first_solver/n18/n18_41pts.txt",
+   "sha256": "56fe470e34be7ba8c02f3ffa374e03b941d08a59ce858b72357c3355b2819c8f",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 19,
+   "points": 43,
+   "file": "witnesses_table/n19_43pts.txt",
+   "source": "certs/a280537_first_solver/n19/n19_43pts.txt",
+   "sha256": "c2644cb954581674e4bad07ae8d9d7c462eda9e0f558e2e38e915984d98137f7",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 20,
+   "points": 45,
+   "file": "witnesses_table/n20_45pts.txt",
+   "source": "certs/a280537_first_solver/n20/n20_45pts.txt",
+   "sha256": "6239bd1d1c3f6e74ab43bddbfbd6e68a8cdd60ab04d0d1b2acfe2f40f7142efb",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 21,
+   "points": 47,
+   "file": "witnesses_table/n21_47pts.txt",
+   "source": "certs/a280537_first_solver/n21/n21_47pts.txt",
+   "sha256": "4f6225c8c40997e9325d9209f5d7a5197de1e412443695e1efd202e9df5883d8",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 22,
+   "points": 49,
+   "file": "witnesses_table/n22_49pts.txt",
+   "source": "certs/a280537_first_solver/n22/n22_49pts.txt",
+   "sha256": "24b37d02ab352fd24bab435a6c940041acf38985c2f3154cf7d3e0841d146c12",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 23,
+   "points": 50,
+   "file": "witnesses_table/n23_50pts.txt",
+   "source": "certs/a280537_first_solver/n23/n23_50pts.txt",
+   "sha256": "b6c3ebe3089cd122295f641589c79388217dd52b100e68f71269d921d9ac912f",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 24,
+   "points": 52,
+   "file": "witnesses_table/n24_52pts.txt",
+   "source": "certs/a280537_first_solver/n24/n24_52pts.txt",
+   "sha256": "3b4eab7096812f6ad0c823c3b15041d315e49cb8b2dc6ae3a61a8e9180cde82b",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 25,
+   "points": 53,
+   "file": "witnesses_table/n25_53pts.txt",
+   "source": "certs/a280537_first_solver/n25/n25_53pts.txt",
+   "sha256": "7356b0eb247eb55fb6fee81faec082acef7a9c718315607a20ffca768192541b",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 27,
+   "points": 56,
+   "file": "witnesses_table/n27_56pts.txt",
+   "source": "certs/a280537_first_solver/n27/n27_56pts.txt",
+   "sha256": "896c6f01bbbfd0d224ca1b0d36a374691287e133c05fba227acff4329ad16189",
+   "verifier_exit": 0,
+   "clean": true
+  },
+  {
+   "n": 29,
+   "points": 59,
+   "file": "witnesses_table/n29_59pts.txt",
+   "source": "certs/a280537_first_solver/n29/n29_59pts.txt",
+   "sha256": "21bc9e2184865dadde89972a69bf828627e791daccaa5b2cb0e19d33c1c5f848",
+   "verifier_exit": 0,
+   "clean": true
+  }
+ ],
+ "verifier_with_count": {
+  "witness_n11_28_c06_ord3_long.txt": {
+   "n": 11,
+   "points": 28,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n11_28_first_solver.txt": {
+   "n": 11,
+   "points": 28,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n12_31_record.txt": {
+   "n": 12,
+   "points": 31,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n21_47_record.txt": {
+   "n": 21,
+   "points": 47,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n22_49_record.txt": {
+   "n": 22,
+   "points": 49,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n27_56_record.txt": {
+   "n": 27,
+   "points": 56,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n5.txt": {
+   "n": 5,
+   "points": 13,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n7_18_c03_ord2_strata.txt": {
+   "n": 7,
+   "points": 18,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n7_18_c06_ord3_strata.txt": {
+   "n": 7,
+   "points": 18,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n7_18_first_solver.txt": {
+   "n": 7,
+   "points": 18,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n8_20_c03_ord2_strata.txt": {
+   "n": 8,
+   "points": 20,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n8_20_c06_ord3_strata.txt": {
+   "n": 8,
+   "points": 20,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n8_20_first_solver.txt": {
+   "n": 8,
+   "points": 20,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n9_23_c06_ord3_long.txt": {
+   "n": 9,
+   "points": 23,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n9_23_c06_ord3_strata.txt": {
+   "n": 9,
+   "points": 23,
+   "exit": 0,
+   "clean": true
+  },
+  "witness_n9_23_first_solver.txt": {
+   "n": 9,
+   "points": 23,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n09_23pts.txt": {
+   "n": 9,
+   "points": 23,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n10_26pts.txt": {
+   "n": 10,
+   "points": 26,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n11_28pts.txt": {
+   "n": 11,
+   "points": 28,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n12_31pts.txt": {
+   "n": 12,
+   "points": 31,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n13_32pts.txt": {
+   "n": 13,
+   "points": 32,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n14_34pts.txt": {
+   "n": 14,
+   "points": 34,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n15_35pts.txt": {
+   "n": 15,
+   "points": 35,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n16_38pts.txt": {
+   "n": 16,
+   "points": 38,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n17_38pts.txt": {
+   "n": 17,
+   "points": 38,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n18_41pts.txt": {
+   "n": 18,
+   "points": 41,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n19_43pts.txt": {
+   "n": 19,
+   "points": 43,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n20_45pts.txt": {
+   "n": 20,
+   "points": 45,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n21_47pts.txt": {
+   "n": 21,
+   "points": 47,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n22_49pts.txt": {
+   "n": 22,
+   "points": 49,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n23_50pts.txt": {
+   "n": 23,
+   "points": 50,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n24_52pts.txt": {
+   "n": 24,
+   "points": 52,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n25_53pts.txt": {
+   "n": 25,
+   "points": 53,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n27_56pts.txt": {
+   "n": 27,
+   "points": 56,
+   "exit": 0,
+   "clean": true
+  },
+  "evidence/witnesses_table/n29_59pts.txt": {
+   "n": 29,
+   "points": 59,
+   "exit": 0,
+   "clean": true
+  }
+ }
+}

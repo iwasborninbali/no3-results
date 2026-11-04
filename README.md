@@ -15,7 +15,7 @@ repository.
 
 | paper | version | sources / PDF here | concept DOI |
 |---|---|---|---|
-| Exact values and certified lower bounds for the no-three-in-line problem in the cube | 1.6 (4 Nov 2026: one n=5 sentence corrected, one inference withdrawn; Zenodo 10.5281/zenodo.23927117) | `paper/arxiv_no3_3d_v16/`, `paper/no3_3d_note.pdf` | [10.5281/zenodo.22019279](https://doi.org/10.5281/zenodo.22019279) |
+| Exact values and certified lower bounds for the no-three-in-line problem in the cube | 1.7 (4 Nov 2026: 1.6 corrected one n=5 sentence and withdrew one inference; 1.7 adds a nonuniform 40-point n=5 optimum with three interior points; Zenodo 10.5281/zenodo.23938075) | `paper/arxiv_no3_3d_v17/`, `paper/no3_3d_note.pdf` | [10.5281/zenodo.22019279](https://doi.org/10.5281/zenodo.22019279) |
 | Certified configurations and bounds for the no-four-coplanar problem in the cube (A280537) | 4.1 (26 Sep 2026: after six review passes; two definitions repaired) | `paper/arxiv_a280537_v41/`, `paper/a280537_note.pdf` (PDF of 3.4) |
 | 4.2 (26 Sep 2026: after the sixth pass and a fresh independent read; second verifier shipped; n=10 exhaustion re-run with a receipt per shard) | `paper/arxiv_a280537_v42/`, `paper/a280537_note.pdf` (PDF of 3.4) |
 | 4.3 (26 Sep 2026: after the returning reviewer's delta of 4.2 and a second fresh read; wall-time label) | `paper/arxiv_a280537_v43/`, `paper/a280537_note.pdf` (PDF of 3.4) |

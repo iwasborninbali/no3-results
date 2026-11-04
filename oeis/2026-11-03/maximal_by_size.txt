@@ -1,0 +1,13 @@
+A398184: numbers of maximal subsets by size.
+All grid subsets are labeled; rotations and reflections are counted separately.
+Computed at Athanor Lab with Codex assistance, Nov 03 2026.
+
+n = 1: sizes 1..1 occur 1 times (total 1); exact (two programs agree)
+n = 2: sizes 4..4 occur 1 times (total 1); exact (two programs agree)
+n = 3: sizes 4..6 occur 5, 16, 2 times (total 23); exact (two programs agree)
+n = 4: sizes 4..8 occur 2, 8, 210, 116, 11 times (total 347); exact (two programs agree)
+n = 5: sizes 6..10 occur 152, 1468, 3474, 520, 32 times (total 5646); exact (two programs agree)
+n = 6: sizes 6..12 occur 8, 172, 11955, 49332, 49830, 5064, 50 times (total 116411); exact (two programs agree)
+n = 7: sizes 8..14 occur 4136, 97712, 864918, 1158976, 305960, 13684, 132 times (total 2445518); exact (two programs agree)
+n = 8: sizes 8..16 occur 228, 8240, 728956, 9888900, 32215908, 20739920, 2853164, 73888, 380 times (total 66509584); exact (two programs agree)
+n = 9: sizes 8..18 occur 11, 396, 69326, 4366232, 110766708, 622544768, 848609530, 258109988, 17196815, 214044, 368 times (total 1861878186); exact (two programs agree)

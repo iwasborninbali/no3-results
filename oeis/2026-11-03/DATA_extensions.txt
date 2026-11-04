@@ -1,0 +1,19 @@
+LOCAL REVIEW COPY -- NOT SUBMITTED
+
+n=8 is already approved in all three sequences; do not claim it as new.
+A398172 complete DATA:
+2,16,230,4812,109536,3599697,101612896,4113975079,167892639418
+
+A398184 complete DATA:
+1,1,23,347,5646,116411,2445518,66509584,1861878186
+
+A398580 row 8, k=0..16: exact (two programs agree)
+1,64,2016,40120,545764,5199888,34678364,159413700,491910848,981664732,1205860050,854333084,320112688,56240936,3892476,79968,380
+Flattened b-file indices 64..80.
+
+A398580 row 9, k=0..18: exact (two programs agree)
+1,81,3240,82608,1461672,18520572,169259212,1108580092,5122725512,16314977516,34710618602,47380008344,39382614935,18607504664,4551201738,504200104,20659489,220668,368
+Flattened b-file indices 81..99.
+
+The triangle's existing DATA field (through row 6) is preserved in the full record.
+Complete later rows belong in the b-file, following the September record style.

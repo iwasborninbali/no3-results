@@ -1,0 +1,25 @@
+Independent computational verification, Athanor Lab, Nov 03 2026.
+Prepared with Codex assistance for Aleksei Kudriashov's review. NOT SUBMITTED.
+
+n=8: exact (two programs agree); n=9: exact (two programs agree).
+
+The new C program line_rows.c was written from the definition, without reading
+or reusing any freedom-scales code. It generates maximal lattice lines from
+primitive integer directions, maintains their occupancies, enumerates row
+patterns, and sums the final row analytically. Its maximality tests include all
+unselected grid cells. Reflection branches have explicitly justified weights.
+Every September T(n,k) and maximal-by-size entry through n=7 was reproduced;
+reversing row order and disabling reflection reduction at n=7 gave the same
+counts. All 17 n=8 profile cells agree with freedom-scales' output CSV and the
+already approved OEIS b-file. T(8,16)=380 agrees with A000755(8).
+
+An additional point-by-point C traversal, determinant_check.c, derives from
+the independent September 10 tri.c (Conductor), extended to 128-bit masks and
+candidate-bitset iteration. It builds collinearity constraints using integer
+determinants and uses neither row completion nor symmetry weights. Completed
+comparison outputs accompany the local report. This adaptation is explicitly
+credited; it is not presented as a new clean-room original.
+
+The existing n=8 terms remain credited to Sean A. Irvine (September 2026).
+No change to that historical attribution is proposed. No website, discussion,
+email, API mutation or submission was made. Alex decides any submission.

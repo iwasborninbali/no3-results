@@ -1,0 +1,603 @@
+{
+  "version": "1.0",
+  "created_utc": "2026-11-03T20:16:42.707826+00:00",
+  "created_wita": "2026-11-04T04:16:42.707826+08:00",
+  "author": "Athanor research core, gpt-6.1-sol",
+  "target": "Exact labelled no-three-in-line n=10 cardinality and maximal profiles",
+  "prohibited_directory_not_opened": "../oeis-n10/vm-results/",
+  "training": "Exact full profiles n=1..9; topology n=4..9; published endpoint totals n=1..20.",
+  "exclusions": [
+    "No n=10 Monte Carlo interior counts used.",
+    "Failed SIS and umbrella estimates excluded.",
+    "Qualified n>=30 bulk rows supply context, not fitted forecast parameters."
+  ],
+  "exposure_disclosure": [
+    "The mandatory oeis-row8/report.md disclosed a Knuth estimate of 7.47e12 total n=10 safe subsets, SE 0.217e12, and a runtime estimate. Neither forecast nor its band is fitted to that total.",
+    "The mandatory sampler reports displayed n=10 endpoint calibration estimates. The exact endpoint 1135 is prior work and is explicitly conditioned on, not a blind prediction.",
+    "No file or directory in oeis-n10 was opened or listed."
+  ],
+  "units": "Natural logarithms; labelled subsets; maximal means inclusion-maximal, not maximum.",
+  "model_rules": {
+    "common": "B_n,m is the exact row/column-cap-two DP count. C_n=ln B_n,2n-ln A000755(n). Forecast ln a=ln B-C_n*w, with deterministic witness/cap/ledger clamps. Known exact rows are calibration records, not predictions.",
+    "Q": "w is the piecewise-linear interpolation of [ln B_9,j-ln a_9,j]/C_9 at density j/9, evaluated at m/10. Hindcasts at n use only the n-1 shape.",
+    "H": "At fixed h=20-m, regress w_j(h)= [ln B_j,2j-h-ln a_j,2j-h]/C_j on 1 and 1/j for j=6,7,8,9. Evaluate at j=10 and clamp to [0,1]. Rolling hindcasts use up to four preceding boards, j>=4. Where fewer than two valid boards exist, use Q.",
+    "maximal": "Use f_m=(m+1)*exp(L_(m+1)-L_m). Approximate F by Binomial(h^2,f_m/h^2), hence M_m=exp(L_m)*(1-f_m/h^2)^(h^2). At h=1 the formula is exact conditional on L. General binomial laws are heuristic, not deduced from mean Freedom.",
+    "bands": "For each target, use errors from rolling conditional forecasts of n=6,7,8,9. Q aligns targets by nearest density (round half up); H aligns by h. Halfwidth=t_3(0.9)*sqrt(1.25)*RMS(signed errors), floored at .35 for ln a and .70 for ln(1+M). Truncate to deterministic bounds; special exact transform at m=19. Peak and half-fraction level use a minimum radius of one. These are nominal 80% predictive bands, with no coverage theorem; four correlated board cases cannot establish calibration."
+  },
+  "scoring": {
+    "count_targets": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "maximal_targets": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "known_endpoint_excluded": 20,
+    "transform_counts": "y=ln a_m",
+    "transform_maximal": "y=ln(1+M_m), likewise for point and interval endpoints",
+    "interval_score": "IS80=(u-l)+10*max(l-y,0)+10*max(y-u,0)",
+    "WIS": "WIS=(0.5*abs(y-p)+0.1*IS80)/1.5",
+    "primary": "0.5*mean(WIS over 8 unknown ln a targets)+0.5*mean(WIS over 6 ln(1+M) targets); smaller is better. Equal family weight; do not treat cells as independent replicates.",
+    "secondary": "Report MAE and 80% coverage separately for each family. Peak (smallest maximizer if tied) and first e<1/2: absolute error, IS80, and coverage, reported separately. The shattering prediction is unscored unless a separate full completion-support graph census is supplied.",
+    "comparison": "Declare Q or H the finite-forecast winner only if primary scores differ by at least 0.01; otherwise report a tie. No significance claim or asymptotic model selection follows from this single board.",
+    "no_tuning": "Keep these two files byte-identical after publication/commit. Any revision must be a separately named, dated file; score this version regardless."
+  },
+  "asymptotic_closures": {
+    "status": "Illustrative heuristic continuations, not inferred asymptotic results and not tested by n=10.",
+    "common": "For n>20, with alpha=m/n, define L(n,alpha)=(n/20)*L_model(20,alpha)+n*ln(n/20)*s_model(alpha), using linear interpolation of the finite n=20 forecast. Round exp(L) to a positive integer where L>=0; set counts to zero after the first L<0 on the descending tail. At n<=9 use exact calibration profiles; n=10..20 use the conditional finite rules. This is an explicit convention, not a derived counting law.",
+    "Q": "s_Q(alpha)=alpha-2*w_9(alpha). Its first descending zero is 2 and s_Q>0 on (0,2); L_Q(n,2)=n*ln(941580)/20>0. This closure predicts 2n for every sufficiently large n, with a sparse exponential endpoint population.",
+    "H": "s_H(alpha)=alpha-.67*alpha^3/3-lambda*max(alpha-1.25,0)^2; lambda=[r-.67*r^3/3]/(r-1.25)^2, r=pi/sqrt(3). This closure keeps the bulk peak near 1/sqrt(.67), then has its first descending zero at r and predicts eventual endpoint extinction.",
+    "identifiability": "Either closure can be attached to either finite forecasting rule while preserving every supplied exact datum. A better n=10 score tests transport of the finite terminal correction, not either asymptotic closure."
+  },
+  "models": [
+    {
+      "id": "Q",
+      "name": "Density-scaled quota correction",
+      "status": "heuristic",
+      "ln_a": [
+        {
+          "m": 12,
+          "point": 28.42924215298262,
+          "lower80": 28.07924215298262,
+          "upper80": 28.779242152982622,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.16555751074466585,
+            0.19872426430593393,
+            -0.04476738786317114,
+            -0.11673004415474253
+          ]
+        },
+        {
+          "m": 13,
+          "point": 28.387675504632433,
+          "lower80": 27.94297293304614,
+          "upper80": 28.832378076218728,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.3531419386327581,
+            0.26934518387995254,
+            -0.04476738786317114,
+            -0.19151334008533993
+          ]
+        },
+        {
+          "m": 14,
+          "point": 27.840036882643766,
+          "lower80": 27.305871376893037,
+          "upper80": 28.374202388394494,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.3531419386327581,
+            0.35663472811728525,
+            -0.09278675928135627,
+            -0.28268117196438425
+          ]
+        },
+        {
+          "m": 15,
+          "point": 26.715979826418277,
+          "lower80": 25.923628981332474,
+          "upper80": 27.50833067150408,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.607581134203711,
+            0.45713513394180794,
+            -0.14758268004466402,
+            -0.3861488586270134
+          ]
+        },
+        {
+          "m": 16,
+          "point": 24.92065243284891,
+          "lower80": 23.913775628594205,
+          "upper80": 25.927529237103617,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.9006786620016634,
+            0.45713513394180794,
+            -0.20051724210028965,
+            -0.3861488586270134
+          ]
+        },
+        {
+          "m": 17,
+          "point": 22.320796592509502,
+          "lower80": 21.241541492003414,
+          "upper80": 23.40005169301559,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.9006786620016634,
+            0.5323316304644621,
+            -0.23741578463160629,
+            -0.4885554937239718
+          ]
+        },
+        {
+          "m": 18,
+          "point": 18.71559185580786,
+          "lower80": 17.60146282795604,
+          "upper80": 19.829720883659675,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.9136695435806672,
+            0.526949625701695,
+            -0.23741578463160629,
+            -0.5586376656613368
+          ]
+        },
+        {
+          "m": 19,
+          "point": 13.794473943379689,
+          "lower80": 12.725489275057342,
+          "upper80": 14.863458611702036,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.9136695435806672,
+            0.526949625701695,
+            -0.1708473924741245,
+            -0.47082092233845785
+          ]
+        },
+        {
+          "m": 20,
+          "point": 7.034387929915503,
+          "lower80": 7.034387929915503,
+          "upper80": 7.034387929915503,
+          "conditioned_prior_work": true,
+          "scored": false,
+          "calibration_signed_errors": []
+        }
+      ],
+      "maximal_counts": [
+        {
+          "m": 14,
+          "point": 6548354845,
+          "lower80": 3251816779,
+          "upper80": 13186767300,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            0.35314083926083306,
+            -0.3089520778321848,
+            -0.30002971094338626,
+            -0.18083203852677698
+          ]
+        },
+        {
+          "m": 15,
+          "point": 24130000944,
+          "lower80": 11982603848,
+          "upper80": 48591854734,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            0.07619275848229812,
+            0.28419145974022086,
+            -0.178981916216987,
+            -0.2816510051744494
+          ]
+        },
+        {
+          "m": 16,
+          "point": 17848686293,
+          "lower80": 7184085359,
+          "upper80": 44344629331,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            -0.8901315677637687,
+            0.28419145974022086,
+            -0.18886600659228137,
+            -0.2816510051744494
+          ]
+        },
+        {
+          "m": 17,
+          "point": 2987554019,
+          "lower80": 1037084487,
+          "upper80": 8606318113,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            -0.8901315677637687,
+            0.5155497731630856,
+            -0.27052942007756364,
+            -0.4519375647899544
+          ]
+        },
+        {
+          "m": 18,
+          "point": 116640567,
+          "lower80": 32238872,
+          "upper80": 422006741,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            -1.108006909638493,
+            0.5807570435928255,
+            -0.27052942007756364,
+            -0.5785156185771676
+          ]
+        },
+        {
+          "m": 19,
+          "point": 956483,
+          "lower80": 313509,
+          "upper80": 2829094,
+          "band_method": "exact M_19 = a_19 - 22700; transform the a_19 band",
+          "calibration_signed_errors": [
+            -1.108006909638493,
+            0.5807570435928255,
+            -0.18629416376859353,
+            -0.4896019198678374
+          ]
+        }
+      ],
+      "peak_position": {
+        "point": 12,
+        "lower80": 11,
+        "upper80": 13,
+        "calibration_signed_errors": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "first_extendable_fraction_below_half": {
+        "point": 17,
+        "lower80": 16,
+        "upper80": 18,
+        "calibration_signed_errors": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "first_completable_disconnection": {
+        "point": 13,
+        "lower80": 12,
+        "upper80": 15,
+        "scored": false,
+        "reason": "Requires a separate graph census; exact profile alone cannot test it."
+      },
+      "qualitative": [
+        "The peak precedes the first majority-maximal slice by several levels.",
+        "At the one-hole layer F is Bernoulli; e_19=f_19, mu_19=0.",
+        "Completable futures first disconnect near one step after the peak; this does not imply that the all-safe giant has collapsed."
+      ],
+      "freedom_points": {
+        "12": 12.470710179481934,
+        "13": 8.096393435339106,
+        "14": 4.8743811113689395,
+        "15": 2.6571691550333147,
+        "16": 1.2628328660795631,
+        "17": 0.4892738240708447,
+        "18": 0.13852853672235074,
+        "19": 0.02318258937751215,
+        "20": 0.0
+      },
+      "extendable_fraction_points": {
+        "12": 0.9999990538767497,
+        "13": 0.9998565466819346,
+        "14": 0.9946867798500775,
+        "15": 0.9397503231863068,
+        "16": 0.7316482576158505,
+        "17": 0.395332015100637,
+        "18": 0.13149693890117398,
+        "19": 0.023182589377512164,
+        "20": 0.0
+      }
+    },
+    {
+      "id": "H",
+      "name": "Fixed-hole terminal correction",
+      "status": "heuristic",
+      "ln_a": [
+        {
+          "m": 12,
+          "point": 28.899145713089545,
+          "lower80": 28.081709983103487,
+          "upper80": 29.716581443075604,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            0.08490165483309653,
+            0.3288812603150255,
+            0.5902177023937618,
+            0.5774665944190573
+          ]
+        },
+        {
+          "m": 13,
+          "point": 28.766732452660918,
+          "lower80": 27.86651196759539,
+          "upper80": 29.666952937726446,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            0.15914224983735004,
+            0.4671799210468066,
+            0.6892167525018174,
+            0.4982358913458853
+          ]
+        },
+        {
+          "m": 14,
+          "point": 28.097187567854295,
+          "lower80": 27.211069149919155,
+          "upper80": 28.983305985789436,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            0.16572661557437307,
+            0.54760579885928,
+            0.6927530993059392,
+            0.3599217207751906
+          ]
+        },
+        {
+          "m": 15,
+          "point": 26.826344537288037,
+          "lower80": 26.056534503874918,
+          "upper80": 27.596154570701156,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            0.053137158195365686,
+            0.5554523491111212,
+            0.5975097351618182,
+            0.19657101364411034
+          ]
+        },
+        {
+          "m": 16,
+          "point": 24.865204539730094,
+          "lower80": 24.221814461697843,
+          "upper80": 25.508594617762345,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.19552483753476402,
+            0.5113409789389713,
+            0.438044262412042,
+            0.047756131273693825
+          ]
+        },
+        {
+          "m": 17,
+          "point": 22.09053649485427,
+          "lower80": 21.378292457679063,
+          "upper80": 22.802780532029477,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -0.5649905193375897,
+            0.4569874956418669,
+            0.27488093916405276,
+            -0.040144475264028756
+          ]
+        },
+        {
+          "m": 18,
+          "point": 18.32492299987011,
+          "lower80": 17.308973976697008,
+          "upper80": 19.340872023043215,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -1.0207797041118738,
+            0.4074806650225984,
+            0.1517561481849672,
+            -0.018582187897241198
+          ]
+        },
+        {
+          "m": 19,
+          "point": 13.338874723078224,
+          "lower80": 12.08292881905741,
+          "upper80": 14.594820627099038,
+          "conditioned_prior_work": false,
+          "scored": true,
+          "calibration_signed_errors": [
+            -1.3061268465038687,
+            0.36586944970598445,
+            0.1401960392314603,
+            0.14976859915422835
+          ]
+        },
+        {
+          "m": 20,
+          "point": 7.034387929915503,
+          "lower80": 7.034387929915503,
+          "upper80": 7.034387929915503,
+          "conditioned_prior_work": true,
+          "scored": false,
+          "calibration_signed_errors": []
+        }
+      ],
+      "maximal_counts": [
+        {
+          "m": 14,
+          "point": 18136412619,
+          "lower80": 2647532727,
+          "upper80": 124239998703,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            -1.1387464138009358,
+            -1.6485274155821426,
+            0.21374329669846048,
+            0.5980552863851685
+          ]
+        },
+        {
+          "m": 15,
+          "point": 42267958714,
+          "lower80": 5826318852,
+          "upper80": 306639643125,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            1.9022077929877321,
+            0.24381859142120454,
+            0.8949484392880542,
+            0.454113306298197
+          ]
+        },
+        {
+          "m": 16,
+          "point": 21007514658,
+          "lower80": 6686042106,
+          "upper80": 66005517923,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            0.964080819961298,
+            0.417479421467851,
+            0.6660253379270671,
+            0.1280505832359431
+          ]
+        },
+        {
+          "m": 17,
+          "point": 2561393179,
+          "lower80": 1271950209,
+          "upper80": 5158012451,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            0.38230453776026607,
+            0.47434259356227493,
+            0.3722032462503222,
+            -0.06668415998634458
+          ]
+        },
+        {
+          "m": 18,
+          "point": 79633866,
+          "lower80": 33514929,
+          "upper80": 189215750,
+          "band_method": "nominal log1p band from aligned rolling-board errors",
+          "calibration_signed_errors": [
+            -0.8385311134521523,
+            0.4076103075998887,
+            0.14552711653458594,
+            -0.05599168549797895
+          ]
+        },
+        {
+          "m": 19,
+          "point": 598169,
+          "lower80": 154127,
+          "upper80": 2157268,
+          "band_method": "exact M_19 = a_19 - 22700; transform the a_19 band",
+          "calibration_signed_errors": [
+            -1.6893581321037168,
+            0.40639149202431035,
+            0.1509007258661672,
+            0.15406318734513214
+          ]
+        }
+      ],
+      "peak_position": {
+        "point": 12,
+        "lower80": 11,
+        "upper80": 13,
+        "calibration_signed_errors": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "first_extendable_fraction_below_half": {
+        "point": 17,
+        "lower80": 16,
+        "upper80": 18,
+        "calibration_signed_errors": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "first_completable_disconnection": {
+        "point": 13,
+        "lower80": 12,
+        "upper80": 15,
+        "scored": false,
+        "reason": "Requires a separate graph census; exact profile alone cannot test it."
+      },
+      "qualitative": [
+        "The peak precedes the first majority-maximal slice by several levels.",
+        "At the one-hole layer F is Bernoulli; e_19=f_19, mu_19=0.",
+        "Completable futures first disconnect near one step after the peak; this does not imply that the all-safe giant has collapsed."
+      ],
+      "freedom_points": {
+        "12": 11.38772586700327,
+        "13": 7.167181239931621,
+        "14": 4.208924578542055,
+        "15": 2.251166946557086,
+        "16": 1.0602930150113001,
+        "17": 0.41676126084683995,
+        "18": 0.12981962426918625,
+        "19": 0.036561682266212064,
+        "20": 0.0
+      },
+      "extendable_fraction_points": {
+        "12": 0.9999964185868733,
+        "13": 0.9995687477244933,
+        "14": 0.9886211631619759,
+        "15": 0.9054899762354397,
+        "16": 0.6661483305870713,
+        "17": 0.3473532995166889,
+        "18": 0.12363533094427359,
+        "19": 0.03656168226621204,
+        "20": 0.0
+      }
+    }
+  ],
+  "source_sha256": {
+    "models.py": "8bc1d60f18d00221ca69b68d33e0ab918c3acd5f27abd90090956de857a754db",
+    "anatomy.py": "842e04f5dbee957f579eeb203f2f4fb8497972eda2c5dd9aea6039cbc887d2e1",
+    "preregister.py": "5acd0b671baccf31da560ff0485877080c90a6ff2f6a07e52b5fa92dc2de9d6a",
+    "inputs/manifest.json": "3b3cf9e4ec8eeaaf99df24dc9996d328d6fec18425125f211d0a87a82cd679e2",
+    "inputs/exact-profiles.csv": "47ba8298389516c0d4cedcb58a248a0cca4e7541ada6ff48d0311027d340c672",
+    "inputs/oeis-A000755.txt": "3d07efd381c0c9eacc58d57cd8f6ac95358b761b8847dc8b31e4cfbe3fcf652b",
+    "inputs/oeis-A000769.txt": "fb7a36f5ccc29773455bf28124705128f0289b86672fd0579539bcbf694cbacb",
+    "endpoint-topology-n9.json": "36657c3e9d45a71fa749fc55c6ef8a795bafb441a25d356e526e930ec3284fb9"
+  }
+}
